@@ -26,7 +26,7 @@ export const ContactCTA = () => {
   ];
 
   return (
-    <div className="relative w-full bg-gradient-to-t from-background to-accent/30 py-24 overflow-hidden">
+    <div className="relative w-full bg-gradient-to-t from-background via-accent/40 to-background py-24 overflow-hidden">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.5 }}

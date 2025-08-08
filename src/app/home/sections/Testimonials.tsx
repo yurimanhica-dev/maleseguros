@@ -15,7 +15,7 @@ export const Testimonials = () => {
   };
 
   return (
-    <section className="relative w-full py-24 lg:pt-44 bg-gradient-to-b from-background to-accent/20 overflow-hidden">
+    <section className="relative w-full py-24 lg:pt-44 bg-background overflow-hidden">
       <div className="container mx-auto c-space">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Área de CTA */}

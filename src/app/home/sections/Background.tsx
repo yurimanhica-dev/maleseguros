@@ -22,14 +22,14 @@ export default function BackgroundFill() {
       <div className="absolute inset-0 bg-black/10 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col lg:flex-row mx-auto h-full items-center justify-center gap-10 px-6 md:px-16 lg:px-32">
+      <div className="relative z-20 flex flex-col lg:flex-row mx-auto h-full items-center justify-center gap-10 px-6 md:px-16 lg:px-32 ">
         {/* Texto Principal */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="lg:w-1/2 space-y-6 text-start lg:text-left"
+          className="lg:w-1/2 space-y-6 text-start lg:text-left c-space"
         >
           <h2 className="text-background/90 uppercase text-5xl font-extrabold leading-14">
             Já se impressionou!

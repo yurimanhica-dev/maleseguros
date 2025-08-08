@@ -46,7 +46,7 @@ export const AboutUs = () => {
     <section
       ref={ref}
       className="relative py-10 md:py-16 min-h-[60vh] bg-gradient-to-b from-background 
-      via-accent/70 to-accent/10 overflow-hidden w-full"
+      via-accent/70 to-background overflow-hidden w-full"
     >
       <motion.div
         initial={{ opacity: 0 }}

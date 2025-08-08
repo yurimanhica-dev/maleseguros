@@ -17,37 +17,14 @@ export const metadata: Metadata = {
   description: "seu se",
   icons: {
     icon: "/logos/icon.png",
-    apple: "/apple-touch-icon.png",
-    shortcut: "/favicon-32x32.png",
+    apple: "/logos/icon.png",
+    shortcut: "/logos/icon.png",
     other: [
       {
         rel: "mask-icon",
-        url: "/safari-pinned-tab.svg",
-        color: "#5bbad5",
+        url: "/logos/icon.png",
       },
     ],
-  },
-  manifest: "/manifest.json",
-  openGraph: {
-    title: "Seguradora Favorita dos Moçambicanos | MALEseguros",
-    description: "seu se",
-    images: [
-      {
-        url: "/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Seguradora Favorita dos Moçambicanos | MALEseguros",
-      },
-    ],
-    locale: "pt_BR",
-    siteName: "Seguradora Favorita dos Moçambicanos | MALEseguros",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Seguradora Favorita dos Moçambicanos | MALEseguros",
-    description: "seu se",
-    images: ["/og.png"],
-    creator: "@MALEseguros",
   },
 };
 
