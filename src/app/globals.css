@@ -161,6 +161,28 @@
     transform: scale(1);
   }
 
+  .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-4px);
+    width: 12px;
+    height: 2px;
+    background: currentColor;
+    opacity: 0;
+    transition: all 0.6s ease;
+  }
+
+  .nav-link:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+  }
   @keyframes aura-pulse {
     0% {
       transform: scale(1);

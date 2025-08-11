@@ -1,4 +1,3 @@
-// components/PremiumNavbar.tsx
 "use client";
 
 import HamburgerIcon from "@/app/components/HamburgerIcon";

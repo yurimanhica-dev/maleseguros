@@ -110,6 +110,9 @@ export const ContactCTA = () => {
           transition={{ delay: 0.4 }}
           className="mt-20 max-w-2xl mx-auto"
         >
+          <h3 className="text-2xl font-semibold text-foreground mb-8">
+            Ou Envie uma Mensagem
+          </h3>
           <div className="space-y-6">
             <input
               type="text"

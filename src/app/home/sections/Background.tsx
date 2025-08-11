@@ -7,7 +7,7 @@ import { redirect } from "next/navigation";
 
 export default function BackgroundFill() {
   return (
-    <section className="relative w-full h-[700px] md:h-[500px]  text-white overflow-hidden">
+    <section className="relative w-full h-[700px] md:h-[500px]  text-white z-40">
       {/* Background full section */}
       <Image
         src="/bg/r.png"
@@ -40,7 +40,7 @@ export default function BackgroundFill() {
             <span className="text-black/80 font-bold uppercase text-xl">
               MALEseguros
             </span>
-            {""}. Aqui, a segurança não é apenas um serviço — é um compromisso
+            {""}. Aqui, a segurança não é apenas um serviço, é um compromisso
             com o que há de mais precioso na sua vida.
           </p>
           <Button
@@ -62,30 +62,30 @@ export default function BackgroundFill() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 2 }}
           viewport={{ once: true }}
-          className="lg:w-1/2 flex items-center justify-center"
+          className="lg:w-1/2 flex items-center justify-center z-30"
+        ></motion.div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="absolute -bottom-9 left-1/2 -translate-x-1/2 text-black z-50"
         >
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 3 }}
-            className="absolute lg:w-1/2 bottom-10 left-1/2 -translate-x-1/2 z-20"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 3, repeat: Infinity }}
+            className="flex flex-col items-center"
           >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="flex flex-col items-center"
-            >
-              <span className="text-lg text-secondary/90 font-semibold mb-2">
-                Deslize, nós temos mais.....
-              </span>
-              <div className="w-5 h-8 border-2 border-white rounded-full flex justify-center">
-                <motion.div
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                  className="w-1 h-2 bg-white rounded-full mt-1"
-                />
-              </div>
-            </motion.div>
+            <span className="text-lg text-white font-medium mb-2 text-nowrap">
+              Deslize, nós temos mais.....
+            </span>
+            <div className="w-5 h-8 border-2 border-primary rounded-full flex justify-center">
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 3, repeat: Infinity }}
+                className="w-1 h-2 bg-primary rounded-full mt-1"
+              />
+            </div>
           </motion.div>
         </motion.div>
       </div>

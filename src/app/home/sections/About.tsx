@@ -62,13 +62,16 @@ export const AboutUs = () => {
       />
       <motion.div
         animate={{ x: [0, 10, 0], y: [0, -5, 0] }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.1 }}
         transition={{ duration: 8, repeat: Infinity }}
-        className="absolute bottom-1/6 lg:top-1/4 right-1/2 lg:right-1/4 w-4 h-4 rounded-full bg-foreground opacity-30"
+        className="absolute bottom-1/6 lg:top-1/4 right-1/2 lg:right-1/4 w-4 h-4 rounded-full bg-foreground/45 opacity-30"
       />
       <motion.div
         animate={{ y: [0, 15, 0] }}
+        whileInView={{ opacity: 0.1 }}
         transition={{ duration: 6, repeat: Infinity, delay: 1 }}
-        className="absolute bottom-1/3 right-1/4  w-3 h-3 rounded-full bg-primary opacity-50"
+        className="absolute bottom-1/3 right-1/4  w-3 h-3 rounded-full bg-primary/45  opacity-30"
       />
       {/* Elementos decorativos */}
       <motion.div

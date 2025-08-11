@@ -98,7 +98,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Sobre Nós",
-    path: "/sobre",
+    path: "/about",
   },
   {
     title: "Academia de Seguros",

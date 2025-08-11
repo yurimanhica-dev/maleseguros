@@ -15,7 +15,7 @@ export const Testimonials = () => {
   };
 
   return (
-    <section className="relative w-full py-24 lg:pt-44 bg-background overflow-hidden">
+    <section className="relative w-full py-24 lg:pt-44 bg-background overflow-hidden z-10">
       <div className="container mx-auto c-space">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Área de CTA */}
@@ -54,13 +54,22 @@ export const Testimonials = () => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: item * 0.1 }}
-                    className="w-10 h-10 rounded-full bg-primary/30 border-2 border-background"
-                  />
+                    className="w-10 h-10 rounded-full overflow-hidden border-2 border-background"
+                  >
+                    <Image
+                      src={`/avatars/${item}.jpg`} // caminho das imagens
+                      alt={`Cliente ${item}`}
+                      width={40}
+                      height={40}
+                      quality={80}
+                      className="object-cover w-full h-full"
+                    />
+                  </motion.div>
                 ))}
               </div>
               <p className="text-sm text-muted-foreground">
-                <span className="font-bold  text-primary">+5.000</span> clientes
-                satisfeitos por Ano
+                <span className="font-bold  text-primary">+5.000</span> Clientes
+                Satisfeitos
               </p>
             </div>
           </motion.div>

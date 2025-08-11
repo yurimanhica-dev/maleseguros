@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import { AboutUs } from "./home/sections/About";
 import BackgroundFill from "./home/sections/Background";
 import { ContactCTA } from "./home/sections/ContactCTA";
@@ -18,6 +19,7 @@ export default function Home() {
       <BackgroundFill />
       <Testimonials />
       <ContactCTA />
+      <Footer />
     </>
   );
 }
