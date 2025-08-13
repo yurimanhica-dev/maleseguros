@@ -14,14 +14,22 @@ const Navlinks = () => {
     setOpenDropdown(openDropdown === item ? null : item);
   };
 
-  const isSelected = (item: string) => {
+  const isSelected = (item: string, path?: string) => {
+    const normalizedPath = currentPath.toLowerCase().replace(/\/$/, ""); // remove barra final
+
+    if (path) {
+      return normalizedPath === path.toLowerCase();
+    }
+
     const itemPath = item
       .toLowerCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "");
+
+    // marca ativo se for rota exata ou se incluir subcaminhos
     return (
-      currentPath.includes(itemPath) ||
-      (item === "Seguros" && currentPath.includes("seguro"))
+      normalizedPath.includes(itemPath) ||
+      (item === "Seguros" && normalizedPath.includes("seguro"))
     );
   };
 
@@ -37,7 +45,7 @@ const Navlinks = () => {
                   <Link
                     href={item.path}
                     className={`flex items-center h-full px-6 font-medium transition-colors border-b-2 ${
-                      isSelected(item.title)
+                      isSelected(item.title, item.path)
                         ? "text-primary border-primary"
                         : "text-foreground/90 hover:text-primary border-transparent hover:border-primary"
                     }`}
@@ -101,7 +109,10 @@ const Navlinks = () => {
                                           <Link
                                             href={subItem.path}
                                             className={`inline-block transition-colors ${
-                                              isActive
+                                              isSelected(
+                                                subItem.name,
+                                                subItem.path
+                                              )
                                                 ? "text-primary font-medium"
                                                 : "text-foreground/90 hover:text-primary"
                                             }`}
@@ -134,7 +145,6 @@ const Navlinks = () => {
             className="relative px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium shadow-lg hover:shadow-primary/30 transition-all"
           >
             Solicitar Retorno
-            
             <motion.span
               className="absolute inset-0 rounded-full border border-primary"
               animate={{

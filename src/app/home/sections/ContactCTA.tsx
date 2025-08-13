@@ -63,7 +63,8 @@ export const ContactCTA = () => {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            Nosso time está pronto para oferecer a melhor experiência em seguros
+            Nossa equipe está pronta para oferecer a melhor experiência em
+            seguros
           </motion.p>
         </div>
 

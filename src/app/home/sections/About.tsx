@@ -90,7 +90,7 @@ export const AboutUs = () => {
           variants={containerVariants}
           initial="hidden"
           animate={controls}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
         >
           {/* Imagem com efeito parallax sutil */}
           <motion.div
@@ -99,19 +99,19 @@ export const AboutUs = () => {
             className="relative h-80 md:h-96 overflow-hidden shadow-2xl"
           >
             <Image
-              src="/bg/tecnologia.jpg"
+              src="/bg/2149731372.jpg"
               alt="Nossa equipe"
               fill
-              className="object-cover"
+              className="object-cover object-bottom-right"
               quality={100}
               priority
             />
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ delay: 0.8, duration: 1 }}
-              className="absolute z-20 inset-0 bg-gradient-to-t from-black/90 to-transparent"
-            />
+              className="absolute z-20 inset-0 bg-gradient-to-b from-black/90 to-transparent"
+            /> */}
           </motion.div>
 
           {/* Conteúdo de texto */}
@@ -127,10 +127,10 @@ export const AboutUs = () => {
               variants={itemVariants}
               className="text-5xl uppercase font-bold "
             >
-              Protegemos <span className="text-primary">Inovando</span> com{" "}
-              <br />
+              <span className="text-primary">Protegendo</span> seus
               <motion.span
-                className="inline-block"
+                className="inline-block ml-2"
+                variants={itemVariants}
                 animate={
                   inView
                     ? {
@@ -145,7 +145,7 @@ export const AboutUs = () => {
                     : {}
                 }
               >
-                Tecnologia
+                Riscos
               </motion.span>
             </motion.h2>
 
@@ -153,8 +153,9 @@ export const AboutUs = () => {
               variants={itemVariants}
               className="text-lg text-muted-foreground"
             >
-              Fundada em 2014, nossa seguradora combina agilidade digital com
-              expertise para oferecer as melhores soluções em proteção.
+              fundada com a missão de sugerir aos nossos Clientes os vários
+              tipos de seguros de acordo com a especificação de potenciais
+              riscos a que a sua riqueza e fluxos financeiros estão sujeitos.
             </motion.p>
 
             <Button

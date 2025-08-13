@@ -7,14 +7,14 @@ const ContactInfo = () => {
   const contactItems = [
     {
       icon: <FiPhoneCall size={16} />,
-      text: "(+258) 85 212 9634",
+      text: "(+258) 214 184 39",
       subtext: "Linha Direta 24/7",
-      href: "tel:+258 85 212 9634",
-      aria: "Ligar para +258 85 212 9634",
+      href: "tel:+258 214 184 39",
+      aria: "Ligar para +258 214 184 39",
     },
     {
       icon: <FiMapPin size={16} />,
-      text: "Rua Frei Amaro, Nº 35 de São Tomás",
+      text: "Av. Vladimir Lenine, 2815",
       subtext: "Maputo, Moçambique",
       href: "https://maps.app.goo.gl/K9ZgTB1qbCjpz13Y6",
       aria: "Ver localização no Google Maps",
@@ -22,7 +22,7 @@ const ContactInfo = () => {
     {
       icon: <FiClock size={16} />,
       text: "Seg-Sex: 8h-18h",
-      subtext: "Sábado: 9h-13h",
+      subtext: "Estamos Aqui para Ajudar.",
       href: "#",
       aria: "Horário de funcionamento",
     },

@@ -28,7 +28,7 @@ const Logo = () => {
       <div className="relative h-16 w-40">
         <Image
           src={logoSrc}
-          alt="Insurance Company Logo"
+          alt="Logotipo - MALESeguros, Corretores de Seguros, Lda."
           fill
           className="object-contain transition duration-300 ease-in-out"
           priority

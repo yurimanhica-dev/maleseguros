@@ -33,7 +33,7 @@ const Button = ({
   const variants = {
     primary: {
       bg: "bg-primary",
-      hover: "hover:bg-primary/90",
+      hover: "hover:bg-primary",
       text: "text-primary-foreground",
       shadow: "shadow-lg hover:shadow-primary/30",
       border: "border border-primary",

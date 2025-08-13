@@ -125,63 +125,69 @@ const Footer = () => {
 
           {/* Coluna 2: Ações rápidas + Nossos produtos */}
           <motion.div variants={itemVariants} custom={1}>
-            <motion.h3
-              variants={itemVariants}
-              custom={0}
-              className="text-lg uppercase  font-semibold mb-6 flex items-center"
-            >
-              Ações Rápidas
-            </motion.h3>
-            <ul className="space-y-3 text-muted-foreground mb-8">
-              {quickActions.map((action, index) => (
-                <motion.li
-                  key={action.name}
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-8 md:gap-12 lg:gap-8 justify-between col-span-1 md:col-span-2 lg:col-span-1">
+              <div>
+                <motion.h3
                   variants={itemVariants}
-                  custom={index + 1}
-                  whileHover="hover"
-                  className="flex items-center"
+                  custom={0}
+                  className="text-lg uppercase  font-semibold mb-6 flex items-center"
                 >
-                  <Link
-                    href={action.href}
-                    className="hover:text-[var(--primary)] nav-link  transition-colors"
-                  >
-                    {action.name}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
+                  Ações Rápidas
+                </motion.h3>
+                <ul className="space-y-3 text-muted-foreground mb-8">
+                  {quickActions.map((action, index) => (
+                    <motion.li
+                      key={action.name}
+                      variants={itemVariants}
+                      whileHover="hover"
+                      custom={index + 1}
+                      className="flex items-center"
+                    >
+                      <Link
+                        href={action.href}
+                        className="hover:text-[var(--primary)] nav-link  transition-colors"
+                      >
+                        {action.name}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
 
-            <motion.h3
-              variants={itemVariants}
-              custom={quickActions.length + 1}
-              className="text-lg uppercase font-semibold mb-6 flex items-center"
-            >
-              Nossos Produtos
-            </motion.h3>
-            <ul className="space-y-3 text-muted-foreground">
-              {products.map((product, index) => (
-                <motion.li
-                  key={product.name}
+              <div>
+                <motion.h3
                   variants={itemVariants}
-                  custom={quickActions.length + index + 2}
-                  whileHover="hover"
+                  custom={quickActions.length + 1}
+                  className="text-lg uppercase font-semibold mb-6 flex items-center"
                 >
-                  <Link
-                    href={product.href}
-                    className="hover:text-[var(--primary)]  nav-link transition-colors"
-                  >
-                    {product.name}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
+                  Nossos Produtos
+                </motion.h3>
+                <ul className="space-y-3 text-muted-foreground">
+                  {products.map((product, index) => (
+                    <motion.li
+                      key={product.name}
+                      variants={itemVariants}
+                      custom={quickActions.length + index + 2}
+                      whileHover="hover"
+                    >
+                      <Link
+                        href={product.href}
+                        className="hover:text-[var(--primary)]  nav-link transition-colors"
+                      >
+                        {product.name}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </motion.div>
 
           {/* Coluna 3: Empresa + Contato */}
           <motion.div
             variants={itemVariants}
             custom={2}
-            className="flex flex-col md:flex-row lg:flex-col justify-between col-span-1 md:col-span-2 lg:col-span-1"
+            className="flex flex-col sm:flex-row lg:flex-col justify-between col-span-1 md:col-span-2 lg:col-span-1"
           >
             <div>
               <motion.h3

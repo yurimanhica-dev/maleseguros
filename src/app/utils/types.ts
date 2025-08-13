@@ -94,7 +94,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Serviços",
-    path: "/servicos",
+    path: "/services",
   },
   {
     title: "Sobre Nós",

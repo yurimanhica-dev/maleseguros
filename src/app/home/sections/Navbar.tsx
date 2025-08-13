@@ -30,12 +30,12 @@ const Navbar = () => {
       icon: <FiLinkedin size={16} />,
     },
   ];
-
+  // sticky top-0
   return (
-    <header className="sticky top-0 z-50 w-full bg-background border-b border-border/10 shadow-sm">
+    <header className="relative z-50 w-full bg-background border-b border-border/10 shadow-sm  overflow-hidden">
       {/* Top Contact Bar - Desktop Only */}
       <div className="hidden lg:block border-b border-border/10">
-        <div className="container mx-auto c-space">
+        <div className="container mx-auto px-6">
           <div className="flex items-center justify-between py-2">
             <ContactInfo />
             <div className="flex items-center gap-4">
@@ -59,7 +59,7 @@ const Navbar = () => {
 
       {/* Main Navigation Bar */}
       <div className="relative z-50 bg-background">
-        <div className="container mx-auto c-space flex items-center justify-between h-20">
+        <div className="container mx-auto px-4 flex items-center justify-between h-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -68,9 +68,8 @@ const Navbar = () => {
             <Logo />
           </motion.div>
 
-          <div className="hidden lg:block flex-1">
-            <Navlinks />
-          </div>
+          <div className="hidden lg:block flex-1"></div>
+          <Navlinks />
 
           <button
             className="lg:hidden p-2 text-primary focus:outline-none"

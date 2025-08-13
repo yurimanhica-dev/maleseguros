@@ -32,8 +32,8 @@ export const Testimonials = () => {
                 proteção em minutos
               </h2>
               <p className="text-lg text-muted-foreground">
-                Tecnologia de ponta combinada com 60 anos de expertise em
-                seguros para oferecer a melhor cobertura.
+                Conte-nos suas necessidades e cuidaremos do resto. Peça sua
+                simulação e garanta a segurança dos seus bens!
               </p>
             </div>
             <Button

@@ -2,62 +2,72 @@
 
 import Button from "@/app/components/Button";
 import { motion } from "framer-motion";
-import { Car, HeartPulse, Plane, Ship, Store, Umbrella } from "lucide-react";
+import { HeartPulse, Plane, Ship, Umbrella } from "lucide-react";
 import Image from "next/image";
 
 const personalInsurance = [
   {
-    id: "auto",
-    name: "Seguro Automóvel",
-    icon: <Car className="w-8 h-8 text-primary" />,
-    description: "Proteção completa para seu veículo",
-    features: ["Cobertura total", "Assistência 24h", "Danos a terceiros"],
-    image: "/bg/auto.jpg", // Adicione suas imagens aqui
-  },
-  {
-    id: "health",
-    name: "Seguro Saúde",
+    id: "particularvida",
+    name: "Seguro Vida",
+    type: "Vida",
     icon: <HeartPulse className="w-8 h-8 text-primary" />,
-    description: "Cuidados médicos quando você mais precisa",
-    features: ["Consultas ilimitadas", "Internações", "Exames complementares"],
+    description:
+      "Apresentamos as melhores opções de seguros para proteger você e sua família contra acidentes, doenças e imprevistos relacionados  à sua integridade física e bem-estar, garantindo tranquilidade financeira.",
+    features: [
+      "Acidentes Pessoais",
+      "Acidentes Pessoais – Seguro Escolar",
+      "Acidentes Pessoais – Seguro Familiar",
+      "Acidentes Pessoais – Seguro Desporto, Cultura e Recreio",
+    ],
     image: "/bg/liability.jpg",
   },
   {
-    id: "travel",
-    name: "Seguro Viagem",
+    id: "particularnaovida",
+    name: "Seguro Não Vida",
+    type: "Não Vida",
     icon: <Plane className="w-8 h-8 text-primary" />,
-    description: "Tranquilidade em suas aventuras",
-    features: ["Cobertura internacional", "Perda de bagagem", "Cancelamentos"],
+    description:
+      "Oferecemos soluções completas para proteger seus bens pessoais, como imóvel, veículo e responsabilidade civil, garantindo coberturas que preservam seu patrimônio contra diversos riscos.",
+    features: [
+      "Viagens",
+      "Multi Riscos – Habitação e Crédito à Habitação",
+      "Automóvel",
+      "Responsabilidade Civil – Familiar e Caçador",
+    ],
     image: "/bg/trav.jpg",
   },
 ];
 
 const businessInsurance = [
   {
-    id: "property",
-    name: "Seguro Patrimonial",
-    icon: <Store className="w-8 h-8 text-primary" />,
-    description: "Proteja seus bens empresariais",
-    features: ["Incêndio", "Roubo", "Danos elétricos"],
-    image: "/bg/incendio.jpg",
-  },
-  {
-    id: "liability",
-    name: "Seguro Responsabilidade",
+    id: "empresarialvida",
+    name: "Seguro Vida",
+    type: "Vida",
     icon: <Umbrella className="w-8 h-8 text-primary" />,
-    description: "Proteção contra reclamações de terceiros",
-    features: ["Danos materiais", "Danos corporais", "Defesa jurídica"],
+    description:
+      "Oferecemos opções de seguros para proteger a vida e o bem-estar dos colaboradores, garantindo suporte em casos de acidentes, doenças e outras eventualidades, promovendo segurança e tranquilidade no ambiente de trabalho.",
+    features: [
+      "Acidentes de Trabalho",
+      "Seguro Saúde – Grupo",
+      "Defesa jurídica",
+      "Seguros para Trabalhador Conta Própria",
+    ],
     image: "/bg/danos.jpg",
   },
   {
-    id: "cargo",
-    name: "Seguro de Carga",
+    id: "empresarialnaovida",
+    name: "Seguro Não Vida",
+    type: "Não Vida",
     icon: <Ship className="w-8 h-8 text-primary" />,
-    description: "Segurança para suas mercadorias",
+    description:
+      "Disponibilizamos soluções completas para proteger seus bens pessoais, como imóveis, veículos e responsabilidade civil, oferecendo coberturas que preservam seu patrimônio contra diversos riscos do dia a dia.",
     features: [
       "Transporte nacional",
-      "Transporte internacional",
-      "Roubo de carga",
+      "Incêndio e Elementos da Natureza",
+      "Avarias de Máquinas, Obras e Montagens",
+      "Multi Riscos - Comerciantes e All Risks",
+      "Transportes Marítimos, Aéreos e Terrestres",
+      "Responsabilidade Civil – Geral, Exploração, Pescadores, Produtos e Profissional",
     ],
     image: "/bg/cargas.jpg",
   },
@@ -77,7 +87,8 @@ export const InsuranceProductsGrid = ({ type }: { type: string }) => {
         {type === "personal" ? "Seguros Particulares" : "Seguros Empresariais"}
       </h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* tipo de seguro por cada card */}
         {products.map((product, index) => (
           <motion.div
             key={product.id}
@@ -85,8 +96,12 @@ export const InsuranceProductsGrid = ({ type }: { type: string }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -5 }}
-            className="relative h-full rounded-xl overflow-hidden shadow-lg"
+            className="relative h-full rounded-xl overflow-hidden shadow-lg w-full"
           >
+            <h4 className="text-center text-xl uppercase font-semibold mb-6">
+              {product.type}
+            </h4>
+
             {/* Imagem permanente no topo do card */}
             <div className="h-64 w-full relative">
               <Image
@@ -103,8 +118,6 @@ export const InsuranceProductsGrid = ({ type }: { type: string }) => {
               <div className="flex items-center justify-center w-16 h-16 bg-background rounded-lg mb-4 -mt-12 mx-auto relative z-10">
                 {product.icon}
               </div>
-
-              <h4 className="text-xl font-semibold mb-4">{product.name}</h4>
               <p className="text-muted-foreground mb-4">
                 {product.description}
               </p>

@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Home, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 
@@ -9,13 +10,15 @@ const insuranceTypes = [
   {
     id: "personal",
     name: "Seguros Particulares",
-    icon: <Home className="w-6 h-6" />,
+    icon: (
+      <Image src="/icons/personal-datar.png" alt="a" width={32} height={32} />
+    ),
     description: "Proteção personalizada para você e sua família",
   },
   {
     id: "business",
     name: "Seguros Empresariais",
-    icon: <Building2 className="w-6 h-6" />,
+    icon: <Image src="/icons/insurancer.png" alt="a" width={32} height={32} />,
     description: "Soluções completas para proteger seu negócio",
   },
 ];
@@ -33,7 +36,7 @@ export const InsuranceTypeSelector = ({
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto py-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -45,11 +48,11 @@ export const InsuranceTypeSelector = ({
           <span className="text-sm font-medium">8 Anos de Excelência</span>
         </div>
         <h2 className="text-5xl font-bold uppercase text-foreground mb-4">
-          Nossas Soluções em <span className="text-primary">Seguros</span>
+          Em Soluções de <span className="text-primary">Seguros</span>
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Com mais de 16 anos de experiência, oferecendo proteção completa
-          adaptada às necessidades de nossos clientes
+          oferecendo proteção completa adaptada às necessidades de nossos
+          clientes
         </p>
       </motion.div>
 
@@ -68,7 +71,7 @@ export const InsuranceTypeSelector = ({
           >
             <div className="flex items-start gap-4">
               <div
-                className={`p-3 rounded-lg ${
+                className={`p-3 rounded-lg bg-primary/70 ${
                   selectedType === type.id
                     ? "bg-primary text-primary-foreground"
                     : "bg-accent text-foreground"
@@ -83,8 +86,8 @@ export const InsuranceTypeSelector = ({
                     {type.description}
                   </p>
                 </div>
-                <div className="flex flex-row items-center justify-end text-primary underline">
-                  Saber mais
+                <div className="flex flex-row items-center text-sm justify-end text-primary underline">
+                  mais informações
                   <FiArrowRight className="inline-block ml-1" />
                 </div>
               </div>

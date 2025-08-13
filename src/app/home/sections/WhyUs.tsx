@@ -1,24 +1,26 @@
 "use client";
 
+import Button from "@/app/components/Button";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import { useState } from "react";
 
 const features = [
   {
-    title: "Preços Transparentes",
+    title: "Acompanhamento Contínuo",
     description:
-      "Acreditamos na clareza. Sem taxas ocultas, sem surpresas — apenas preços diretos e confiáveis.",
+      "Estamos ao lado do cliente em todo o processo, garantindo suporte próximo em sinistros e qualquer outra questão relacionada ao seguro.",
   },
   {
-    title: "Atendimento ao Cliente 24/7",
+    title: "Defesa dos Interesses",
     description:
-      "Nossa equipe de suporte dedicada está disponível 24 horas por dia, 7 dias por semana, sempre que você precisar.",
+      "Trabalhamos para proteger o patrimônio, o dinheiro e a riqueza de cada cliente, sempre priorizando sua segurança e tranquilidade.",
   },
   {
-    title: "Processo de Sinistro Sem Complicações",
+    title: "Assessoria Sem Custos Extras",
     description:
-      "Registrar um sinistro não deve ser estressante. Nosso processo simples garante que você esteja coberto sem complicações.",
+      "Nossa consultoria especializada é oferecida sem cobranças adicionais, garantindo mais valor pelo seu investimento.",
   },
 ];
 
@@ -41,7 +43,7 @@ export default function WhyChooseUs() {
         className="absolute bottom-0 right-0 w-[20rem] h-[20rem] bg-primary translate-x-1/2 translate-y-1/2 rotate-45 z-0"
       />
 
-      <div className="max-w-7xl c-space mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="container c-space mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
         {/* Textual Content */}
         <div className="space-y-12">
           <motion.div
@@ -72,7 +74,7 @@ export default function WhyChooseUs() {
                   transition={{ duration: 0.6, delay: 0.1 * index }}
                   viewport={{ once: true }}
                 >
-                  <h4 className="text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                  <h4 className="text-2xl font-semibold text-foreground group-hover:cursor-pointer group-hover:text-primary transition-colors">
                     {feature.title}
                   </h4>
 
@@ -118,6 +120,17 @@ export default function WhyChooseUs() {
               </div>
             ))}
           </div>
+          <Button
+            onClick={() => {
+              redirect("/sinistro");
+            }}
+            variant="primary"
+            rounded="full"
+            size="md"
+            className="font-semibold hover:shadow-none hover:bg-primary"
+          >
+            Participar um Sinistro
+          </Button>
         </div>
 
         {/* Image with enhanced styling */}

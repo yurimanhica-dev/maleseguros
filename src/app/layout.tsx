@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Funnel_Sans } from "next/font/google";
 import { ThemeProvider } from "./components/theme-provider";
@@ -41,6 +42,7 @@ export default function RootLayout({
           [&::-webkit-scrollbar-track]:bg-zinc-100 
         `}
       >
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

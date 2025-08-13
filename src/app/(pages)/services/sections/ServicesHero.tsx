@@ -15,7 +15,7 @@ export const Hero = ({ title, imageUrl, breadcrumb }: HeroProps) => {
   const yBg = useTransform(scrollY, [0, 300], [0, -100]); // Efeito parallax
 
   return (
-    <motion.section className="relative h-[200px] lg:h-[300px] w-full overflow-hidden">
+    <motion.section className="relative h-[200px] lg:h-[300px] w-full mt-8 overflow-hidden">
       {/* Imagem de fundo com parallax */}
       <motion.div
         style={{ y: yBg }}
