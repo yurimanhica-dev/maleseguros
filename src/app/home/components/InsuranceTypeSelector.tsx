@@ -71,7 +71,7 @@ export const InsuranceTypeSelector = ({
           >
             <div className="flex items-start gap-4">
               <div
-                className={`p-3 rounded-lg bg-primary/70 ${
+                className={`p-3 rounded-lg ${
                   selectedType === type.id
                     ? "bg-primary text-primary-foreground"
                     : "bg-accent text-foreground"
