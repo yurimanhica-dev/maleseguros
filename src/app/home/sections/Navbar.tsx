@@ -2,6 +2,7 @@
 
 import HamburgerIcon from "@/app/components/HamburgerIcon";
 import LanguageSwitcher from "@/app/components/LanguageSwitcher";
+import { ThemeToggle } from "@/app/components/ThemeToggle";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
@@ -9,6 +10,7 @@ import ContactInfo from "../components/ContactInfo";
 import Logo from "../components/Logo";
 import MobileMenu from "../components/MobileMenu";
 import Navlinks from "../components/Navlinks";
+import NavLinks from "../components/Navlinks";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,8 +36,8 @@ const Navbar = () => {
   return (
     <header className="relative z-50 w-full bg-background border-b border-border/10 shadow-sm  overflow-hidden">
       {/* Top Contact Bar - Desktop Only */}
-      <div className="hidden lg:block border-b border-border/10">
-        <div className="container mx-auto px-6">
+      <div className="hidden md:block border-b border-border/10">
+        <div className="container mx-auto c-space">
           <div className="flex items-center justify-between py-2">
             <ContactInfo />
             <div className="flex items-center gap-4">
@@ -52,14 +54,15 @@ const Navbar = () => {
                   </motion.button>
                 ))}
               </div>
+              <ThemeToggle />
             </div>
           </div>
         </div>
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="relative z-50 bg-background">
-        <div className="container mx-auto px-4 flex items-center justify-between h-20">
+      <div className="sticky top-0 left-0 right-0 w-full z-50 bg-background">
+        <div className="container mx-auto c-space flex items-center justify-between h-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -68,11 +71,11 @@ const Navbar = () => {
             <Logo />
           </motion.div>
 
-          <div className="hidden lg:block flex-1"></div>
-          <Navlinks />
+          <div className="hidden md:block flex-1"></div>
+          <NavLinks />
 
           <button
-            className="lg:hidden p-2 text-primary focus:outline-none"
+            className="md:hidden p-2 text-primary focus:outline-none"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}

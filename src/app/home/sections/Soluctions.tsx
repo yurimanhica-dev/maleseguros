@@ -8,7 +8,7 @@ export const Solutions = () => {
   const [selectedType, setSelectedType] = useState<string | null>(null);
 
   return (
-    <section className="relative overflow-hidden py-16 md:py-24 min-h-[60vh] w-full flex items-center bg-background">
+    <section className="relative overflow-hidden py-16 md:py-24 min-h-[60vh] w-full flex items-center bg-background z-20">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.1 }}

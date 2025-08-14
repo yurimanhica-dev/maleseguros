@@ -1,5 +1,6 @@
 import Navbar from "@/app/home/sections/Navbar";
 import { Hero } from "./components/AboutHero";
+import { AboutUsSection } from "./components/AboutUs";
 
 const page = () => {
   return (
@@ -10,6 +11,7 @@ const page = () => {
         imageUrl="/bg/mee.jpg"
         breadcrumb={[{ name: "Sobre Nós", path: "/about" }]}
       />
+      <AboutUsSection />
     </>
   );
 };

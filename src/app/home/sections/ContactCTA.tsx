@@ -26,7 +26,7 @@ export const ContactCTA = () => {
   ];
 
   return (
-    <div className="relative w-full bg-gradient-to-t from-background via-accent/40 to-background py-24 overflow-hidden">
+    <div className="relative w-full bg-gradient-to-t from-background via-accent to-background py-24 overflow-hidden z-20">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 0.5 }}
@@ -54,8 +54,8 @@ export const ContactCTA = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Fale con{""}
-            <span className=" text-primary">nosco</span>
+            Fale connosco{""}
+            <span className=" text-primary"></span>
           </motion.h2>
           <motion.p
             className="text-gray-500 max-w-2xl mx-auto"

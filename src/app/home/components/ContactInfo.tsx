@@ -22,7 +22,7 @@ const ContactInfo = () => {
     {
       icon: <FiClock size={16} />,
       text: "Seg-Sex: 8h-18h",
-      subtext: "Estamos Aqui para Ajudar.",
+      subtext: "Horário",
       href: "#",
       aria: "Horário de funcionamento",
     },
@@ -42,7 +42,9 @@ const ContactInfo = () => {
         >
           <div className="mr-2 text-primary">{item.icon}</div>
           <div>
-            <p className="text-sm font-medium text-foreground">{item.text}</p>
+            <p className="text-sm font-medium text-foreground truncate">
+              {item.text}
+            </p>
             <p className="text-xs text-muted-foreground">{item.subtext}</p>
           </div>
         </motion.a>

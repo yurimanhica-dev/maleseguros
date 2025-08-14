@@ -76,7 +76,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[var(--background)] border-t border-[var(--border)] relative overflow-hidden">
+    <footer className="bg-[var(--background)] border-t border-[var(--border)] relative overflow-hidden z-20">
       {/* Background blur element */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div

@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full py-24 lg:pb-44 bg-background text-foreground relative overflow-hidden">
+    <section className="w-full py-24 lg:pb-44 bg-background text-foreground relative overflow-hidden z-20">
       {/* Decorative rotated overlays */}
       <motion.div
         initial={{ opacity: 0 }}

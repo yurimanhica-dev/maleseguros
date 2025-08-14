@@ -64,7 +64,7 @@ const Hero = () => {
               initial={{ scale: 1 }}
               animate={{ scale: 1.05 }}
               transition={{ duration: 15, ease: "easeInOut" }}
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full parallax-bg"
             />
             {/* Gradient overlay - shadow effect from left to center */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60  to-transparent" />
