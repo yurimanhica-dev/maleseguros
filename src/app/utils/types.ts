@@ -102,7 +102,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Academia MALEseguros",
-    path: "/education",
+    path: "/academy",
   },
 ];
 
@@ -206,3 +206,34 @@ export const quizzes = [
     correct: 1,
   },
 ];
+
+export const seguroConfig = {
+  taxasLegais: [
+    { nome: "ISSM", percentual: 2 }, // Imposto Moçambique
+    { nome: "Taxa de Emissão", percentual: 0.5 },
+  ],
+
+  tipos: {
+    auto: {
+      taxaBase: 5, // % do valor do bem
+      ajusteUso: {
+        particular: 1,
+        comercial: 1.25, // +25% para uso comercial
+      },
+      ajusteSinistros: 10, // +10% por sinistro
+    },
+    vida: {
+      faixas: [
+        { maxIdade: 30, percentual: 0.2 }, // 0.2% do valor da cobertura
+        { maxIdade: 50, percentual: 0.35 },
+        { maxIdade: Infinity, percentual: 0.5 },
+      ],
+    },
+    saude: {
+      taxaBase: 4, // % da cobertura anual
+    },
+    empresarial: {
+      taxaBase: 3, // % do valor do património
+    },
+  },
+};

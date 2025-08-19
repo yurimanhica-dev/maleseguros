@@ -9,8 +9,8 @@ interface NavSelectProps {
 }
 
 const tabs: { label: string; value: TabType }[] = [
-  { label: "Particular", value: "particular" },
-  { label: "Empresarial", value: "empresarial" },
+  { label: "PARTICULAR", value: "particular" },
+  { label: "EMPRESARIAL", value: "empresarial" },
 ];
 
 export default function NavSelect({ onChange }: NavSelectProps) {

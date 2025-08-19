@@ -2,6 +2,7 @@
 
 import Button from "@/app/components/Button";
 import { AnimatePresence, motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { useState } from "react";
@@ -125,9 +126,10 @@ export default function WhyChooseUs() {
               redirect("/sinistro");
             }}
             variant="primary"
-            rounded="full"
+            icon={<ArrowRight />}
+            iconPosition="right"
             size="md"
-            className="font-semibold hover:shadow-none hover:bg-primary"
+            rounded="full"
           >
             Participar um Sinistro
           </Button>

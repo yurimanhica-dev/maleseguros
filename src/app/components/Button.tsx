@@ -19,7 +19,7 @@ const Button = ({
   children,
   variant = "primary",
   size = "md",
-  rounded = "md",
+  rounded = "none",
   icon,
   iconPosition = "left",
   className = "",
@@ -111,6 +111,7 @@ const Button = ({
       onClick={onClick}
       className={`
         relative overflow-hidden
+        group cursor-pointer
         font-medium tracking-wide
         transition-all duration-300
         focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2
@@ -144,13 +145,15 @@ const Button = ({
         />
       )}
 
-      <div className="relative z-10 flex items-center justify-center gap-2">
+      <div className="relative z-10 flex items-center justify-center gap-2 group">
         {icon && iconPosition === "left" && (
           <span className="inline-flex">{icon}</span>
         )}
         {children}
         {icon && iconPosition === "right" && (
-          <span className="inline-flex">{icon}</span>
+          <span className="inline-flex group-hover:-rotate-30 transition-transform ease-in-out duration-300">
+            {icon}
+          </span>
         )}
       </div>
     </motion.button>

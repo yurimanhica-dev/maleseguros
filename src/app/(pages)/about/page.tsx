@@ -1,6 +1,9 @@
+import Footer from "@/app/components/Footer";
 import Navbar from "@/app/home/sections/Navbar";
-import { Hero } from "./components/AboutHero";
-import { AboutUsSection } from "./components/AboutUs";
+import { Hero } from "../../components/PagesHeroimg";
+import AboutUs from "./sections/AboutUs";
+import Diferentials from "./sections/Diferentials";
+import TeamSection from "./sections/TeamSection";
 
 const page = () => {
   return (
@@ -11,7 +14,12 @@ const page = () => {
         imageUrl="/bg/mee.jpg"
         breadcrumb={[{ name: "Sobre Nós", path: "/about" }]}
       />
-      <AboutUsSection />
+      <AboutUs />
+      <Diferentials />
+      <TeamSection />
+      {/* <WhyChooseUs /> */}
+      {/* <Differentiators /> */}
+      <Footer />
     </>
   );
 };

@@ -149,7 +149,7 @@ const ParticularServicesInfo = () => {
             priority
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
-          <div className="absolute top-0 left-0 w-[15rem] h-[15rem] bg-background -translate-x-1/2 -translate-y-1/2 rotate-45 z-0" />
+          <div className="absolute bottom-0 right-0 w-[15rem] h-[15rem] bg-background translate-x-1/2 translate-y-1/2 rotate-45 z-0" />
         </motion.div>
       </div>
 

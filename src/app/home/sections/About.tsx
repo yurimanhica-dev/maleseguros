@@ -2,9 +2,9 @@
 
 import Button from "@/app/components/Button";
 import { motion, useAnimation, Variants } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi";
 import { useInView } from "react-intersection-observer";
 
 export const AboutUs = () => {
@@ -76,11 +76,11 @@ export const AboutUs = () => {
       {/* Elementos decorativos */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
+        animate={inView ? { opacity: 0.5 } : {}}
         transition={{ duration: 1.5 }}
         className="absolute  bottom-1/3 right-1/4 inset-0 -z-10 flex items-center justify-center"
       >
-        <div className="text-[20vw] font-bold tracking-tighter text-primary opacity-30 whitespace-nowrap">
+        <div className="text-[20vw] font-bold tracking-tighter text-primary opacity-10 whitespace-nowrap">
           DESDE 2014
         </div>
       </motion.div>
@@ -160,7 +160,7 @@ export const AboutUs = () => {
 
             <Button
               variant="primary"
-              icon={<FiArrowRight />}
+              icon={<ArrowRight />}
               iconPosition="right"
               size="md"
               rounded="full"

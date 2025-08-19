@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { QuizSection } from "@/app/(pages)/education/components/QuizSession";
+import { QuizSection } from "@/app/(pages)/academy/components/QuizSession";
 import { quizzes } from "@/app/utils/types";
 import { AnimatePresence, motion } from "framer-motion";
 import {

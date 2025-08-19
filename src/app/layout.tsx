@@ -1,5 +1,6 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import "flag-icons/css/flag-icons.min.css";
 import type { Metadata } from "next";
 import { Funnel_Sans } from "next/font/google";
 import { ThemeProvider } from "./components/theme-provider";
