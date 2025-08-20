@@ -65,7 +65,7 @@ export default function DifferentialSection() {
               className="text-white"
             >
               <h2 className="text-md uppercase tracking-wider mb-2 font-semibold">
-                Por que escolher-nos?
+                Porque escolher-nos?
               </h2>
               <h3 className="text-5xl md:text-6xl font-bold mb-4">
                 <span className="text-primary">Diferenças</span> que fazem a
@@ -81,7 +81,7 @@ export default function DifferentialSection() {
                   rounded="full"
                   className="text-sm hover:bg-primary-dark"
                 >
-                  Solicitar Cotação
+                  Simular um Seguro
                 </Button>
               </div>
             </motion.div>
@@ -131,7 +131,7 @@ export default function DifferentialSection() {
         <div className="animate-bounce flex flex-col items-center">
           <span className="text-white text-sm mb-2">Scroll</span>
           <svg
-            className="w-6 h-6 text-white"
+            className="w-6 h-6 text-primary"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

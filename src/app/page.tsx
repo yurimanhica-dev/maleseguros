@@ -1,4 +1,5 @@
 import Footer from "./components/Footer";
+import TopContactBar from "./home/components/TopContactBar";
 import { AboutUs } from "./home/sections/About";
 import BackgroundFill from "./home/sections/Background";
 import { ContactCTA } from "./home/sections/ContactCTA";
@@ -11,6 +12,7 @@ import WhyChooseUs from "./home/sections/WhyUs";
 export default function Home() {
   return (
     <>
+      <TopContactBar />
       <Navbar />
       <Hero />
       <Solutions />

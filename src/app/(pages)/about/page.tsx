@@ -4,10 +4,13 @@ import { Hero } from "../../components/PagesHeroimg";
 import AboutUs from "./sections/AboutUs";
 import Diferentials from "./sections/Diferentials";
 import TeamSection from "./sections/TeamSection";
+import QuemSomos from "./sections/WhoWeAre";
+import TopContactBar from "@/app/home/components/TopContactBar";
 
 const page = () => {
   return (
     <>
+      <TopContactBar />
       <Navbar />
       <Hero
         title="Sobre Nós"
@@ -16,6 +19,7 @@ const page = () => {
       />
       <AboutUs />
       <Diferentials />
+      <QuemSomos />
       <TeamSection />
       {/* <WhyChooseUs /> */}
       {/* <Differentiators /> */}

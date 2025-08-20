@@ -58,7 +58,7 @@ const AboutUs = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-5xl md:text-7xl font-bold text-nowrap"
+              className="text-5xl md:text-7xl font-bold truncate"
             >
               Nossa História<span className="text-primary">.</span>
             </motion.h1>
@@ -67,7 +67,7 @@ const AboutUs = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-lg text-[var(--foreground)] leading-relaxed"
+              className="text-lg text-[var(--muted-foreground)] leading-relaxed"
             >
               Em resposta ao crescente número de reclamações sobre o atendimento
               das seguradoras, a <strong>MALEholding</strong> criou a{" "}
@@ -94,7 +94,7 @@ const AboutUs = () => {
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 + index * 0.1 }}
+                  transition={{ delay: 0.2 + index * 0.1 }}
                   className="text-center flex flex-col items-center gap-2"
                 >
                   <div className="text-4xl font-bold text-[var(--primary)]">

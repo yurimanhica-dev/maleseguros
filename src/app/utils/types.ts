@@ -237,3 +237,74 @@ export const seguroConfig = {
     },
   },
 };
+
+// Dados dos valores da empresa
+export const companyValues = [
+  {
+    id: "confianca",
+    title: "Confiança",
+
+    description:
+      "Construímos relações baseadas na transparência e honestidade.",
+    image: "/values/125041.jpg",
+    content: {
+      title: "Confiança que Constrói Futuros",
+      description:
+        "Há mais de 8 anos, temos sido o pilar de confiança para milhares de clientes, garantindo segurança e tranquilidade em cada contrato estabelecido.",
+      features: [
+        "Transparência total em todas as transações",
+        "Honestidade como princípio fundamental",
+        "Relações de longo prazo baseadas na confiança mútua",
+      ],
+    },
+  },
+  {
+    id: "excelencia",
+    title: "Excelência",
+    description: "Buscamos sempre a máxima qualidade em nossos serviços.",
+    image: "/values/120121.jpg",
+    content: {
+      title: "Excelência em Cada Detalhe",
+      description:
+        "Nossos padrões de qualidade são reconhecidos no mercado, com processos rigorosos que garantem serviços de alto nível para nossos clientes.",
+      features: [
+        "Processos rigorosos de controle de qualidade",
+        "Equipe especializada e em constante capacitação",
+        "Melhores práticas do mercado aplicadas",
+      ],
+    },
+  },
+  {
+    id: "inovacao",
+    title: "Inovação",
+    description: "Adotamos as melhores tecnologias para servir melhor.",
+    image: "/values/119174.jpg",
+    content: {
+      title: "Inovação que Transforma",
+      description:
+        "Estamos sempre na vanguarda das tendências do setor, implementando soluções tecnológicas que simplificam e tornam mais eficientes os serviços de corretagem.",
+      features: [
+        "Tecnologia de ponta em todas as operações",
+        "Soluções personalizadas para cada cliente",
+        "Adaptação contínua às mudanças do mercado",
+      ],
+    },
+  },
+  {
+    id: "proximidade",
+    title: "Proximidade",
+
+    description: "Estamos sempre perto, oferecendo suporte personalizado.",
+    image: "/values/126146.jpg",
+    content: {
+      title: "Proximidade que Faz a Diferença",
+      description:
+        "Valorizamos o contato direto e personalizado com cada cliente, entendendo suas necessidades específicas para oferecer as melhores soluções.",
+      features: [
+        "Atendimento personalizado e humanizado",
+        "Canais de comunicação diretos e acessíveis",
+        "Soluções adaptadas às reais necessidades",
+      ],
+    },
+  },
+];

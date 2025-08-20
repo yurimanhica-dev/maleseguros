@@ -1,8 +1,7 @@
 "use client";
 
-import Button from "@/app/components/Button";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 
 type MembroEquipe = {
@@ -105,21 +104,6 @@ export default function EquipePremium() {
 
   return (
     <section className="relative w-full py-24 bg-[var(--background)] text-[var(--foreground)] overflow-hidden">
-      {/* Elementos decorativos de fundo
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.07 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1 }}
-        className="pointer-events-none absolute -top-20 -left-20 h-64 w-64 rounded-full bg-[var(--primary)] blur-3xl"
-      />
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.06 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.1 }}
-        className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-[var(--primary)] blur-3xl"
-      /> */}
       <div className="mx-auto max-w-7xl c-space">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Coluna esquerda: Título e descrição */}
@@ -131,28 +115,28 @@ export default function EquipePremium() {
             className="lg:col-span-4 space-y-4"
           >
             <div className="space-y-4">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 }}
-                className="bg-[var(--primary)]/10 text-[var(--primary)] w-fit px-4 py-2 rounded-full shadow-lg"
-              >
-                <span className="font-semibold">Nossa Equipe</span>
-              </motion.div>
+              <div className="inline-flex  items-center uppercase px-4 py-2 bg-[var(--primary)] text-white text-sm font-medium">
+                <span className="font-semibold">Encontre um Corrector</span>
+              </div>
 
-              <h2 className="text-4xl md:text-2xl uppercase font-bold leading-tight">
-                <span className="block">Conheça os teus</span>
-                <span className="block text-5xl text-[var(--primary)] uppercase">
-                  Correctores
+              <h2 className="font-bold leading-tight">
+                <span className="block uppercase text-4xl md:text-2xl">
+                  Fale com um
                 </span>
-                <span className="block">de seguros</span>
+                <span className="block text-5xl text-[var(--primary)] uppercase">
+                  Corrector
+                </span>
+                {/* <span className="block">
+                  hoje e descubra o plano ideal para sua situacão.
+                </span> */}
               </h2>
             </div>
             <p className="text-[var(--muted-foreground)] leading-relaxed text-lg">
-              Nossa equipe multidisciplinar combina experiência técnica com
-              criatividade para entregar soluções inovadoras e personalizadas.
+              Descubra o plano ideal para sua situacão. A Nossa equipe
+              multidisciplinar combina experiência técnica com criatividade para
+              entregar soluções inovadoras e personalizadas.
             </p>
-            <Button
+            {/* <Button
               variant="primary"
               icon={<ArrowRight />}
               iconPosition="right"
@@ -161,18 +145,23 @@ export default function EquipePremium() {
               className="text-sm hover:bg-primary-dark"
             >
               Solicitar Retorno
-            </Button>
+            </Button>*/}
           </motion.aside>
 
           {/* Coluna direita: Cards da equipe */}
           <div className="lg:col-span-8 relative w-fit">
             <div className="relative overflow-hidden py-4">
-              <motion.div className="flex gap-6 animate-slide overflow-x-scroll [&::-webkit-scrollbar]:hidden">
+              <motion.div
+                className="flex gap-6 animate-slide overflow-x-scroll [&::-webkit-scrollbar]:hidden"
+                onWheel={(e) => {
+                  if (e.shiftKey) {
+                    e.currentTarget.scrollLeft += e.deltaY; // scroll com Shift
+                  }
+                }}
+              >
                 {duplicated.map((membro, idx) => (
-                  <motion.div
+                  <div
                     key={idx}
-                    variants={item}
-                    whileHover="hover"
                     className="relative min-w-[280px] flex-shrink-0 group"
                   >
                     <div className="relative overflow-hidden">
@@ -193,19 +182,25 @@ export default function EquipePremium() {
                           {membro.redes?.linkedin && (
                             <a
                               href={membro.redes.linkedin}
-                              className="p-2 rounded-full hover:bg-[var(--primary)]/90 transition-colors"
+                              className="p-2 rounded-full hover:cursor-pointer hover:bg-[var(--primary)]/90 transition-colors"
                               aria-label={`LinkedIn de ${membro.nome}`}
                             >
-                              <Linkedin size={18} className="text-white" />
+                              <Linkedin
+                                size={18}
+                                className="text-white hover:cursor-pointer hover:bg-[var(--primary)]/90"
+                              />
                             </a>
                           )}
                           {membro.redes?.email && (
                             <a
                               href={membro.redes.email}
-                              className="p-2 rounded-full hover:bg-[var(--primary)]/90 transition-colors"
+                              className="p-2 rounded-full cursor-pointer hover:bg-[var(--primary)]/90 transition-colors"
                               aria-label={`Email de ${membro.nome}`}
                             >
-                              <Mail size={18} className="text-white" />
+                              <Mail
+                                size={18}
+                                className="text-white cursor-pointer hover:bg-[var(--primary)]/90"
+                              />
                             </a>
                           )}
                         </div>
@@ -220,7 +215,7 @@ export default function EquipePremium() {
                         <p className="text-sm text-white/90">{membro.cargo}</p>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </motion.div>
 

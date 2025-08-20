@@ -8,6 +8,7 @@ import HowItWorks from "./components/HowItWorks";
 import NavSelect from "./components/NavSelect";
 import EnterpriceServices from "./sections/empresarial/EnterpriseServices";
 import ParticularServices from "./sections/particular/ParticularServices";
+import TopContactBar from "@/app/home/components/TopContactBar";
 
 const ServicesPage = () => {
   const [currentTab, setCurrentTab] = useState<"particular" | "empresarial">(
@@ -16,6 +17,7 @@ const ServicesPage = () => {
 
   return (
     <>
+      <TopContactBar />
       <Navbar />
       <NavSelect onChange={(tab) => setCurrentTab(tab)} />
       {currentTab === "particular" ? (
