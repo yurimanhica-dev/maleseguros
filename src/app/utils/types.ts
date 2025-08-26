@@ -68,26 +68,35 @@ interface NavItem {
 
 export const navItems: NavItem[] = [
   {
-    title: "Seguros",
+    title: "Explorar",
     subItems: [
       {
-        title: "Seguros Pessoais",
+        title: "Acesso Rápido",
         items: [
-          { name: "Automóvel", path: "/seguros/automovel" },
-          { name: "Vida", path: "/seguros/vida" },
-          { name: "Saúde", path: "/seguros/saude" },
-          { name: "Habitação", path: "/seguros/habitacao" },
+          { name: "Simular um Seguro", path: "/seguros/simular" },
+          { name: "Renovar Apólice", path: "/seguros/renovar" },
+          { name: "Encontrar um Consultor", path: "/consultores" },
+          { name: "Solicitar Abertura de Conta", path: "/abrir-conta" },
         ],
       },
       {
-        title: "Seguros Empresariais",
+        title: "Sinistros",
         items: [
-          { name: "Patrimonial", path: "/seguros/patrimonial" },
+          { name: "Comunicar Sinistro", path: "/sinistros/comunicar" },
+          { name: "Documentos", path: "/sinistros/documentos" },
+          { name: "Oficinas e Reboques", path: "/sinistros/oficinas-reboques" },
+          { name: "Dicas Úteis", path: "/sinistros/dicas-uteis" },
+        ],
+      },
+      {
+        title: "Serviços ao Cliente",
+        items: [
+          { name: "Informações Úteis", path: "/servicos-cliente/informacoes" },
           {
-            name: "Responsabilidade Civil",
-            path: "/seguros/responsabilidade",
+            name: "Solicitar Retorno",
+            path: "/servicos-cliente/solicitar-retorno",
           },
-          { name: "Riscos Especiais", path: "/seguros/riscos-especiais" },
+          { name: "Contactos", path: "/servicos-cliente/contactos" },
         ],
       },
     ],
@@ -308,3 +317,20 @@ export const companyValues = [
     },
   },
 ];
+
+export const COUNTRY_CODES = [
+  { code: "+1", country: "USA/Canada" },
+  { code: "+44", country: "UK" },
+  { code: "+33", country: "França" },
+  { code: "+49", country: "Alemanha" },
+  { code: "+55", country: "Brasil" },
+  { code: "+258", country: "Moçambique" },
+  { code: "+34", country: "Espanha" },
+  { code: "+27", country: "África do Sul" },
+  { code: "+39", country: "Itália" },
+  { code: "+7", country: "Rússia" },
+  { code: "+81", country: "Japão" },
+  { code: "+91", country: "Índia" },
+] as const;
+
+export type CountryCode = (typeof COUNTRY_CODES)[number]["code"];

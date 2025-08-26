@@ -58,7 +58,7 @@ export const ContactCTA = () => {
             <span className=" text-primary"></span>
           </motion.h2>
           <motion.p
-            className="text-gray-500 max-w-2xl mx-auto"
+            className="text-foreground/70 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -83,7 +83,7 @@ export const ContactCTA = () => {
               <h3 className="text-xl text-foreground font-medium mb-2">
                 {option.title}
               </h3>
-              <p className="text-gray-500 mb-6">{option.description}</p>
+              <p className="text-foreground/70 mb-6">{option.description}</p>
               <motion.button className="flex items-center gap-2 text-primary hover:underline font-medium">
                 {option.action}
                 <svg

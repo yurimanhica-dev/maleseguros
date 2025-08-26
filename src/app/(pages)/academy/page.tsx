@@ -1,11 +1,10 @@
-import { EducationHub } from "@/app/home/sections/EducationHub";
-import Navbar from "@/app/home/sections/Navbar";
+import NavBar from "@/app/components/Navbar";
 
 const Page = () => {
   return (
     <>
-      <Navbar />
-      <EducationHub />
+      <NavBar />
+      {/* <EducationHub /> */}
     </>
   );
 };

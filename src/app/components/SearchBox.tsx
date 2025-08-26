@@ -4,12 +4,13 @@ import { motion } from "framer-motion";
 import { Search, X } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { navItems } from "../utils/types";
 
 interface SearchBoxProps {
   placeholder?: string;
   className?: string;
 }
-
+// Componente de Busca
 export default function SearchBox({
   placeholder = "Buscar páginas...",
   className = "",
@@ -17,45 +18,51 @@ export default function SearchBox({
   const [query, setQuery] = useState("");
   const [isSearching, setIsSearching] = useState(false);
 
-  const searchResults = [
-    {
-      title: "Página Inicial",
-      url: "/",
-      description: "Volte para a página principal",
-    },
-    {
-      title: "Sobre Nós",
-      url: "/about",
-      description: "Conheça mais sobre a MaleSeguros",
-    },
-    {
-      title: "Serviços",
-      url: "/services",
-      description: "Nossos serviços de seguros",
-    },
-    {
-      title: "Academia MALEseguros",
-      url: "/academy",
-      description: "Aprenda mais sobre seguros",
-    },
-  ];
-
-  // Função para normalizar texto (remove acentos e caixa)
+  // Normalizar texto (remover acentos e caixa)
   const normalize = (text: string) =>
     text
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase();
 
-  // Motor de busca melhorado
+  // Flatten navItems para gerar lista de links pesquisáveis
+  const searchResults = useMemo(() => {
+    const results: { title: string; url: string; description?: string }[] = [];
+
+    navItems.forEach((nav) => {
+      if (nav.path) {
+        results.push({
+          title: nav.title,
+          url: nav.path,
+          description: `Página de ${nav.title}`,
+        });
+      }
+      if (nav.subItems) {
+        nav.subItems.forEach((sub) => {
+          sub.items.forEach((item) => {
+            results.push({
+              title: item.name,
+              url: item.path,
+              description: `${sub.title} - ${nav.title}`,
+            });
+          });
+        });
+      }
+    });
+
+    return results;
+  }, []);
+
+  // Filtragem de resultados
   const filteredResults = useMemo(() => {
     if (!query.trim()) return [];
     const q = normalize(query);
     return searchResults.filter(
       (r) =>
-        normalize(r.title).includes(q) || normalize(r.description).includes(q)
+        normalize(r.title).includes(q) ||
+        normalize(r.description || "").includes(q)
     );
-  }, [query]);
+  }, [query, searchResults]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -65,7 +72,7 @@ export default function SearchBox({
   };
 
   return (
-    <div className={`w-full max-w-2xl mx-auto ${className}`}>
+    <div className={`w-full max-w-5xl mx-auto z-50 relative ${className}`}>
       <form onSubmit={handleSearch} className="relative">
         <div className="relative flex items-center border border-[var(--border)] rounded-[var(--radius)] bg-[var(--background)]">
           <Search className="absolute left-4 text-[var(--muted-foreground)] w-5 h-5" />
@@ -95,19 +102,19 @@ export default function SearchBox({
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="mt-4 bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] overflow-hidden"
+              className="mt-4 px-4 grid grid-cols-2 md:grid-cols-3 max-w-4xl min-w-full md:min-w-3xl absolute left-1/2 -translate-x-1/2 bg-[var(--card)] border border-[var(--border)] rounded-[var(--radius)] z-50"
             >
               {filteredResults.map((r, i) => (
                 <Link
                   key={i}
                   href={r.url}
-                  className="flex items-center gap-3 p-4 hover:bg-[var(--muted)] transition-colors"
+                  className="flex items-start gap-3 p-2 hover:bg-[var(--muted)] transition-colors"
                 >
                   <div>
-                    <h4 className="font-semibold text-[var(--primary)]">
+                    <h4 className="font-semibold text-start text-[var(--primary)]">
                       {r.title}
                     </h4>
-                    <p className="text-sm text-[var(--muted-foreground)]">
+                    <p className="text-sm text-start text-[var(--muted-foreground)]">
                       {r.description}
                     </p>
                   </div>

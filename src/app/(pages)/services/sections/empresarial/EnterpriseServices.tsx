@@ -1,7 +1,7 @@
 import EnterpriseServicesHero from "./sections/EnterpriseServicesHero";
 import EnterpriseServicesInfo from "./sections/EnterpriseServicesInfo";
 
-const EnterpriceServices = () => {
+const EnterpriseServices = () => {
   return (
     <section className="animate-fadeIn">
       <EnterpriseServicesHero />
@@ -10,4 +10,4 @@ const EnterpriceServices = () => {
   );
 };
 
-export default EnterpriceServices;
+export default EnterpriseServices;

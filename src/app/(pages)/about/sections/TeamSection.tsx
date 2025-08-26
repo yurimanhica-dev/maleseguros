@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 import { Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 
@@ -83,21 +83,21 @@ const membros: MembroEquipe[] = [
 //   },
 // };
 
-const item: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-  hover: {
-    y: -5,
-    transition: { duration: 0.3 },
-  },
-};
+// const item: Variants = {
+//   hidden: { opacity: 0, y: 20 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 0.5,
+//       ease: "easeOut",
+//     },
+//   },
+//   hover: {
+//     y: -5,
+//     transition: { duration: 0.3 },
+//   },
+// };
 
 export default function EquipePremium() {
   const duplicated = [...membros, ...membros];

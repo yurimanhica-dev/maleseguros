@@ -41,8 +41,8 @@ const Button = ({
     secondary: {
       bg: "bg-secondary",
       hover: "hover:bg-secondary",
-      text: "text-secondary-foreground",
-      shadow: "shadow-lg hover:shadow-secondary/30",
+      text: "text-secondary-foreground/80",
+      shadow: "shadow-lg shadow-black/10 hover:shadow-black/20",
       border: "border border-secondary",
     },
     outline: {

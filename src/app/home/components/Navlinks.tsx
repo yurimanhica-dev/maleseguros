@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
+import { ThemeToggle } from "@/app/components/ThemeToggle";
 import { navItems } from "@/app/utils/types";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
@@ -39,39 +41,53 @@ const NavLinks = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [openDropdown]);
 
-  const isSelected = (item: string, path?: string) => {
+  const isSelected = (item: string, path?: string, subItems?: any[]) => {
     const normalizedPath = currentPath.toLowerCase().replace(/\/$/, "");
 
-    if (path) return normalizedPath === path.toLowerCase();
+    // Verifica correspondência direta com path
+    if (path && normalizedPath === path.toLowerCase()) return true;
 
+    // Normaliza o título para comparação
     const itemPath = item
       .toLowerCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "");
 
+    // Se o item tiver subItems, verifica se algum deles bate com o currentPath
+    if (subItems) {
+      return subItems.some((group) =>
+        group.items.some(
+          (subItem: { path: string }) =>
+            subItem.path &&
+            normalizedPath === subItem.path.toLowerCase().replace(/\/$/, "")
+        )
+      );
+    }
+
+    // Caso genérico
     return (
       normalizedPath.includes(itemPath) ||
-      (item === "Seguros" && normalizedPath.includes("seguro"))
+      (item === "Explorar" && normalizedPath.includes("explorar"))
     );
   };
 
   const linkBaseClasses =
-    "flex items-center h-full px-6 font-medium transition-colors border-b-2";
+    "flex items-center h-full font-medium transition-colors border-b-2";
 
   return (
     <div className="container mx-auto">
-      <div className="flex h-20 items-center justify-between">
+      <div className="flex justify-between h-20 items-center gap-8">
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center h-full" role="menubar">
-          <ul className="flex items-center h-full">
+          <ul className="flex items-center gap-4 h-full">
             {navItems.map((item) => (
-              <li key={item.title} className="relative min-w-3 h-full group">
+              <li key={item.title} className="relative min-w-3  pb-1  h-full">
                 {item.path ? (
                   <Link
                     href={item.path}
                     role="menuitem"
-                    className={`${linkBaseClasses} ${
-                      isSelected(item.title, item.path)
+                    className={`${linkBaseClasses} uppercase text-sm ${
+                      isSelected(item.title, item.path, item.subItems)
                         ? "text-primary border-primary"
                         : "text-foreground/90 hover:text-primary border-transparent hover:border-primary"
                     }`}
@@ -82,8 +98,8 @@ const NavLinks = () => {
                   <>
                     <button
                       onClick={() => toggleDropdown(item.title)}
-                      className={`${linkBaseClasses} ${
-                        openDropdown === item.title
+                      className={`${linkBaseClasses} uppercase text-sm ${
+                        isSelected(item.title, item.path, item.subItems)
                           ? "text-primary border-primary"
                           : "text-foreground/90 hover:text-primary border-transparent hover:border-primary"
                       }`}
@@ -113,44 +129,56 @@ const NavLinks = () => {
                               stiffness: 300,
                               damping: 25,
                             }}
-                            className="absolute left-0 top-20 mt-0 w-screen bg-background shadow-xl border-t border-border/10 z-50"
+                            className="absolute left-0 top-18 mt-0 w-screen bg-background shadow-xl border-t border-border/10 z-50"
                             id={`dropdown-${item.title}`}
                             style={{
                               boxShadow:
                                 "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                             }}
                           >
-                            <div className="container mx-auto py-8 grid grid-cols-4 gap-8">
+                            <div className="container mx-auto py-14 grid grid-cols-4 c-space xl:px-0 gap-10">
                               {item.subItems.map((group, groupIndex) => (
                                 <div key={groupIndex}>
                                   {group.title && (
-                                    <h4 className="text-lg font-bold text-primary mb-4">
+                                    <h4 className=" text-md uppercase font-bold text-primary mb-4">
                                       {group.title}
                                     </h4>
                                   )}
                                   <ul className="space-y-3">
-                                    {group.items.map((subItem) => (
-                                      <li
-                                        key={subItem.name}
-                                        className="relative group w-fit"
-                                      >
-                                        <Link
-                                          href={subItem.path}
-                                          role="menuitem"
-                                          className={`inline-block transition-colors ${
-                                            isSelected(
-                                              subItem.name,
-                                              subItem.path
-                                            )
-                                              ? "text-primary font-medium"
-                                              : "text-foreground/90 hover:text-primary"
-                                          }`}
-                                          onClick={() => setOpenDropdown(null)} // Fecha ao clicar em um item
+                                    {group.items.map((subItem) => {
+                                      const selected = isSelected(
+                                        subItem.name,
+                                        subItem.path
+                                      );
+                                      return (
+                                        <li
+                                          key={subItem.name}
+                                          className="relative group w-fit"
                                         >
-                                          {subItem.name}
-                                        </Link>
-                                      </li>
-                                    ))}
+                                          <Link
+                                            href={subItem.path}
+                                            role="menuitem"
+                                            className={`inline-block transition-colors ${
+                                              selected
+                                                ? " font-medium"
+                                                : "text-foreground/90 hover:text-primary"
+                                            }`}
+                                            onClick={() =>
+                                              setOpenDropdown(null)
+                                            }
+                                          >
+                                            {subItem.name}
+                                          </Link>
+                                          <span
+                                            className={`absolute left-0 -bottom-1 h-[2px] w-full bg-primary transition-transform duration-300 origin-left ${
+                                              selected
+                                                ? "scale-x-100"
+                                                : "scale-x-0 group-hover:scale-x-100"
+                                            }`}
+                                          />
+                                        </li>
+                                      );
+                                    })}
                                   </ul>
                                 </div>
                               ))}
@@ -167,7 +195,7 @@ const NavLinks = () => {
         </nav>
 
         {/* CTA Section */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4 cursor-pointer">
           <motion.div
             className="relative"
             whileHover={{ scale: 1.05 }}
@@ -180,7 +208,8 @@ const NavLinks = () => {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             />
             <motion.a
-              href="https://wa.me/258847777777"
+              href="/servicos-cliente/solicitar-retorno"
+              // href="https://wa.me/258847777777"
               className="relative flex px-6 py-2 gap-3 text-nowrap rounded-full bg-primary text-primary-foreground font-medium shadow-xl hover:shadow-2xl transition-all duration-300 z-10"
             >
               <motion.div
@@ -196,6 +225,7 @@ const NavLinks = () => {
               Solicitar Retorno
             </motion.a>
           </motion.div>
+          <ThemeToggle />
         </div>
       </div>
     </div>

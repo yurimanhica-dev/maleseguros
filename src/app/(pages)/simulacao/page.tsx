@@ -1,12 +1,12 @@
 import Footer from "@/app/components/Footer";
 import { Hero } from "@/app/components/PagesHeroimg";
-import Navbar from "@/app/home/sections/Navbar";
+import NavBar from "@/app/components/Navbar";
 import { SeguroAutoMocambique } from "./sections/SeguroAutoMocambique";
 
 const SimulatorPage = () => {
   return (
     <>
-      <Navbar />
+      <NavBar />
       <Hero
         title="Simulação de Seguros"
         imageUrl="/bg/simulator.jpg"

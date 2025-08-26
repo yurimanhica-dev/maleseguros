@@ -7,10 +7,9 @@ interface HeroProps {
   title: string;
   imageUrl: string;
   breadcrumb: { path: string; name: string }[];
-  subtitle?: string;
 }
 
-export const Hero = ({ title, imageUrl, breadcrumb, subtitle }: HeroProps) => {
+export const Hero = ({ title, imageUrl, breadcrumb }: HeroProps) => {
   return (
     <motion.section className="relative w-full overflow-hidden min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
       {/* Imagem de fundo com parallax */}
@@ -67,7 +66,7 @@ export const Hero = ({ title, imageUrl, breadcrumb, subtitle }: HeroProps) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 * (index + 1) }}
             >
-              <span className="mx-2 text-white">/</span>
+              <span className="mx-4 text-white">/</span>
               <motion.a
                 href={item.path}
                 whileHover={{ scale: 1.05 }}

@@ -22,7 +22,7 @@ export default function NavSelect({ onChange }: NavSelectProps) {
   };
 
   return (
-    <div className="sticky top-20 left-0 w-full z-30 bg-background py-4  border-b border-border/10 shadow-sm">
+    <div className="sticky top-20 left-0 w-full z-30 bg-background pb-4  border-b border-border/10 shadow-sm">
       <div className="flex items-center justify-center space-x-4 text-xl font-semibold">
         {tabs.map(({ label, value }, index) => (
           <div key={value} className="flex items-center space-x-4">
