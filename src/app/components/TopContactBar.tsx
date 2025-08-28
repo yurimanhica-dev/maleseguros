@@ -1,7 +1,6 @@
 "use client";
 
 import LanguageSwitcher from "@/app/components/LanguageSwitcher";
-import { ThemeToggle } from "@/app/components/ThemeToggle";
 import { motion } from "framer-motion";
 import { FiFacebook, FiLinkedin, FiTwitter } from "react-icons/fi";
 import ContactInfo from "../home/components/ContactInfo";
@@ -48,7 +47,7 @@ const TopContactBar = () => {
                 </motion.a>
               ))}
             </div>
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
         </div>
       </div>

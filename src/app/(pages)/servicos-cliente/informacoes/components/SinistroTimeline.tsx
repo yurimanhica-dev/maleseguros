@@ -1,39 +1,7 @@
 "use client";
 
+import { steps } from "@/app/utils/types";
 import Image from "next/image";
-
-const steps = [
-  {
-    img: "/images/sinistros/acident.jpg",
-    step: "Etapa 1: ",
-    title: "Acidente",
-    description: "Mantenha a calma e verifique se há feridos.",
-  },
-  {
-    img: "/images/sinistros/emergencia.jpg",
-    step: "Etapa 2: ",
-    title: "Contacto",
-    description: "Ligue imediatamente para os serviços de emergência.",
-  },
-  {
-    img: "/images/sinistros/documentacao.jpg",
-    step: "Etapa 3: ",
-    title: "Documentação",
-    description: "Recolha fotos, boletim e informações do local.",
-  },
-  {
-    img: "/images/sinistros/emergencia.jpg",
-    step: "Etapa 4: ",
-    title: "Abertura de Sinistro",
-    description: "Envie os documentos ou abra online em até 48h.",
-  },
-  {
-    img: "/images/sinistros/resolucao.jpg",
-    step: "Etapa 5: ",
-    title: "Resolução",
-    description: "Acompanhe o processo até a indenização.",
-  },
-];
 
 export default function SinistroTimeline() {
   return (

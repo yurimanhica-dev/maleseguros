@@ -12,7 +12,7 @@ const page = () => {
       <NavBar />
       <Hero
         title="Solicitar Retorno"
-        imageUrl="/images/servicos-cliente/solicitar-retorno.webp"
+        imageUrl="/images/servicos-cliente/retorno.jpg"
         breadcrumb={[
           {
             name: "Solicitar Retorno",

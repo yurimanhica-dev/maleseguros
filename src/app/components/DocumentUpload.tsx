@@ -230,7 +230,7 @@ export const DocumentUpload = () => {
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             whileHover={{ scale: 1.05 }}
-            className="flex flex-col items-center justify-center space-y-4"
+            className="flex flex-col items-center justify-center space-y-4 py-8"
           >
             <div className="p-3 bg-primary/10 rounded-full">
               <Cloud className="w-8 h-8 text-primary" />
@@ -245,7 +245,7 @@ export const DocumentUpload = () => {
               </p>
             </div>
 
-            <motion.button
+            {/* <motion.button
               type="button"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -253,7 +253,7 @@ export const DocumentUpload = () => {
               onClick={(e) => e.stopPropagation()}
             >
               Selecionar Arquivos
-            </motion.button>
+            </motion.button> */}
           </motion.div>
         </div>
 

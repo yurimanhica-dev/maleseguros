@@ -1,27 +1,34 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import {
-  AlertTriangle,
-  Car,
-  Clock,
-  Download,
-  FileText,
-  MapPin,
-  Phone,
-  Shield,
-  Users,
-} from "lucide-react";
+import { AlertTriangle, Download, FileText } from "lucide-react";
+import { useTheme } from "next-themes";
+import Image from "next/image";
 import { useRef, useState } from "react";
 
 const AccidentSection = () => {
+  const { theme } = useTheme();
   const [activeStep, setActiveStep] = useState(0);
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const sectionRef = useRef(null);
 
   const accidentSteps = [
     {
-      icon: <Car className="w-6 h-6 " />,
+      icon: (
+        <Image
+          src={theme === "dark" ? "/icons/calm.png" : "/icons/calm-dark.png"}
+          alt="Mantenha a calma"
+          width={50}
+          height={50}
+        />
+      ),
+      iconActive: (
+        <Image
+          src="/icons/calm.png"
+          alt="Mantenha a calma"
+          width={32}
+          height={32}
+        />
+      ),
       title: "Mantenha a calma",
       description: "Avalie a situação e garanta sua segurança.",
       details: [
@@ -29,11 +36,21 @@ const AccidentSection = () => {
         "Afaste-se de áreas de risco, se possível.",
         "Ligue para os serviços de emergência se necessário.",
       ],
-
-      gradient: "from-blue-500 to-cyan-500",
     },
     {
-      icon: <Phone className="w-6 h-6" />,
+      icon: (
+        <Image
+          src={
+            theme === "dark" ? "/icons/contact.png" : "/icons/contact-dark.png"
+          }
+          alt="Contato"
+          width={50}
+          height={50}
+        />
+      ),
+      iconActive: (
+        <Image src="/icons/contact.png" alt="Contato" width={32} height={32} />
+      ),
       title: "Contato imediato",
       description: "Informe a seguradora e acione assistência.",
       details: [
@@ -41,11 +58,28 @@ const AccidentSection = () => {
         "Informe dados do acidente: local, hora e envolvidos.",
         "Mantenha registro de todas as informações e fotos do acidente.",
       ],
-
-      gradient: "from-purple-500 to-pink-500",
     },
     {
-      icon: <MapPin className="w-6 h-6" />,
+      icon: (
+        <Image
+          src={
+            theme === "dark"
+              ? "/icons/phone-camera.png"
+              : "/icons/phone-camera-dark.png"
+          }
+          alt="Recolha evidências"
+          width={50}
+          height={50}
+        />
+      ),
+      iconActive: (
+        <Image
+          src="/icons/phone-camera.png"
+          alt="Recolha evidências"
+          width={32}
+          height={32}
+        />
+      ),
       title: "Documentação no local",
       description: "Recolha evidências importantes para o sinistro.",
       details: [
@@ -53,11 +87,28 @@ const AccidentSection = () => {
         "Anote testemunhas e seus contatos.",
         "Evite admitir culpa ou assinar documentos sem orientação.",
       ],
-
-      gradient: "from-amber-500 to-orange-500",
     },
     {
-      icon: <Shield className="w-6 h-6" />,
+      icon: (
+        <Image
+          src={
+            theme === "dark"
+              ? "/icons/briefing.png"
+              : "/icons/briefing_dark.png"
+          }
+          alt="Abertura de sinistro"
+          width={50}
+          height={50}
+        />
+      ),
+      iconActive: (
+        <Image
+          src="/icons/briefing.png"
+          alt="Abertura de sinistro"
+          width={32}
+          height={32}
+        />
+      ),
       title: "Abertura de sinistro",
       description: "Registre oficialmente o sinistro para cobertura.",
       details: [
@@ -65,8 +116,43 @@ const AccidentSection = () => {
         "Preencha os campos com precisão.",
         "Anexe fotos, documentos e relatórios, se houver.",
       ],
+    },
+  ];
 
-      gradient: "from-emerald-500 to-teal-500",
+  const helpersSteps = [
+    {
+      icon: (
+        <Image
+          src="/icons/support_red.png"
+          alt="support"
+          width={50}
+          height={50}
+        />
+      ),
+      title: "Assistência 24h",
+      description:
+        "Nossa equipe está disponível a qualquer momento para ajudar.",
+    },
+    {
+      icon: (
+        <Image
+          src="/icons/timing_red.png"
+          alt="timing"
+          width={50}
+          height={50}
+        />
+      ),
+      title: "Processo Rápido",
+      description:
+        "Resolução de sinistros em até 72 horas após documentação completa.",
+    },
+    {
+      icon: (
+        <Image src="/icons/shield.png" alt="shield" width={50} height={50} />
+      ),
+      title: "Cobertura Total",
+      description:
+        "Proteção completa para você e seu veículo em qualquer situação.",
     },
   ];
 
@@ -124,13 +210,10 @@ const AccidentSection = () => {
                         : "bg-secondary hover:bg-accent"
                     }`}
                   >
-                    <div
-                      className={`flex items-center justify-center w-10 h-10 rounded-full mr-4 ${
-                        activeStep === index ? "bg-white/20" : ""
-                      }`}
-                    >
-                      {step.icon}
+                    <div className="flex items-center justify-center w-8 h-8 rounded-full mr-4">
+                      {activeStep === index ? step.iconActive : step.icon}
                     </div>
+
                     <span className="font-medium text-left">{step.title}</span>
                   </button>
                 ))}
@@ -145,7 +228,7 @@ const AccidentSection = () => {
                   {emergencyContacts.map((contact, index) => (
                     <div
                       key={index}
-                      className="flex items-center justify-between p-3 bg-muted rounded-lg"
+                      className="flex items-center justify-between p-3 bg-muted"
                     >
                       <div>
                         <p className="font-medium text-foreground">
@@ -170,7 +253,7 @@ const AccidentSection = () => {
 
           {/* Step content */}
           <div className="lg:col-span-2">
-            <div className="bg-card rounded-2xl shadow-lg overflow-hidden border border-border">
+            <div className="bg-card  shadow-lg overflow-hidden border border-border">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeStep}
@@ -182,7 +265,7 @@ const AccidentSection = () => {
                 >
                   <div className="flex items-start mb-6">
                     <div
-                      className={`flex items-center justify-center w-14 h-14 rounded-2xl bg-foreground text-white mr-5`}
+                      className={`flex items-center justify-center w-14 h-14 text-white mr-5`}
                     >
                       {accidentSteps[activeStep].icon}
                     </div>
@@ -216,7 +299,7 @@ const AccidentSection = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="bg-muted p-4 rounded-lg">
                       <h4 className="font-medium text-foreground mb-2">
-                        Documentos necessários
+                        Documentos necessários caso 0 acidente seja automóvel:
                       </h4>
                       <ul className="text-sm text-muted-foreground space-y-1">
                         <li>• Carta de condução</li>
@@ -236,11 +319,11 @@ const AccidentSection = () => {
                   </div>
 
                   <div className="mt-8 flex flex-wrap gap-4">
-                    <button className="flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors">
+                    <button className="flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-colors">
                       <FileText className="w-5 h-5 mr-2" />
                       Abrir Sinistro Online
                     </button>
-                    <button className="flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary/5 transition-colors">
+                    <button className="flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-full font-medium hover:bg-primary/5 transition-colors">
                       <Download className="w-5 h-5 mr-2" />
                       Download do Formulário
                     </button>
@@ -250,44 +333,25 @@ const AccidentSection = () => {
             </div>
 
             {/* Additional resources */}
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-blue-100 dark:bg-blue-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+            <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-4">
+              {helpersSteps.map((helper, index) => (
+                <div
+                  key={index}
+                  className="bg-card p-5 border border-border shadow-sm hover:shadow-md transition-shadow flex items-start space-x-4"
+                >
+                  <div className="w-14 h-14 rounded-lg flex items-center justify-center">
+                    {helper.icon}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">
+                      {helper.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground">
+                      {helper.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-foreground mb-2">
-                  Assistência 24h
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Nossa equipe está disponível a qualquer momento para ajudar.
-                </p>
-              </div>
-
-              <div className="bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-amber-100 dark:bg-amber-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Clock className="w-6 h-6 text-amber-600 dark:text-amber-400" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">
-                  Processo Rápido
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Resolução de sinistros em até 72 horas após documentação
-                  completa.
-                </p>
-              </div>
-
-              <div className="bg-card rounded-xl p-5 border border-border shadow-sm hover:shadow-md transition-shadow">
-                <div className="bg-emerald-100 dark:bg-emerald-900/30 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2">
-                  Cobertura Total
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Proteção completa para você e seu veículo em qualquer
-                  situação.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>

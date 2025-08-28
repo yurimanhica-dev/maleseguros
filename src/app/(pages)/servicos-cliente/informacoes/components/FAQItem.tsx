@@ -56,7 +56,7 @@ export default function FAQSection() {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
-            Perguntas <span className="text-primary">Frequentes</span>
+            Perguntas Frequentes
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             Aqui respondemos às dúvidas mais comuns sobre apólices e sinistros.
@@ -70,26 +70,47 @@ export default function FAQSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-card border border-border rounded-t-2xl shadow-sm overflow-hidden"
+              className="bg-card border border-border rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300"
             >
               <button
                 onClick={() => toggle(index)}
-                className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
+                className={`w-full flex justify-between items-center p-6 text-left focus:outline-none group ${
+                  openIndex === index ? "bg-primary text-white" : ""
+                }
+                `}
               >
-                <span className="text-lg font-medium text-foreground">
+                <span className="text-lg font-medium transition-colors duration-300">
                   {item.question}
                 </span>
-                <motion.span
-                  animate={{ rotate: openIndex === index ? 180 : 0 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="transition-transform duration-200 ease-in-out"
+
+                <div
+                  className={`relative w-6 h-6 flex items-center justify-center
+                ${openIndex === index ? " text-white" : "text-primary"}`}
                 >
-                  {openIndex === index ? (
-                    <Minus className="w-6 h-6 text-primary" />
-                  ) : (
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      rotate: openIndex === index ? 0 : 90,
+                      opacity: openIndex === index ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="absolute"
+                  >
+                    <Minus className="w-6 h-6 " />
+                  </motion.div>
+
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      rotate: openIndex === index ? -90 : 0,
+                      opacity: openIndex === index ? 0 : 1,
+                    }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="absolute"
+                  >
                     <Plus className="w-6 h-6 text-primary" />
-                  )}
-                </motion.span>
+                  </motion.div>
+                </div>
               </button>
 
               <AnimatePresence initial={false}>
@@ -97,12 +118,27 @@ export default function FAQSection() {
                   <motion.div
                     key="content"
                     initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="px-6 pb-6 text-foreground/70"
+                    animate={{
+                      opacity: 1,
+                      height: "auto",
+                      transition: {
+                        opacity: { duration: 0.3, ease: "easeOut" },
+                        height: { duration: 0.4, ease: "easeInOut" },
+                      },
+                    }}
+                    exit={{
+                      opacity: 0,
+                      height: 0,
+                      transition: {
+                        opacity: { duration: 0.2, ease: "easeIn" },
+                        height: { duration: 0.3, ease: "easeInOut" },
+                      },
+                    }}
+                    className="overflow-hidden"
                   >
-                    {item.answer}
+                    <div className="px-6 pb-6 pt-2 text-foreground/70">
+                      {item.answer}
+                    </div>
                   </motion.div>
                 )}
               </AnimatePresence>

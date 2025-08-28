@@ -55,9 +55,9 @@ const Button = ({
     ghost: {
       bg: "bg-transparent",
       hover: "hover:bg-primary/10",
-      text: "text-primary",
+      text: "text-white",
       shadow: "",
-      border: "border border-transparent",
+      border: "border border-white",
     },
   };
 

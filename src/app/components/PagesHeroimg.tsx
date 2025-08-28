@@ -72,7 +72,7 @@ export const Hero = ({ title, imageUrl, breadcrumb }: HeroProps) => {
                 whileHover={{ scale: 1.05 }}
                 className={`font-semibold transition-colors truncate ${
                   index === breadcrumb.length - 1
-                    ? "text-primary"
+                    ? "text-white underline decoration-primary underline-offset-4"
                     : "text-white/80 hover:text-white"
                 }`}
               >

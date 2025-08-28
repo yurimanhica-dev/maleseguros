@@ -129,14 +129,14 @@ const NavLinks = () => {
                               stiffness: 300,
                               damping: 25,
                             }}
-                            className="absolute left-0 top-18 mt-0 w-screen bg-background shadow-xl border-t border-border/10 z-50"
+                            className="absolute left-0 top-18 right-0 mt-0 min-w-4xl c-space w-full overflow-hidden mx-auto bg-background shadow-xl border-t border-border/10 z-50"
                             id={`dropdown-${item.title}`}
                             style={{
                               boxShadow:
                                 "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                             }}
                           >
-                            <div className="container mx-auto py-14 grid grid-cols-4 c-space xl:px-0 gap-10">
+                            <div className="container overflow-hidden w-fit gap-10 py-12 grid md:grid-cols-2 lg:grid-cols-3">
                               {item.subItems.map((group, groupIndex) => (
                                 <div key={groupIndex}>
                                   {group.title && (

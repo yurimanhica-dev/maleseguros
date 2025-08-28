@@ -1,14 +1,22 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { CarTaxiFront, Home, Minus, ShieldCheck } from "lucide-react";
+import { Minus } from "lucide-react";
+import Image from "next/image";
 import { useRef } from "react";
-import { FiAlertTriangle } from "react-icons/fi";
 
 const preventionTips = [
   {
-    icon: <CarTaxiFront className="w-10 h-10 text-primary" />,
-    title: "Segurança Veicular",
+    icon: (
+      <Image
+        src="/icons/car_red.png"
+        alt="car"
+        width={50}
+        height={50}
+        className="text-primary"
+      />
+    ),
+    title: "Segurança do Veiculo",
     description:
       "Reduza acidentes e sinistros mantendo seu veículo seguro e revisado.",
     details: [
@@ -19,7 +27,15 @@ const preventionTips = [
     ],
   },
   {
-    icon: <Home className="w-10 h-10 text-primary" />,
+    icon: (
+      <Image
+        src="/icons/home_red.png"
+        alt="home"
+        width={50}
+        height={50}
+        className="text-primary"
+      />
+    ),
     title: "Proteção Residencial",
     description: "Minimize riscos e proteja sua residência.",
     details: [
@@ -30,7 +46,15 @@ const preventionTips = [
     ],
   },
   {
-    icon: <ShieldCheck className="w-10 h-10 text-primary" />,
+    icon: (
+      <Image
+        src="/icons/shield_red.png"
+        alt="shield"
+        width={50}
+        height={50}
+        className="text-primary"
+      />
+    ),
     title: "Seguro Atualizado",
     description:
       "Mantenha suas apólices sempre alinhadas às suas necessidades.",
@@ -42,7 +66,15 @@ const preventionTips = [
     ],
   },
   {
-    icon: <FiAlertTriangle className="w-10 h-10 text-primary" />,
+    icon: (
+      <Image
+        src="/icons/warning-triangle_red.png"
+        alt="warning triangle"
+        width={50}
+        height={50}
+        className="text-primary"
+      />
+    ),
     title: "Prevenção de Riscos",
     description:
       "Adote hábitos preventivos para reduzir exposição a sinistros.",
@@ -91,7 +123,7 @@ const PreventionSection = () => {
               {/* Ícone colorido */}
               <div
                 className={
-                  "w-14 h-14 flex items-center justify-center mb-6 p-4 text-primary bg-foreground/10 rounded-full"
+                  "w-14 h-14 flex items-center justify-center mb-6  text-primary "
                 }
               >
                 {tip.icon}

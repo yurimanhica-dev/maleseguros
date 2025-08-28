@@ -23,10 +23,9 @@ export default function BackgroundFill() {
       <div className="relative z-20 flex c-space flex-col h-full items-start justify-center gap-10">
         {/* Texto Principal */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -200 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 2 }}
           className="space-y-6 container mx-auto c-space"
         >
           <h2 className="text-foreground/90 max-w-xl uppercase text-5xl font-extrabold leading-12">

@@ -12,7 +12,7 @@ const page = () => {
       <Navbar />
       <Hero
         title="Comunicar Sinistro"
-        imageUrl="/images/sinistros/comunicar/bg.png"
+        imageUrl="/images/sinistros/bg.png"
         breadcrumb={[
           { name: "Comunicar Sinistro", path: "/sinistros/comunicar" },
         ]}

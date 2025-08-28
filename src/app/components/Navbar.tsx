@@ -15,7 +15,7 @@ const NavBar = () => {
     <header className="sticky top-0 z-50 shadow-md w-full h-full bg-background">
       {/* Main Navigation Bar */}
       <div className="sticky top-0 left-0 w-full z-50 bg-background">
-        <div className="container gap-8  mx-auto flex items-center justify-between h-20">
+        <div className="container gap-8  mx-auto c-space flex items-center justify-between h-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

@@ -60,7 +60,7 @@ const SinistroHeader = () => {
           className="flex-1 relative w-full h-96"
         >
           <Image
-            src="/images/sinistros/comunicar/comunicar_sinistro.jpg"
+            src="/images/sinistros/comunicar_sinistro.jpg"
             alt="Comunicação de Sinistro"
             fill
             className="w-full h-auto shadow-lg object-cover"

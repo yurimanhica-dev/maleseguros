@@ -3,22 +3,21 @@
 import { Button } from "@/components/ui/button";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import {
-  Car,
   ChevronRight,
   Download,
   FileText,
-  MapPin,
   Minus,
   Phone,
   Plus,
   Shield,
   Users,
 } from "lucide-react";
+import Image from "next/image";
 import { useRef, useState } from "react";
 
 const accidentSteps = [
   {
-    icon: <Car className="w-8 h-8" />,
+    icon: <Image src="/icons/calm.png" alt="calm" width={50} height={50} />,
     title: "Mantenha a calma",
     description: "Avalie a situação e garanta sua segurança.",
     details: [
@@ -28,7 +27,9 @@ const accidentSteps = [
     ],
   },
   {
-    icon: <Phone className="w-8 h-8" />,
+    icon: (
+      <Image src="/icons/contact.png" alt="contact" width={50} height={50} />
+    ),
     title: "Contato imediato",
     description: "Informe a seguradora e acione assistência.",
     details: [
@@ -38,7 +39,14 @@ const accidentSteps = [
     ],
   },
   {
-    icon: <MapPin className="w-8 h-8" />,
+    icon: (
+      <Image
+        src="/icons/documentacao.png"
+        alt="documentacao"
+        width={50}
+        height={50}
+      />
+    ),
     title: "Documentação no local",
     description: "Recolha evidências importantes para o sinistro.",
     details: [
@@ -48,7 +56,14 @@ const accidentSteps = [
     ],
   },
   {
-    icon: <Shield className="w-8 h-8" />,
+    icon: (
+      <Image
+        src="/icons/documentacao.png"
+        alt="documentacao"
+        width={50}
+        height={50}
+      />
+    ),
     title: "Abertura de sinistro",
     description: "Registre oficialmente o sinistro para cobertura.",
     details: [
@@ -119,7 +134,7 @@ export default function AccidentSection() {
                 >
                   <div className="flex items-center gap-4">
                     <div
-                      className={`p-3 rounded-full bg-primary/10 transition-colors ${
+                      className={`p-3 w-14 h-14 rounded-full bg-primary/10 transition-colors ${
                         hoveredIndex === idx ? "bg-primary/20" : ""
                       }`}
                     >

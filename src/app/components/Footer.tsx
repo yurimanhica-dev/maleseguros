@@ -10,7 +10,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 
-import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FiMail, FiMapPin, FiPhone, FiSmartphone } from "react-icons/fi";
 import Logo from "../home/components/Logo";
 
 const Footer = () => {
@@ -31,6 +31,11 @@ const Footer = () => {
       icon: <FiPhone className="mr-2 text-[var(--primary)]" />,
       text: "(+258) 214 184 39",
       href: "tel:+258 214 184 39",
+    },
+    {
+      icon: <FiSmartphone className="mr-2 text-[var(--primary)]" />,
+      text: "(+258) 82 305 21 72",
+      href: "tel:+25823052172",
     },
     {
       icon: <FiMail className="mr-2 text-[var(--primary)]" />,
@@ -69,7 +74,7 @@ const Footer = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 pt-16 relative z-10">
+      <div className="container mx-auto c-space pt-16 relative z-10">
         {/* Grid de 4 colunas */}
         <motion.div
           initial="hidden"
@@ -124,7 +129,7 @@ const Footer = () => {
           {/* Coluna 3: Contact */}
           <motion.div variants={itemVariants} custom={2}>
             <h3 className="text-lg uppercase font-semibold mb-6">Contactos</h3>
-            <ul className="space-y-4 ">
+            <ul className="space-y-3">
               {contact.map((c, index) => (
                 <motion.li
                   key={index}

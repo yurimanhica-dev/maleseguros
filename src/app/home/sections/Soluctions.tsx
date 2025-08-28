@@ -15,7 +15,7 @@ export const Solutions = () => {
         transition={{ duration: 1, delay: 0.3 }}
         className="absolute bottom-0 -right-15 w-[20rem] h-[20rem] bg-primary translate-x-1/2 translate-y-1/2 rotate-180 z-0"
       />
-      <div className="container px-4 mx-auto">
+      <div className="container c-space mx-auto">
         {!selectedType ? (
           <InsuranceTypeSelector onSelect={setSelectedType} />
         ) : (

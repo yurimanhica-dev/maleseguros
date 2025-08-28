@@ -214,7 +214,7 @@ const ContactSection = () => {
             </div>
             <Button
               type="submit"
-              className="w-full bg-primary text-white py-4 rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="w-fit bg-primary text-white py-4 px-4 rounded-lg hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Enviando..." : "Solicitar Retorno"}
