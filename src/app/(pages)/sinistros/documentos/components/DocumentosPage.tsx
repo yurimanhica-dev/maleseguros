@@ -33,13 +33,13 @@ const DocumentosPage = () => {
   const [sortBy, setSortBy] = useState("recentes");
   const [openSections, setOpenSections] = useState<string[]>([]);
 
-  const toggleSection = (section: string) => {
-    setOpenSections((prev) =>
-      prev.includes(section)
-        ? prev.filter((s) => s !== section)
-        : [...prev, section]
-    );
-  };
+  // const toggleSection = (section: string) => {
+  //   setOpenSections((prev) =>
+  //     prev.includes(section)
+  //       ? prev.filter((s) => s !== section)
+  //       : [...prev, section]
+  //   );
+  // };
 
   const categorias = [
     {

@@ -9,18 +9,30 @@ import { corretores } from "../utils/types";
 const TeamSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [visible, setVisible] = useState(1); // 👈 default safe (mobile)
+
+  // Função para atualizar o número de corretores visíveis
+  const updateVisible = () => {
+    if (typeof window === "undefined") return; // proteção SSR
+    if (window.innerWidth >= 1280) return setVisible(4);
+    if (window.innerWidth >= 1024) return setVisible(3);
+    if (window.innerWidth >= 768) return setVisible(2);
+    return setVisible(1);
+  };
+
+  useEffect(() => {
+    updateVisible(); // inicializa
+    window.addEventListener("resize", updateVisible);
+    return () => window.removeEventListener("resize", updateVisible);
+  }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === corretores.length - 1 ? 0 : prevIndex + 1
-    );
+    setCurrentIndex((prev) => (prev === corretores.length - 1 ? 0 : prev + 1));
     setIsAutoPlaying(false);
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? corretores.length - 1 : prevIndex - 1
-    );
+    setCurrentIndex((prev) => (prev === 0 ? corretores.length - 1 : prev - 1));
     setIsAutoPlaying(false);
   };
 
@@ -29,25 +41,16 @@ const TeamSection = () => {
     setIsAutoPlaying(false);
   };
 
-  // Auto-play functionality
+  // Auto-play
   useEffect(() => {
     if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === corretores.length - 1 ? 0 : prevIndex + 1
+      setCurrentIndex((prev) =>
+        prev === corretores.length - 1 ? 0 : prev + 1
       );
     }, 5000);
-
     return () => clearInterval(interval);
   }, [isAutoPlaying, corretores.length]);
-
-  const visibleCorretores = () => {
-    if (window.innerWidth >= 1280) return 4; // xl screens
-    if (window.innerWidth >= 1024) return 3; // lg screens
-    if (window.innerWidth >= 768) return 2; // md screens
-    return 1; // mobile
-  };
 
   return (
     <section
@@ -95,7 +98,7 @@ const TeamSection = () => {
           <div className="overflow-hidden">
             <motion.div
               className="flex gap-6"
-              animate={{ x: -currentIndex * (100 / visibleCorretores()) + "%" }}
+              animate={{ x: -currentIndex * (100 / visible) + "%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               {corretores.map((corretor, index) => (
@@ -216,21 +219,20 @@ const TeamSection = () => {
 
         {/* Dots Indicator */}
         <div className="flex justify-center mt-8 space-x-2">
-          {Array.from({
-            length: Math.ceil(corretores.length / visibleCorretores()),
-          }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index * visibleCorretores())}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentIndex >= index * visibleCorretores() &&
-                currentIndex < (index + 1) * visibleCorretores()
-                  ? "bg-primary"
-                  : "bg-border"
-              }`}
-              aria-label={`Ir para slide ${index + 1}`}
-            />
-          ))}
+          {Array.from({ length: Math.ceil(corretores.length / visible) }).map(
+            (_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index * visible)}
+                className={`w-3 h-3 rounded-full ${
+                  currentIndex >= index * visible &&
+                  currentIndex < (index + 1) * visible
+                    ? "bg-primary"
+                    : "bg-border"
+                }`}
+              />
+            )
+          )}
         </div>
       </div>
     </section>
