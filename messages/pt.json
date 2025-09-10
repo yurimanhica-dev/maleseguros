@@ -1,0 +1,238 @@
+{
+  "HomePage": {
+    "Contact": {
+      "Phone": "(+258) 214 184 39",
+      "PhoneSubtitle": "Linha Direta 24/7",
+      "PhoneAria": "Ligar para +258 214 184 39",
+      "Address": "Av. Vladimir Lenine, 2815",
+      "AddressSubtitle": "Maputo, Moçambique",
+      "AddressAria": "Ver localização no Google Maps",
+      "Hours": "Seg-Sex: 8h-18h",
+      "HoursSubtitle": "Horário",
+      "HoursAria": "Horário de funcionamento"
+    },
+    "Nav": {
+      "Explorar": "Explorar",
+      "AcessoRapido": "Acesso Rápido",
+      "SimulacaoSeguro": "Simulação de Seguro",
+      "RenovarApolice": "Renovar Apólice",
+      "NossaEquipe": "Nossa Equipe",
+      "Sinistros": "Gestão de Sinistros",
+      "ComunicarSinistro": "Comunicar Sinistro",
+      "Documentos": "Documentos",
+      "OficinasReboques": "Oficinas e Reboques",
+      "ServicosCliente": "Serviços ao Cliente",
+      "InformacoesUteis": "Informações Úteis",
+      "SolicitarRetorno": "Solicitar Retorno",
+      "Contactos": "Contactos",
+      "Servicos": "Serviços",
+      "SobreNos": "Sobre Nós",
+      "SeguroDigital": "Seguro Digital",
+      "Callback": "Solicitar Retorno"
+    },
+    "Hero": {
+      "slides": {
+        "1": {
+          "title": "Quem é Protegido Vive Diferente",
+          "subtitle": "A diferença entre temer o futuro e estar pronto para ele",
+          "description": "Nossos clientes não vivem com medo do amanhã — eles vivem com a certeza de estarem preparados.",
+          "cta": "Quero Viver Diferente"
+        },
+        "2": {
+          "title": "Seguro de Veículos Automóveis",
+          "subtitle": "Proteção total para seu veículo",
+          "description": "Coberturas completas com assistência 24 horas em todo o país",
+          "cta": "Conhecer Planos"
+        },
+        "3": {
+          "title": "A Sombra que Protege Seu Patrimônio",
+          "subtitle": "Deixe o que é valioso sob a nossa sombra",
+          "description": "Com nossa cobertura personalizada, seu patrimônio fica resguardado para enfrentar imprevistos e crescer com segurança.",
+          "cta": "Falar com Especialista"
+        }
+      }
+    },
+    "Insurance": {
+      "Personal": {
+        "Name": "Seguros Particulares",
+        "Description": "Proteção personalizada para você e sua família"
+      },
+      "Business": {
+        "Name": "Seguros Empresariais",
+        "Description": "Soluções completas para proteger seu negócio"
+      },
+      "YearsOfExcellence": "8 Anos de Excelência",
+      "SectionTitle": "Em Soluções de Seguros",
+      "SectionDescription": "oferecendo proteção completa adaptada às necessidades de nossos clientes",
+      "MoreInfo": "Mais informações"
+    },
+    "InsuranceTypes": {
+      "Personal": {
+        "Name": "Seguros Particulares",
+        "Life": {
+          "Name": "Seguro Vida",
+          "Type": "Vida",
+          "Description": "Apresentamos as melhores opções de seguros para proteger você e sua família contra acidentes, doenças e imprevistos relacionados à sua integridade física e bem-estar, garantindo tranquilidade financeira.",
+          "Feature1": "Acidentes Pessoais",
+          "Feature2": "Acidentes Pessoais – Seguro Escolar",
+          "Feature3": "Acidentes Pessoais – Seguro Familiar",
+          "Feature4": "Acidentes Pessoais – Seguro Desporto, Cultura e Recreio"
+        },
+        "NonLife": {
+          "Name": "Seguro Não Vida",
+          "Type": "Não Vida",
+          "Description": "Oferecemos soluções completas para proteger seus bens pessoais, como imóvel, veículo e responsabilidade civil, garantindo coberturas que preservam seu patrimônio contra diversos riscos.",
+          "Feature1": "Viagens",
+          "Feature2": "Multi Riscos – Habitação e Crédito à Habitação",
+          "Feature3": "Automóvel",
+          "Feature4": "Responsabilidade Civil – Familiar e Caçador"
+        }
+      },
+      "Business": {
+        "Name": "Seguros Empresariais",
+        "Life": {
+          "Name": "Seguro Vida",
+          "Type": "Vida",
+          "Description": "Oferecemos opções de seguros para proteger a vida e o bem-estar dos colaboradores, garantindo suporte em casos de acidentes, doenças e outras eventualidades, promovendo segurança e tranquilidade no ambiente de trabalho.",
+          "Feature1": "Acidentes de Trabalho",
+          "Feature2": "Seguro Saúde – Grupo",
+          "Feature3": "Defesa jurídica",
+          "Feature4": "Seguros para Trabalhador Conta Própria"
+        },
+        "NonLife": {
+          "Name": "Seguro Não Vida",
+          "Type": "Não Vida",
+          "Description": "Disponibilizamos soluções completas para proteger seus bens pessoais, como imóveis, veículos e responsabilidade civil, oferecendo coberturas que preservam seu patrimônio contra diversos riscos do dia a dia.",
+          "Feature1": "Transporte nacional",
+          "Feature2": "Incêndio e Elementos da Natureza",
+          "Feature3": "Avarias de Máquinas, Obras e Montagens",
+          "Feature4": "Multi Riscos - Comerciantes e All Risks",
+          "Feature5": "Transportes Marítimos, Aéreos e Terrestres",
+          "Feature6": "Responsabilidade Civil – Geral, Exploração, Pescadores, Produtos e Profissional"
+        }
+      },
+      "RequestQuote": "Solicitação de cotação",
+      "Back": "Voltar para tipos de seguro"
+    },
+    "AboutUs": {
+      "SinceYear": "DESDE 2014",
+      "ImageAlt": "Nossa equipe",
+      "TitleHighlight": "Protegendo",
+      "TitleRest": "seus",
+      "TitleAnimated": "Riscos",
+      "Description": "Fundada com a missão de sugerir aos nossos Clientes os vários tipos de seguros de acordo com a especificação de potenciais riscos a que a sua riqueza e fluxos financeiros estão sujeitos.",
+      "CTA": "Conheça nossa história"
+    },
+    "WhyChooseUs": {
+      "Subtitle": "Por que Escolher-nos",
+      "TitleBefore": "Excelência em ",
+      "TitleHighlight": "Cada Apólice",
+      "Feature1": {
+        "Title": "Acompanhamento Contínuo",
+        "Description": "Estamos ao lado do cliente em todo o processo, garantindo suporte próximo em sinistros e qualquer outra questão relacionada ao seguro."
+      },
+      "Feature2": {
+        "Title": "Defesa dos Interesses",
+        "Description": "Trabalhamos para proteger o patrimônio, o dinheiro e a riqueza de cada cliente, sempre priorizando sua segurança e tranquilidade."
+      },
+      "Feature3": {
+        "Title": "Assessoria Sem Custos Extras",
+        "Description": "Nossa consultoria especializada é oferecida sem cobranças adicionais, garantindo mais valor pelo seu investimento."
+      },
+      "CTA": "Participar um Sinistro",
+      "ImageAlt": "Reunião com agente de seguro",
+      "Consultant": {
+        "title": "Consultoria Sem Custos Adicionais!",
+        "description": "Pague conosco, só pelo valor do seguro e nossa equipe de especialistas estará sempre ao dispor e prontos para ajudar em sua jornada completa de seguros, e por isso ",
+        "Not": "não cobramos nada!"
+      }
+    },
+    "Testimonials": {
+      "Items": {
+        "1": {
+          "content": "Poder garantir a tranquilidade dos meus bens e familiares foi uma das melhores decisões que tomei.",
+          "name": "João Silva",
+          "role": "Seguro Viagem"
+        },
+        "2": {
+          "content": "Em 15 minutos tinha uma proposta que outras seguradoras levavam dias para oferecer. Impressionante!",
+          "name": "Maria Santos",
+          "role": "Seguro Patrimonial"
+        },
+        "3": {
+          "content": "O atendimento humano fez toda diferença. Explicaram cada detalhe com paciência e clareza.",
+          "name": "Carlos Costa",
+          "role": "Seguro Saúde"
+        }
+      },
+      "CTA": {
+        "Title": "e garanta sua proteção em minutos",
+        "TitleHighlight": "Simule agora",
+        "Description": "Conte-nos suas necessidades e cuidaremos do resto. Peça sua simulação e garanta a segurança dos seus bens!",
+        "Button": "Simular meu seguro",
+        "CustomersCount": "+5.000",
+        "CustomersText": "Clientes Satisfeitos"
+      }
+    },
+    "ContactCTA": {
+      "sd": "Seguro Digital",
+      "ds": "Digital Seguro",
+      "Title": "Fale connosco",
+      "Subtitle": "Nossa equipe está pronta para oferecer a melhor experiência em seguros",
+      "SendMessageTitle": "Ou Envie uma Mensagem",
+      "Form": {
+        "NamePlaceholder": "Seu nome",
+        "EmailPlaceholder": "Seu email",
+        "MessagePlaceholder": "Sua mensagem",
+        "SendButton": "Enviar mensagem"
+      },
+      "ContactOptions": {
+        "0": {
+          "Title": "Telefone",
+          "Description": "Linha Direta 24/7",
+          "Action": "Ligar agora"
+        },
+        "1": {
+          "Title": "Email",
+          "Description": "Receba uma resposta rápida",
+          "Action": "Enviar email"
+        },
+        "2": {
+          "Title": "Endereço",
+          "Description": "Av. Vladimir Lenine, 2815, Maputo, Moçambique",
+          "Action": "Ver no mapa"
+        }
+      }
+    }
+  },
+  "Footer": {
+    "Description": "Protegendo sonhos e construindo confiança desde 2014, estamos ao lado dos nossos clientes em todo o processo.",
+    "Explore": {
+      "Title": "Explore",
+      "Links": {
+        "About": "Sobre nós",
+        "Services": "Serviços",
+        "FindBroker": "Nossa Equipe",
+        "Academy": "Seguro Digital"
+      }
+    },
+    "Contact": {
+      "Title": "Contactos",
+      "Address": "Av. Vladimir Lenine, 2815 - Maputo",
+      "Phone": "(+258) 214 184 39",
+      "Mobile": "(+258) 82 305 21 72",
+      "Email": "maleseguros@info.co.mz"
+    },
+    "Newsletter": {
+      "Title": "Newsletter",
+      "Placeholder": "Email Address",
+      "Description": "Inscreva-se para receber nossas notícias e atualizações."
+    },
+    "Bottom": {
+      "Copy": "Todos os direitos reservados.",
+      "Terms": "Termos de Serviço",
+      "Privacy": "Política de Privacidade",
+      "Cookies": "Cookies"
+    }
+  }
+}

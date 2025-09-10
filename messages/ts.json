@@ -1,0 +1,238 @@
+{
+  "HomePage": {
+    "Contact": {
+      "Phone": "(+258) 214 184 39",
+      "PhoneSubtitle": "Mutsari wa Xikombiso 24/7",
+      "PhoneAria": "Vula +258 214 184 39",
+      "Address": "Av. Vladimir Lenine, 2815",
+      "AddressSubtitle": "Maputo, Mozambiki",
+      "AddressAria": "Languta ndhawu eka Google Maps",
+      "Hours": "Minhuku-Sex: 8:00-18:00",
+      "HoursSubtitle": "Nkarhi",
+      "HoursAria": "Nkarhi wa ntirho"
+    },
+    "Nav": {
+      "Explorar": "Hlaya",
+      "AcessoRapido": "Ku Pfumelela Loko Ku Fika Kwihi na Kwihi",
+      "SimulacaoSeguro": "Ku Komba Ndzawulo ya Inshurense",
+      "RenovarApolice": "Vuyisela Apolisi",
+      "NossaEquipe": "Tinxaka Ta Hina",
+      "Sinistros": "Tinsuransi",
+      "ComunicarSinistro": "Vulavula Ndzawulo ya Insurense",
+      "Documentos": "Tincwadi",
+      "OficinasReboques": "Tihofisi na Mota Ya Tshipiha",
+      "ServicosCliente": "Tirhisa Ra Mutirhi",
+      "InformacoesUteis": "Rungula Rwa Ntirho",
+      "SolicitarRetorno": "Komba Ku Tsakisela",
+      "Contactos": "Vulavulo",
+      "Servicos": "Tirhiso",
+      "SobreNos": "Hi Ha",
+      "SeguroDigital": "Inshurense ya Digitali",
+      "Callback": "Komba Ku Tsakisela"
+    },
+    "Hero": {
+      "slides": {
+        "1": {
+          "title": "Lava Va Sirhelekeke Va Hanya Hiendlela Yo Hambana",
+          "subtitle": "Ku hambana exikarhi ko chava vumundzuku na ku va u lunghekile",
+          "description": "Vatekani va hina a va chavi masiku ya vusiku – va hanya va ri kahle va lunghekile.",
+          "cta": "Ndzi Lava Ku Hanya Hi ndlela Yo Hambana"
+        },
+        "2": {
+          "title": "Inshurense ya Vayaxi",
+          "subtitle": "Khuselo hinkwayo ya ximobilho xa wena",
+          "description": "Khuselo na ku pfuna 24/24 evuton’wini hinkwabyo bya tiko",
+          "cta": "Kuma Swipimelo"
+        },
+        "3": {
+          "title": "Kusuwo Ku Sirhelekaka Tikhwatsi Ta Wena",
+          "subtitle": "Tihlayisa swilo swa nkoka hi ndhawu ya hina",
+          "description": "Hi khuselo ra hina leri tirhisiwaka hi ndlela yo karhi, tikhwatsi ta wena ti sirhelekile naswona ti ya tswala hi ku tshama ku tshembekile.",
+          "cta": "Tshama Ni Ntirhisano Wa Nkulukumba"
+        }
+      }
+    },
+    "Insurance": {
+      "Personal": {
+        "Name": "Inshurense Ya Vuntshwa",
+        "Description": "Khuselo leyi endlaka leswaku wena na ndyangu wa wena mi sirhelekile"
+      },
+      "Business": {
+        "Name": "Inshurense Ya Vutshunguri",
+        "Description": "Swipimelo swo tala ku sirhelekisa bindzu ra wena"
+      },
+      "YearsOfExcellence": "8 Nkarhi Wa Nkoka",
+      "SectionTitle": "Eka Swipimelo Swa Inshurense",
+      "SectionDescription": "Hi ku nyika khuselo leyi hundzuluxiweke hi ndlela ya muteki",
+      "MoreInfo": "Rungula Rwo Tala"
+    },
+    "InsuranceTypes": {
+      "Personal": {
+        "Name": "Inshurense Ya Vuntshwa",
+        "Life": {
+          "Name": "Inshurense Ya Vupfhumba",
+          "Type": "Vupfhumba",
+          "Description": "Hi nyikela swipimelo swa kahle ku sirhelekisa wena na ndyangu wa wena eka switlhavi, nhloko ya rifu, na swilo leswi nga ha humelelaka, ku tiyisa ku rhula ka nkoka wa timali.",
+          "Feature1": "Switlhavi Swa Vuntshwa",
+          "Feature2": "Switlhavi Swa Vuntshwa – Inshurense Ya Sukulu",
+          "Feature3": "Switlhavi Swa Vuntshwa – Inshurense Ya Ndyangu",
+          "Feature4": "Switlhavi Swa Vuntshwa – Mintsandzo, Ntsengo Na Ku Swa Ntlango"
+        },
+        "NonLife": {
+          "Name": "Inshurense Ya Ku Lahleka Ka Switirhisiwa",
+          "Type": "Ku Lahleka Ka Switirhisiwa",
+          "Description": "Hi nyika swipimelo swo tala ku sirhelekisa swilo swa wena, ku katsa tiendlelo, ximobilho na mimbuyelo ya ntirho, ku tiyisa leswaku swilo swa wena swi sirhelekile eka swirhavi.",
+          "Feature1": "Ku Endla Rihanyu",
+          "Feature2": "Mihlovo Yo Tala – Ndhawu Na Xikhwama Xa Rihanyu",
+          "Feature3": "Ximobilho",
+          "Feature4": "Mimbuyelo Ya Ntirho – Ndyangu Na Vugandzeri"
+        }
+      },
+      "Business": {
+        "Name": "Inshurense Ya Vutshunguri",
+        "Life": {
+          "Name": "Inshurense Ya Vupfhumba",
+          "Type": "Vupfhumba",
+          "Description": "Hi nyika swipimelo ku sirhelekisa vutomi na vutomi bya vatirhi, ku tiyisa ku pfuna eka switlhavi, mintsongo na swilo leswi nga ha humelelaka, ku endla leswaku ntirho wu tshama wu ri karhi wu sirhelekile.",
+          "Feature1": "Switlhavi Swa Ntirho",
+          "Feature2": "Inshurense Ya Rihanyu – Xikombiso",
+          "Feature3": "Khuselo Ya Milawu",
+          "Feature4": "Inshurense Ya Vutirhi Bya Munhu"
+        },
+        "NonLife": {
+          "Name": "Inshurense Ya Ku Lahleka Ka Switirhisiwa",
+          "Type": "Ku Lahleka Ka Switirhisiwa",
+          "Description": "Hi nyika swipimelo swo tala ku sirhelekisa swilo swa vatirhi, ku katsa tiendlelo, ximobilho na mimbuyelo ya ntirho, ku sirhelekisa switirhisiwa swa vhumbirhi eka swirhavi swa siku na siku.",
+          "Feature1": "Ku Thwala Ekhaya",
+          "Feature2": "Vurhwi Na Nhlayo Ya Ntirho",
+          "Feature3": "Ku Hwesa Ka Michini, Tiholo Na Ku Langa",
+          "Feature4": "Mihlovo Yo Tala – Vatirhisi Na Switirhisiwa Hinkwavo",
+          "Feature5": "Ku Thwala Ka Mahala, Ka Xifambiso Na Ka Misava",
+          "Feature6": "Mimbuyelo Ya Ntirho – Hinkwaswo, Ku tirha, Vaxavisi, Switirhisiwa Na Ntirho"
+        }
+      },
+      "RequestQuote": "Komba Ndzawulo",
+      "Back": "Vuyela eka switlhavi swa inshurense"
+    },
+    "AboutUs": {
+      "SinceYear": "KU SUSIWA 2014",
+      "ImageAlt": "Tinxaka Ta Hina",
+      "TitleHighlight": "Ku Sirhelekisa",
+      "TitleRest": "swinhu swa wena",
+      "TitleAnimated": "Swirhavi",
+      "Description": "Hi sisitiwa ku tirhela ku nyika vatirhi swipimelo swa inshurense hi ndlela yo endla leswaku tikhwatsi ta vona ti sirhelekile hi ku kongoma eka swirhavi leswi nga ha humelelaka.",
+      "CTA": "Kuma Rungula Ra Hina"
+    },
+    "WhyChooseUs": {
+      "Subtitle": "Hikuva Hlawula Hina",
+      "TitleBefore": "Nkoka Eka ",
+      "TitleHighlight": "Polisi Yonkhana",
+      "Feature1": {
+        "Title": "Ku landzelela ka nkarhi hinkwawo",
+        "Description": "Hi tshama na mutirhi evuton’wini hinkwabyo, hi ri karhi hi nyika mpfuno eka switlhavi na mhaka yin’wana ya inshurense."
+      },
+      "Feature2": {
+        "Title": "Ku Sirhelekisa Switirho",
+        "Description": "Hi tirhela ku sirhelekisa tikhwatsi, timali na switirhisiwa swa mutirhi, hi tirhisa ndlela yo sungula ku khathalela khuselo na ku rhula."
+      },
+      "Feature3": {
+        "Title": "Rungula Ra Vuhlayiseki A Hi Rhi Ema Tixavisa",
+        "Description": "Hi nyika mpfuno wo kota ku pfuna hi mahala, hi endla leswaku vutihlamuleri bya wena byi tswala swinene."
+      },
+      "CTA": "Tshama Ni Ndzawulo",
+      "ImageAlt": "Ku hlangana na mutirhi wa inshurense",
+      "Consultant": {
+        "title": "Mpfuneto Wa Mahala!",
+        "description": "U hakela ntsena hi ku hakela nhlayo ya inshurense. Tinxaka ta hina ta vukorhokeri ti tshama ti le handle ka wena, ti ri karhi ti pfuna eka nkarhi wa wena wa inshurense, naswona ",
+        "Not": "a hi endli nhlayo yo engetela!"
+      }
+    },
+    "Testimonials": {
+      "Items": {
+        "1": {
+          "content": "Ku tiyisisa ku rhula ka tikhwatsi na ndyangu wa mina ku nga yin’wana ya swiboho swa kahle swinene leswi ndzi swi endleke.",
+          "name": "João Silva",
+          "role": "Inshurense Ya Ku Endla Rihanyu"
+        },
+        "2": {
+          "content": "Hi nkarhi wa timinete ta 15 ndzi kumile ndhavuko lowu a wuriwa hi van’wana masiku ku wu nyika. Swi tsakisa swinene!",
+          "name": "Maria Santos",
+          "role": "Inshurense Ya Switirhisiwa"
+        },
+        "3": {
+          "content": "Mpfuno wa munhu wu endla ku hambana. Va hlamusele swikombiso hinkwaswo hi ku tiyisisa na ku twisisa.",
+          "name": "Carlos Costa",
+          "role": "Inshurense Ya Rihanyu"
+        }
+      },
+      "CTA": {
+        "Title": "Ku kuma khuselo hi timinete",
+        "TitleHighlight": "Komba sweswi",
+        "Description": "Hi tsundzuka swikongomelo swa wena, hi ku sirhelela hinkwaswo leswi nga humelelaka. Komba sweswi khuselo ya wena!",
+        "Button": "Komba Inshurense Ya Mina",
+        "CustomersCount": "+5.000",
+        "CustomersText": "Vatirhisi Lava Tsakaka"
+      }
+    },
+    "ContactCTA": {
+      "sd": "Inshurense ya Digitali",
+      "ds": "Digitali Inshurense",
+      "Title": "Tiva Na Hina",
+      "Subtitle": "Tinxaka ta hina ti lunghekile ku nyika mpfuneto lowu nga riki na xiphiqo eka inshurense",
+      "SendMessageTitle": "Kambe Tsala Meseji",
+      "Form": {
+        "NamePlaceholder": "Vito ra wena",
+        "EmailPlaceholder": "Imeile ya wena",
+        "MessagePlaceholder": "Meseji ya wena",
+        "SendButton": "Tumela Meseji"
+      },
+      "ContactOptions": {
+        "0": {
+          "Title": "Fowuni",
+          "Description": "Mutsari wa Xikombiso 24/7",
+          "Action": "Vula sweswi"
+        },
+        "1": {
+          "Title": "Imeile",
+          "Description": "Kuma Ndzawulo Yo Huma Hi Sweswo",
+          "Action": "Tumela Imeile"
+        },
+        "2": {
+          "Title": "Endlelo",
+          "Description": "Av. Vladimir Lenine, 2815, Maputo, Mozambiki",
+          "Action": "Languta eka Mapa"
+        }
+      }
+    }
+  },
+  "Footer": {
+    "Description": "Hi sirhelekisa swiroto na ku aka ku tshemba ku sukela hi 2014, hi tshama na vatirhi emisaveni hinkwayo.",
+    "Explore": {
+      "Title": "Hlaya",
+      "Links": {
+        "About": "Hi Ha",
+        "Services": "Tirhiso",
+        "FindBroker": "Tinxaka Ta Hina",
+        "Academy": "Inshurense ya Digitali"
+      }
+    },
+    "Contact": {
+      "Title": "Vulavulo",
+      "Address": "Av. Vladimir Lenine, 2815 - Maputo",
+      "Phone": "(+258) 214 184 39",
+      "Mobile": "(+258) 82 305 21 72",
+      "Email": "maleseguros@info.co.mz"
+    },
+    "Newsletter": {
+      "Title": "Xikombiso Xa Xikombiso",
+      "Placeholder": "Imeile",
+      "Description": "Bhalisela ku kuma rungula na tindzavisiso ta hina."
+    },
+    "Bottom": {
+      "Copy": "Swirho hinkwaswo swi sirhelekile.",
+      "Terms": "Miyalelo Ya Ntirho",
+      "Privacy": "Nawu Wa Xikombiso",
+      "Cookies": "Cookies"
+    }
+  }
+}

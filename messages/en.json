@@ -1,0 +1,238 @@
+{
+  "HomePage": {
+    "Contact": {
+      "Phone": "(+258) 214 184 39",
+      "PhoneSubtitle": "24/7 Direct Line",
+      "PhoneAria": "Call +258 214 184 39",
+      "Address": "Av. Vladimir Lenine, 2815",
+      "AddressSubtitle": "Maputo, Mozambique",
+      "AddressAria": "View location on Google Maps",
+      "Hours": "Mon-Fri: 8am-6pm",
+      "HoursSubtitle": "Opening Hours",
+      "HoursAria": "Business hours"
+    },
+    "Nav": {
+      "Explorar": "Explore",
+      "AcessoRapido": "Quick Access",
+      "SimulacaoSeguro": "Insurance Simulation",
+      "RenovarApolice": "Renew Policy",
+      "NossaEquipe": "Our Team",
+      "Sinistros": "Claims",
+      "ComunicarSinistro": "Report a Claim",
+      "Documentos": "Documents",
+      "OficinasReboques": "Workshops & Towing",
+      "ServicosCliente": "Customer Services",
+      "InformacoesUteis": "Useful Information",
+      "SolicitarRetorno": "Request Callback",
+      "Contactos": "Contacts",
+      "Servicos": "Services",
+      "SobreNos": "About Us",
+      "SeguroDigital": "Digital Insurance",
+      "Callback": "Request Callback"
+    },
+    "Hero": {
+      "slides": {
+        "1": {
+          "title": "Those Who Are Protected Live Differently",
+          "subtitle": "The difference between fearing the future and being ready for it",
+          "description": "Our clients don’t live in fear of tomorrow — they live with the certainty of being prepared.",
+          "cta": "I Want to Live Differently"
+        },
+        "2": {
+          "title": "Automobile Insurance",
+          "subtitle": "Total protection for your vehicle",
+          "description": "Comprehensive coverage with 24-hour roadside assistance nationwide",
+          "cta": "See Plans"
+        },
+        "3": {
+          "title": "The Shadow That Protects Your Assets",
+          "subtitle": "Leave what is valuable under our protection",
+          "description": "With our customized coverage, your assets are safeguarded to face unforeseen events and grow with security.",
+          "cta": "Talk to a Specialist"
+        }
+      }
+    },
+    "Insurance": {
+      "Personal": {
+        "Name": "Personal Insurance",
+        "Description": "Personalized protection for you and your family"
+      },
+      "Business": {
+        "Name": "Business Insurance",
+        "Description": "Complete solutions to protect your business"
+      },
+      "YearsOfExcellence": "8 Years of Excellence",
+      "SectionTitle": "In Insurance Solutions",
+      "SectionDescription": "providing complete protection tailored to our clients' needs",
+      "MoreInfo": "More information"
+    },
+    "InsuranceTypes": {
+      "Personal": {
+        "Name": "Personal Insurance",
+        "Life": {
+          "Name": "Life Insurance",
+          "Type": "Life",
+          "Description": "We offer the best insurance options to protect you and your family against accidents, illnesses, and unforeseen events related to your physical integrity and well-being, ensuring financial peace of mind.",
+          "Feature1": "Personal Accidents",
+          "Feature2": "Personal Accidents – School Insurance",
+          "Feature3": "Personal Accidents – Family Insurance",
+          "Feature4": "Personal Accidents – Sports, Culture and Recreation Insurance"
+        },
+        "NonLife": {
+          "Name": "Non-Life Insurance",
+          "Type": "Non-Life",
+          "Description": "We provide comprehensive solutions to protect your personal assets, such as property, vehicles, and civil liability, ensuring coverage that safeguards your estate against various risks.",
+          "Feature1": "Travel",
+          "Feature2": "Multi-Risk – Housing and Mortgage Insurance",
+          "Feature3": "Automobile",
+          "Feature4": "Civil Liability – Family and Hunter"
+        }
+      },
+      "Business": {
+        "Name": "Business Insurance",
+        "Life": {
+          "Name": "Life Insurance",
+          "Type": "Life",
+          "Description": "We offer insurance options to protect the life and well-being of employees, providing support in case of accidents, illnesses, and other eventualities, promoting safety and peace of mind in the workplace.",
+          "Feature1": "Work Accidents",
+          "Feature2": "Health Insurance – Group",
+          "Feature3": "Legal Defense",
+          "Feature4": "Insurance for Self-Employed Workers"
+        },
+        "NonLife": {
+          "Name": "Non-Life Insurance",
+          "Type": "Non-Life",
+          "Description": "We provide comprehensive solutions to protect your assets, such as property, vehicles, and civil liability, offering coverage that safeguards your estate against everyday risks.",
+          "Feature1": "Domestic Transportation",
+          "Feature2": "Fire and Natural Elements",
+          "Feature3": "Machine, Construction and Installation Damage",
+          "Feature4": "Multi-Risk – Merchants and All Risks",
+          "Feature5": "Maritime, Air, and Land Transport",
+          "Feature6": "Civil Liability – General, Operations, Fishermen, Products, and Professional"
+        }
+      },
+      "RequestQuote": "Request a Quote",
+      "Back": "Back to types of insurance"
+    },
+    "AboutUs": {
+      "SinceYear": "SINCE 2014",
+      "ImageAlt": "Our team",
+      "TitleHighlight": "Protecting",
+      "TitleRest": "your",
+      "TitleAnimated": "Risks",
+      "Description": "Founded with the mission of suggesting to our Clients the various types of insurance according to the specification of potential risks to which their wealth and financial flows are subject.",
+      "CTA": "Discover our history"
+    },
+    "WhyChooseUs": {
+      "Subtitle": "Why Choose Us",
+      "TitleBefore": "Excellence in ",
+      "TitleHighlight": "Every Policy",
+      "Feature1": {
+        "Title": "Continuous Support",
+        "Description": "We are alongside the client throughout the process, ensuring close support in claims and any other insurance-related matters."
+      },
+      "Feature2": {
+        "Title": "Protecting Interests",
+        "Description": "We work to safeguard the assets, money, and wealth of each client, always prioritizing their safety and peace of mind."
+      },
+      "Feature3": {
+        "Title": "Consulting Without Extra Costs",
+        "Description": "Our specialized consultancy is provided without additional charges, ensuring greater value for your investment."
+      },
+      "CTA": "Report a Claim",
+      "ImageAlt": "Meeting with insurance agent",
+      "Consultant": {
+        "title": "Consulting Without Extra Charges!",
+        "description": "Pay with us, only for the insurance value, and our team of specialists will always be available and ready to assist you throughout your entire insurance journey, and for that, ",
+        "Not": "We don't charge anything!"
+      }
+    },
+    "Testimonials": {
+      "Items": {
+        "1": {
+          "content": "Being able to ensure the peace of mind of my assets and family was one of the best decisions I have made.",
+          "name": "João Silva",
+          "role": "Travel Insurance"
+        },
+        "2": {
+          "content": "In 15 minutes I had a proposal that other insurers took days to offer. Impressive!",
+          "name": "Maria Santos",
+          "role": "Property Insurance"
+        },
+        "3": {
+          "content": "The human support made all the difference. They explained every detail with patience and clarity.",
+          "name": "Carlos Costa",
+          "role": "Health Insurance"
+        }
+      },
+      "CTA": {
+        "Title": "and secure your protection in minutes",
+        "TitleHighlight": "Simulate now",
+        "Description": "Tell us your needs and we will take care of the rest. Request your quote and ensure the safety of your assets!",
+        "Button": "Simulate my insurance",
+        "CustomersCount": "+5,000",
+        "CustomersText": "Satisfied Clients"
+      }
+    },
+    "ContactCTA": {
+      "sd": "Digital Insurance",
+      "ds": "Insurance Digital",
+      "Title": "Contact Us",
+      "Subtitle": "Our team is ready to provide the best insurance experience",
+      "SendMessageTitle": "Or Send a Message",
+      "Form": {
+        "NamePlaceholder": "Your Name",
+        "EmailPlaceholder": "Your Email",
+        "MessagePlaceholder": "Your Message",
+        "SendButton": "Send Message"
+      },
+      "ContactOptions": {
+        "0": {
+          "Title": "Phone",
+          "Description": "24/7 Direct Line",
+          "Action": "Call Now"
+        },
+        "1": {
+          "Title": "Email",
+          "Description": "Get a quick response",
+          "Action": "Send Email"
+        },
+        "2": {
+          "Title": "Address",
+          "Description": "Av. Vladimir Lenine, 2815, Maputo, Mozambique",
+          "Action": "View on Map"
+        }
+      }
+    }
+  },
+  "Footer": {
+    "Description": "Protecting dreams and building trust since 2014, we stand by our clients throughout the entire process.",
+    "Explore": {
+      "Title": "Explore",
+      "Links": {
+        "About": "About Us",
+        "Services": "Services",
+        "FindBroker": "Our Team",
+        "Academy": "Digital Insurance"
+      }
+    },
+    "Contact": {
+      "Title": "Contacts",
+      "Address": "Av. Vladimir Lenine, 2815 - Maputo",
+      "Phone": "(+258) 214 184 39",
+      "Mobile": "(+258) 82 305 21 72",
+      "Email": "maleseguros@info.co.mz"
+    },
+    "Newsletter": {
+      "Title": "Newsletter",
+      "Placeholder": "Email Address",
+      "Description": "Subscribe to receive our news and updates."
+    },
+    "Bottom": {
+      "Copy": "All rights reserved.",
+      "Terms": "Terms of Service",
+      "Privacy": "Privacy Policy",
+      "Cookies": "Cookies"
+    }
+  }
+}
