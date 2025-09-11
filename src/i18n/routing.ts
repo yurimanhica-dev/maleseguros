@@ -5,7 +5,6 @@ export const routing = defineRouting({
 
   // // Paths por locale
   pathnames: {
-    "/": { en: "/", pt: "/" },
     "/simulacao-seguro": {
       en: "/insurance-simulation",
       pt: "/simulacao-seguro",
@@ -41,5 +40,6 @@ export const routing = defineRouting({
     "/seguro-digital": { en: "/digital-insurance", pt: "/seguro-digital" },
   },
 
+  // // Default locale
   defaultLocale: "pt",
 });

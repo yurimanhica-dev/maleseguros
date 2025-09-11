@@ -1,6 +1,6 @@
 "use client";
 
-import { companyValues } from "@/app/[locale]/utils/types";
+import { companyPrincipios, companyValues } from "@/app/[locale]/utils/types";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { Minus } from "lucide-react";
 import Image from "next/image";
@@ -47,7 +47,9 @@ const contentVariants: Variants = {
 export default function QuemSomos() {
   const [activeValue, setActiveValue] = useState(companyValues[0].id);
 
-  const selectedValue = companyValues.find((value) => value.id === activeValue);
+  const selectedValue = companyPrincipios.find(
+    (value) => value.id === activeValue
+  );
 
   return (
     <section className="relative py-24 bg-[var(--background)] text-[var(--foreground)] overflow-hidden">
@@ -63,19 +65,22 @@ export default function QuemSomos() {
           <div className="space-y-8">
             <motion.div variants={item} className="space-y-4">
               <div className="inline-flex  items-center uppercase px-4 py-2 bg-[var(--primary)] text-white text-sm font-medium">
-                <span>Nossos Valores Fundamentais</span>
+                <span>Os Nossos Princípios</span>
               </div>
 
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-                <span className="block">Mais de 8 Anos de</span>
+                <span className="block text-3xl uppercase">
+                  Mais de 8 Anos de Experiência no
+                </span>
                 <span className="block text-[var(--primary)]">
-                  Excelência e Inovação
+                  Mercado de Seguros
                 </span>
               </h2>
 
-              <p className="text-lg text-[var(--muted-foreground)] leading-relaxed">
-                Nossa corretora é guiada por valores sólidos que garantem
-                segurança e confiança a cada cliente atendido.
+              <p className="text-lg text-foreground/70 leading-relaxed">
+                No relacionamento com os nossos Clientes, seguimos princípios
+                que asseguram confiança, transparência e excelência em cada
+                serviço prestado.
               </p>
 
               {/* Botões dos valores */}
@@ -83,11 +88,11 @@ export default function QuemSomos() {
                 variants={item}
                 className="flex flex-wrap justify-between items-center gap-3 mt-6"
               >
-                {companyValues.map((value) => (
+                {companyPrincipios.map((value) => (
                   <button
                     key={value.id}
                     onClick={() => setActiveValue(value.id)}
-                    className={`flex uppercase items-center gap-2 px-4 py-2  text-sm font-medium transition-all ${
+                    className={`flex uppercase items-center px-2 py-2  text-sm font-medium transition-all ${
                       activeValue === value.id
                         ? "underline text-[var(--primary)]"
                         : "text-[var(--secondary-foreground)]"

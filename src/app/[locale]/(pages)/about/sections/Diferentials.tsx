@@ -65,7 +65,7 @@ export default function DifferentialSection() {
               className="text-white"
             >
               <h2 className="text-md uppercase tracking-wider mb-2 font-semibold">
-                Porque escolher-nos?
+                Porquê nós para servi-lo?
               </h2>
               <h3 className="text-5xl md:text-6xl font-bold mb-4">
                 <span className="text-primary">Diferenças</span> que fazem a

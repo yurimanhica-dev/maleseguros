@@ -37,7 +37,7 @@ export function LanguageSwitcher() {
     for (const locale of supportedLocales) {
       if (pathname.startsWith(`/${locale}`)) return locale;
     }
-    return "pt"; // fallback
+    return "pt"; // Default to Portuguese
   };
 
   const currentLocale = getLocaleFromPath();

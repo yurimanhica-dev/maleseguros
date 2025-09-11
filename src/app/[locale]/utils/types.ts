@@ -129,15 +129,85 @@ export const seguroConfig = {
     },
   },
 };
+export const companyPrincipios = [
+  {
+    id: "imparcialidade",
+    title: "Imparcialidade",
+    description:
+      "Tratamos cada Cliente de forma justa e igual, garantindo um atendimento sem distinções.",
+    image: "/values/125041.jpg",
+    content: {
+      title: "Atendimento Justo e Transparente",
+      description:
+        "Cada Cliente é valorizado com a mesma dedicação, assegurando confiança e relações de longo prazo.",
+      features: [
+        "Transparência em todas as interações",
+        "Igualdade no tratamento de cada Cliente",
+        "Excelência como padrão de serviço",
+      ],
+    },
+  },
+  {
+    id: "profissionalismo",
+    title: "Profissionalismo",
+    description:
+      "Cuidamos dos detalhes e entendemos o negócio do Cliente para oferecer as melhores soluções.",
+    image: "/values/120121.jpg",
+    content: {
+      title: "Excelência Profissional em Cada Detalhe",
+      description:
+        "Com análise criteriosa e conhecimento técnico, oferecemos coberturas adequadas, zelo e soluções inovadoras.",
+      features: [
+        "Análise aprofundada das necessidades",
+        "Propostas alinhadas ao risco real",
+        "Soluções criativas para minimizar perdas",
+      ],
+    },
+  },
+  {
+    id: "dedicacao",
+    title: "Dedicação",
+    description:
+      "Nossa equipa está sempre disponível e atenta às necessidades dos Clientes.",
+    image: "/values/119174.jpg",
+    content: {
+      title: "Compromisso e Apoio Constante",
+      description:
+        "Colaboradores preparados e acessíveis garantem acompanhamento próximo e eficiente em todas as fases.",
+      features: [
+        "Atendimento rápido e eficiente",
+        "Equipe disponível para suporte contínuo",
+        "Respostas alinhadas às expectativas do Cliente",
+      ],
+    },
+  },
+  {
+    id: "inovacaoZelo",
+    title: "Inovação & Zelo",
+    description:
+      "Buscamos constantemente novas formas de proteger os Clientes com atenção e cuidado.",
+    image: "/values/126146.jpg",
+    content: {
+      title: "Cuidado Moderno e Inovador",
+      description:
+        "Unimos tecnologia, criatividade e zelo para oferecer soluções adaptadas ao mercado e às necessidades individuais.",
+      features: [
+        "Uso de práticas modernas e eficientes",
+        "Estratégias para mitigar riscos de sinistros",
+        "Atenção cuidadosa em cada etapa do processo",
+      ],
+    },
+  },
+];
 
 // Dados dos valores da empresa
 export const companyValues = [
   {
-    id: "confianca",
-    title: "Confiança",
+    id: "imparcialidade",
+    title: "Imparcialidade",
 
     description:
-      "Construímos relações baseadas na transparência e honestidade.",
+      "Tratamos cada Cliente de forma justa e igual, garantindo um atendimento sem distinções.",
     image: "/values/125041.jpg",
     content: {
       title: "Confiança que Constrói Futuros",

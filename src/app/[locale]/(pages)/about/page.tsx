@@ -8,7 +8,7 @@ import EmergencyCTA, {
   EmergencyContacts,
 } from "../servicos-cliente/informacoes/components/EmergencyCTA";
 import AboutUs from "./sections/AboutUs";
-import Diferentials from "./sections/Diferentials";
+import DifferentialSection2 from "./sections/DifferentialSection2";
 import QuemSomos from "./sections/WhoWeAre";
 
 const emergencyContacts: EmergencyContacts = {
@@ -32,7 +32,7 @@ const page = () => {
         breadcrumb={[{ name: "Sobre Nós", path: "/about" }]}
       />
       <AboutUs />
-      <Diferentials />
+      <DifferentialSection2 />
       <QuemSomos />
       <TeamSection />
       <EmergencyCTA emergencyContacts={emergencyContacts} />

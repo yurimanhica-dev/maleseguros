@@ -67,14 +67,16 @@ const AboutUs = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-lg text-[var(--muted-foreground)] leading-relaxed"
+              className="text-lg text-gray-500 leading-relaxed"
             >
               Em resposta ao crescente número de reclamações sobre o atendimento
-              das seguradoras, a <strong>MALEholding</strong> criou a{" "}
-              <strong>MALEseguros</strong>, uma equipe de profissionais
-              moçambicanos comprometidos em estreitar a relação entre clientes e
-              seguradoras, oferecendo transparência, proximidade e excelência em
-              cada atendimento.
+              das seguradoras, a{" "}
+              <span className="text-primary font-semibold">MALEholding</span>{" "}
+              criou a{" "}
+              <span className="text-primary font-semibold">MALEseguros</span>,
+              uma equipe de profissionais moçambicanos comprometidos em
+              estreitar a relação entre clientes e seguradoras, oferecendo
+              transparência, proximidade e excelência em cada atendimento.
             </motion.p>
           </motion.div>
         </motion.div>

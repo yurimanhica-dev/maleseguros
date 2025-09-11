@@ -49,7 +49,7 @@ export const Hero = ({ title, imageUrl, breadcrumb }: HeroProps) => {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="flex  items-center justify-center text-xl text-white bg-accent/30 px-4 md:px-8 lg:px-12 py-2 md:py-3 lg:py-4 backdrop-blur-sm  border-b-2 border-gray-100 w-fit mx-auto"
+          className="flex  items-center justify-center text-xl text-white bg-accent/30 px-4 md:px-8 py-2 md:py-3  backdrop-blur-sm  border-b-2 border-gray-100 w-fit mx-auto"
         >
           <motion.a
             href="/"
