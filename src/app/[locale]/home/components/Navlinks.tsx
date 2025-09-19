@@ -20,19 +20,35 @@ const NavLinks = () => {
     setOpenDropdown(openDropdown === item ? null : item);
   };
 
+  const removeLocalePrefix = (path: string) => {
+    // Divide pelo "/" e remove o primeiro segmento se for uma locale
+    const segments = path.split("/").filter(Boolean);
+    if (segments.length > 0 && ["pt", "en", "ts"].includes(segments[0])) {
+      return "/" + segments.slice(1).join("/");
+    }
+    return path;
+  };
+
   const isSelected = (path?: string, subItems?: any[]) => {
     if (!currentPath) return false;
 
-    // Normaliza o caminho atual
-    const normalizedCurrentPath = currentPath.toLowerCase().replace(/\/+$/, "");
+    // Remove locale e normaliza
+    const normalizedCurrentPath = removeLocalePrefix(currentPath)
+      .toLowerCase()
+      .replace(/\/+$/, "");
 
-    // Verifica se o path principal corresponde
+    // Verifica path principal
     if (path) {
       const normalizedPath = path.toLowerCase().replace(/\/+$/, "");
-      if (normalizedCurrentPath === normalizedPath) return true;
+      if (
+        normalizedCurrentPath === normalizedPath ||
+        normalizedCurrentPath.startsWith(normalizedPath + "/")
+      ) {
+        return true;
+      }
     }
 
-    // Verifica se algum subItem corresponde
+    // Verifica subItems
     if (subItems) {
       for (const group of subItems) {
         for (const subItem of group.items) {
@@ -40,7 +56,12 @@ const NavLinks = () => {
             const normalizedSubItemPath = subItem.path
               .toLowerCase()
               .replace(/\/+$/, "");
-            if (normalizedCurrentPath === normalizedSubItemPath) return true;
+            if (
+              normalizedCurrentPath === normalizedSubItemPath ||
+              normalizedCurrentPath.startsWith(normalizedSubItemPath + "/")
+            ) {
+              return true;
+            }
           }
         }
       }

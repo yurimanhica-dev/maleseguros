@@ -8,12 +8,21 @@ import {
   SelectValue,
 } from "@/components/ui/selectIdioma";
 import "flag-icons/css/flag-icons.min.css";
-import { Globe2 } from "lucide-react";
+import { useTheme } from "next-themes";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 
 export function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
+  const { theme, resolvedTheme } = useTheme();
+
+  const currentTheme = theme === "system" ? resolvedTheme : theme;
+
+  const logoSrc =
+    currentTheme === "dark"
+      ? "/icons/world_light.png"
+      : "/icons/world_dark.png";
 
   const supportedLocales = ["en", "pt", "ts"];
 
@@ -44,7 +53,7 @@ export function LanguageSwitcher() {
 
   return (
     <div className="flex gap-2 items-center">
-      <Globe2 className="w-6 h-6" />
+      <Image src={logoSrc} alt="globe" width={22} height={22} />
       <span>:</span>
       <Select value={currentLocale} onValueChange={onSelectChange}>
         <SelectTrigger>
@@ -52,13 +61,13 @@ export function LanguageSwitcher() {
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="en">
-            EN <span className="fi fi-us"></span>
+            <span className="fi fi-us"></span>
           </SelectItem>
           <SelectItem value="pt">
-            PT <span className="fi fi-pt"></span>
+            <span className="fi fi-pt"></span>
           </SelectItem>
           <SelectItem value="ts">
-            TS <span className="fi fi-mz"></span>
+            <span className="fi fi-mz"></span>
           </SelectItem>
         </SelectContent>
       </Select>
