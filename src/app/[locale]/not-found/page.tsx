@@ -3,7 +3,6 @@
 import Footer from "../components/Footer";
 import NavBar from "../components/Navbar";
 import { Hero } from "../components/PagesHeroimg";
-import SearchBox from "../components/SearchBox";
 import TopContactBar from "../components/TopContactBar";
 
 export default function NotFound() {
@@ -27,7 +26,7 @@ export default function NotFound() {
             navegação ou a busca abaixo para encontrar o que precisa.
           </p>
           <div className="w-full absolute top-0 md:pt-24 pt-38 px-4 z-50">
-            <SearchBox />
+            {/* <SearchBox /> */}
           </div>
         </div>
       </div>

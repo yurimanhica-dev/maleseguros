@@ -1,11 +1,11 @@
 "use client";
 
-import Footer from "../[locale]/components/Footer";
-import NavBar from "../[locale]/components/Navbar";
-import { Hero } from "../[locale]/components/PagesHeroimg";
-import TopContactBar from "../[locale]/components/TopContactBar";
+import Footer from "./[locale]/components/Footer";
+import NavBar from "./[locale]/components/Navbar";
+import { Hero } from "./[locale]/components/PagesHeroimg";
+import TopContactBar from "./[locale]/components/TopContactBar";
 
-export default function NotFound() {
+export default function GlobalNotFound() {
   return (
     <>
       <TopContactBar />
