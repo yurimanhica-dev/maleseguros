@@ -28,13 +28,13 @@ export const Testimonials = () => {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <h2 className="text-5xl uppercase font-bold">
+              <h2 className="text-4xl uppercase font-bold">
                 <span className="text-primary">
                   {t("Testimonials.CTA.TitleHighlight")}
                 </span>{" "}
                 {t("Testimonials.CTA.Title")}
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="md:text-lg text-md text-muted-foreground">
                 {t("Testimonials.CTA.Description")}
               </p>
             </div>
@@ -95,7 +95,7 @@ export const Testimonials = () => {
               >
                 <div className="flex flex-col h-full">
                   <Quote className="w-8 h-8 text-primary/80 mb-4" />
-                  <p className="text-xl italic text-muted-foreground flex-grow">
+                  <p className="text-lg italic text-muted-foreground flex-grow">
                     &quot;{t(testimonials[currentTestimonial].content)}&quot;
                   </p>
                   <div className="mt-8 flex items-center gap-4">

@@ -129,7 +129,7 @@ export const AboutUs = () => {
 
             <motion.h2
               variants={itemVariants}
-              className="text-5xl uppercase font-bold "
+              className="text-4xl uppercase font-bold "
             >
               <span className="text-primary">
                 {t("AboutUs.TitleHighlight")}

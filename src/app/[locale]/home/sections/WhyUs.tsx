@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
             <h2 className="inline-flex text-sm uppercase items-center font-semibold px-4 py-2 bg-primary/10 text-primary rounded-full">
               {t("WhyChooseUs.Subtitle")}
             </h2>
-            <h3 className="text-5xl uppercase font-bold">
+            <h3 className="text-4xl md:text-5xl uppercase font-bold">
               {t("WhyChooseUs.TitleBefore")}{" "}
               <span className="text-primary">
                 {t("WhyChooseUs.TitleHighlight")}
@@ -96,7 +96,7 @@ export default function WhyChooseUs() {
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                           transition={{ delay: 0.2 }}
-                          className="text-lg text-muted-foreground"
+                          className="text-md md:text-lg text-muted-foreground"
                         >
                           {t(feature.description)}
                         </motion.p>

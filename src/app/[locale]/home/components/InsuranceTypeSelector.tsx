@@ -35,7 +35,7 @@ export const InsuranceTypeSelector = ({
             {t("Insurance.YearsOfExcellence")}
           </span>
         </div>
-        <h2 className="text-5xl font-bold uppercase text-foreground mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold uppercase text-foreground mb-4">
           {t("Insurance.SectionTitle")}
         </h2>
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">

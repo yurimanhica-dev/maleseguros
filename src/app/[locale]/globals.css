@@ -225,7 +225,6 @@
     height: 2px;
     color: var(--primary);
     background-color: var(--primary);
-    decoration-color: var(--primary);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;

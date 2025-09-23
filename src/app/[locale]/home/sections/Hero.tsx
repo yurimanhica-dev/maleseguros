@@ -40,9 +40,9 @@ const Hero = () => {
       transition: { duration: 1.3, ease: [0.33, 1, 0.68, 1] }, // de 0.5 → 0.3
     },
   };
-
+  // max-h-[800px]
   return (
-    <section className="relative bg-black h-screen max-h-[800px] w-full overflow-hidden z-0">
+    <section className="relative bg-black h-screen max-h-[800px] min-w-fit w-full overflow-hidden z-0">
       {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0">
         <AnimatePresence>
@@ -90,7 +90,7 @@ const Hero = () => {
               >
                 {t(slides[currentSlide].subtitle)}
               </motion.p>
-              <h1 className="uppercase max-w-3xl text-5xl lg:text-7xl font-extrabold leading-tight mb-4">
+              <h1 className="uppercase max-w-3xl text-4xl md:text-5xl xl:text-7xl font-extrabold leading-tight mb-4">
                 {t(slides[currentSlide].title)}
               </h1>
               <motion.p
