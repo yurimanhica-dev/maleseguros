@@ -126,7 +126,7 @@ const HowItWorks = () => {
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-700"
                         />
-                        <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                         {/* Overlay badge */}
                         <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-primary">

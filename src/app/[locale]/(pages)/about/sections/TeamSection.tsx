@@ -126,9 +126,6 @@ export default function EquipePremium() {
                 <span className="block text-5xl text-[var(--primary)] uppercase">
                   Corrector
                 </span>
-                {/* <span className="block">
-                  hoje e descubra o plano ideal para sua situacão.
-                </span> */}
               </h2>
             </div>
             <p className="text-[var(--muted-foreground)] leading-relaxed text-lg">
@@ -136,20 +133,10 @@ export default function EquipePremium() {
               multidisciplinar combina experiência técnica com criatividade para
               entregar soluções inovadoras e personalizadas.
             </p>
-            {/* <Button
-              variant="primary"
-              icon={<ArrowRight />}
-              iconPosition="right"
-              size="md"
-              rounded="full"
-              className="text-sm hover:bg-primary-dark"
-            >
-              Solicitar Retorno
-            </Button>*/}
           </motion.aside>
 
           {/* Coluna direita: Cards da equipe */}
-          <div className="lg:col-span-8 relative w-fit">
+          <div className="lg:col-span-8 relative w-full">
             <div className="relative overflow-hidden py-4">
               <motion.div
                 className="flex gap-6 animate-slide overflow-x-scroll [&::-webkit-scrollbar]:hidden"

@@ -2,7 +2,7 @@
 
 import Button from "@/app/[locale]/components/Button";
 import { motion } from "framer-motion";
-import { Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { redirect } from "next/navigation";
 
 export interface EmergencyContacts {
@@ -20,8 +20,7 @@ interface EmergencyCTAProps {
 }
 
 const EmergencyCTA = ({ emergencyContacts }: EmergencyCTAProps) => {
-  const { title, description, btn1Text, btn1Link, btn2Text, btn2Link, icon } =
-    emergencyContacts;
+  const { title, description, btn1Text, btn1Link } = emergencyContacts;
 
   return (
     <div>
@@ -31,28 +30,23 @@ const EmergencyCTA = ({ emergencyContacts }: EmergencyCTAProps) => {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="mt-16 bg-gradient-to-r from-primary to-primary/90 px-4 py-24 text-center text-white shadow-xl"
       >
-        <h2 className="text-5xl md:text-6xl font-bold mb-4">{title}</h2>
+        <h2 className="text-4xl md:text-5xl font-bold uppercase mb-4">
+          {title}
+        </h2>
         <p className="text-white/90 text-lg mb-6 max-w-2xl mx-auto">
           {description}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href={btn1Link}
-            className="flex items-center justify-center px-4 py-3 bg-white text-primary rounded-full font-bold hover:bg-gray-100 transition-colors animate-pulse-glow"
-          >
-            <Phone className="w-5 h-5 mr-2" />
-            {btn1Text}
-          </a>
           <Button
-            onClick={() => redirect(btn2Link)}
+            onClick={() => redirect(btn1Link)}
             variant="ghost"
-            icon={icon}
+            icon={<ArrowRight className="w-5 h-5 mr-2 animate-pulse" />}
             iconPosition="right"
             size="md"
             rounded="full"
             className="font-semibold"
           >
-            {btn2Text}
+            {btn1Text}
           </Button>
         </div>
       </motion.div>

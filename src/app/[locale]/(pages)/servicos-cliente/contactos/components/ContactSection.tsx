@@ -36,7 +36,7 @@ const ContactSection = () => {
       id="contactos"
       ref={ref}
     >
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto c-space relative z-10">
         {/* Título */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -47,7 +47,7 @@ const ContactSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold uppercase text-foreground mb-4">
             Entre em <span className="text-primary">Contacto</span>
           </h2>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             Estamos aqui para ajudar. Entre em contacto através dos nossos
             canais ou preencha o formulário abaixo.
           </p>

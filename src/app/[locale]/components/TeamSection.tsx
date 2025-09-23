@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { motion } from "framer-motion";
@@ -19,7 +20,7 @@ const TeamSection = () => {
     const width = window.innerWidth;
     if (width >= 1280) return setVisible(4);
     if (width >= 1024) return setVisible(3);
-    if (width >= 768) return setVisible(2);
+    if (width >= 768) return setVisible(3);
     return setVisible(1);
   }, []);
 
@@ -93,11 +94,7 @@ const TeamSection = () => {
         </motion.div>
 
         {/* Carousel Container */}
-        <div
-          className="relative overflow-hidden py-6"
-          onMouseEnter={() => setIsAutoPlaying(false)}
-          onMouseLeave={() => setIsAutoPlaying(true)}
-        >
+        <div className="relative overflow-hidden py-6">
           <motion.div
             className="flex gap-4 md:gap-6"
             animate={{ x: carouselOffset }}
@@ -242,7 +239,7 @@ const TeamSection = () => {
 
             <button
               onClick={nextSlide}
-              disabled={currentIndex >= corretores.length - visible}
+              disabled={currentIndex >= (totalSlides - 1) * visible}
               className="p-2 md:p-3 rounded-full bg-card border border-border hover:bg-primary hover:text-primary-foreground disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
               aria-label="Próximo"
             >

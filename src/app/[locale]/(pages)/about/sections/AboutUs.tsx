@@ -7,7 +7,7 @@ import { FaHeadset, FaMoneyBillWave, FaSmile, FaUsers } from "react-icons/fa";
 const stats = [
   { value: "+2000", label: "Clientes protegidos", icon: FaUsers },
   { value: "98%", label: "Satisfação", icon: FaSmile },
-  { value: "+ 5m MZN", label: "Em indenizações", icon: FaMoneyBillWave },
+  { value: "+ 5m", label: "Em indenizações", icon: FaMoneyBillWave },
   { value: "24/7", label: "Atendimento", icon: FaHeadset },
 ];
 
@@ -58,7 +58,7 @@ const AboutUs = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-5xl md:text-7xl font-bold truncate"
+              className="text-3xl md:text-5xl xl:text-7xl font-bold truncate"
             >
               Nossa História<span className="text-primary">.</span>
             </motion.h1>
@@ -67,11 +67,18 @@ const AboutUs = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-lg text-gray-500 leading-relaxed"
+              className=" text-foreground/70 text-lg leading-relaxed"
             >
               Em resposta ao crescente número de reclamações sobre o atendimento
               das seguradoras, a{" "}
-              <span className="text-primary font-semibold">MALEholding</span>{" "}
+              <a
+                href="https://maleholding.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-semibold"
+              >
+                MALEholding
+              </a>{" "}
               criou a{" "}
               <span className="text-primary font-semibold">MALEseguros</span>,
               uma equipe de profissionais moçambicanos comprometidos em

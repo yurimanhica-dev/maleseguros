@@ -11,13 +11,24 @@ import "flag-icons/css/flag-icons.min.css";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export function LanguageSwitcher() {
   const router = useRouter();
   const pathname = usePathname();
   const { theme, resolvedTheme } = useTheme();
 
-  const currentTheme = theme === "system" ? resolvedTheme : theme;
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // evita flicker até carregar o tema
+  }
+
+  const currentTheme = theme === "dark" ? resolvedTheme : theme;
 
   const logoSrc =
     currentTheme === "dark"

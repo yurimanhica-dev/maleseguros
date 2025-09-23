@@ -31,7 +31,7 @@ export default function BackgroundFill() {
           transition={{ duration: 2 }}
           className="space-y-6 container mx-auto c-space"
         >
-          <h2 className="text-foreground/90 max-w-3xl uppercase text-4xl font-extrabold leading-12">
+          <h2 className="text-white/90 max-w-3xl uppercase text-4xl font-extrabold leading-12">
             {t("WhyChooseUs.Consultant.title")}
           </h2>
           <p className="mt-2 text-lg text-white/90 max-w-2xl">
@@ -51,9 +51,9 @@ export default function BackgroundFill() {
           transition={{ delay: 1 }}
         >
           <div className="animate-bounce flex flex-col items-center">
-            <span className="text-foreground text-md mb-2">Scroll</span>
+            <span className="text-white/90 text-md mb-2">Scroll</span>
             <svg
-              className="w-6 h-6 text-foreground"
+              className="w-6 h-6 text-primary"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

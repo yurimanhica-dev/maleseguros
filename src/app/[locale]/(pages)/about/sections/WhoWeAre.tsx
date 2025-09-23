@@ -108,7 +108,7 @@ export default function QuemSomos() {
           {/* Coluna visual - Conteúdo dinâmico baseado no valor selecionado */}
           <motion.div
             variants={item}
-            className="relative h-[500px]  overflow-hidden shadow-2xl"
+            className="relative h-[500px]  overflow-hidden shadow-2xl bg-black"
           >
             <AnimatePresence>
               <motion.div
@@ -117,7 +117,7 @@ export default function QuemSomos() {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="relative h-full w-full"
+                className="relative h-full w-full bg-black"
               >
                 <Image
                   src={selectedValue?.image || "/default-image.jpg"}
@@ -128,7 +128,7 @@ export default function QuemSomos() {
                 />
 
                 {/* Overlay gradiente */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/80 to-black/60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/50 to-black/70" />
 
                 {/* Conteúdo textual */}
                 <AnimatePresence mode="wait">

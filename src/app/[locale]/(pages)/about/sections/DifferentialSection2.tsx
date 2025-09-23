@@ -1,32 +1,9 @@
 "use client";
 
+import Button from "@/app/[locale]/components/Button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
-
-const differentials = [
-  {
-    title: "Empresa 100% Moçambicana",
-    description:
-      "Temos orgulho em ser locais, com padrões de serviço ao nível internacional.",
-  },
-  {
-    title: "Experiência Garantida",
-    description:
-      "Colaboradores com longa experiência que asseguram seguros adequados ao seu risco.",
-  },
-  {
-    title: "Acompanhamento Contínuo",
-    description:
-      "Estamos sempre em contacto, apoiando em sinistros e nas suas necessidades diárias.",
-  },
-  {
-    title: "Defesa dos Seus Interesses",
-    description:
-      "A sua confiança é a nossa prioridade, protegendo o seu Male/Dinheiro/Riqueza.",
-  },
-];
-
 export default function DifferentialSection2() {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -71,30 +48,32 @@ export default function DifferentialSection2() {
                 <span className="text-primary ">MALEseguros</span>?
               </h2>
 
-              <p className="text-lg text-gray-400 leading-relaxed">
+              <p className="text-lg text-white/90 leading-relaxed">
                 Somos uma empresa com serviço personalizado e colaboradores
                 experientes que garantem seguros adequados ao risco. Estaremos
                 sempre ao seu lado, defendendo os seus interesses, que para nós
                 significam proteger o seu Male, Dinheiro e Riqueza.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-primary/30 transition-shadow"
+                <Button
+                  variant="primary"
+                  icon={<FaArrowRight />}
+                  iconPosition="right"
+                  rounded="full"
+                  className="font-semibold w-fit"
                 >
-                  Simular um Seguro
-                  <FaArrowRight />
-                </motion.button>
+                  Simular Seguro
+                </Button>
 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 border border-border bg-card text-card-foreground px-6 py-3 rounded-full font-semibold shadow-md"
+                {/* <Button
+                  variant="secondary"
+                  icon={<PhoneCall />}
+                  iconPosition="right"
+                  rounded="full"
+                  className="font-semibold w-full"
                 >
                   Falar com Especialista
-                </motion.button>
+                </Button> */}
               </div>
             </motion.div>
           </div>

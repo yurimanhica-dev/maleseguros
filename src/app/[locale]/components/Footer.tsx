@@ -189,7 +189,7 @@ const Footer = () => {
           className="h-px bg-gradient-to-r from-transparent via-[var(--border)] to-transparent my-8 w-full"
         />
         {/* Rodapé inferior */}
-        <div className="flex flex-col md:flex-row justify-between mb-8 items-center">
+        <div className="flex flex-col md:flex-row gap-4 justify-between mb-8 items-center">
           {" "}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -208,30 +208,27 @@ const Footer = () => {
             transition={{ delay: 0.6 }}
             className="flex items-center space-x-6"
           >
-            {" "}
             <Link
               href="#"
-              className="group relative block text-sm hover:text-[var(--primary)] transition-colors"
+              className="group underline-link relative block text-sm hover:text-[var(--primary)] transition-colors"
             >
               {t("Bottom.Terms")}
-              <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />{" "}
-            </Link>{" "}
+              {/* <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />{" "} */}
+            </Link>
             <Link
               href="#"
-              className="group relative block text-sm hover:text-[var(--primary)] transition-colors"
+              className="group underline-link relative block text-sm hover:text-[var(--primary)] transition-colors"
             >
               {t("Bottom.Privacy")}
-              <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />{" "}
-            </Link>{" "}
+            </Link>
             <Link
               href="#"
-              className="group relative block text-sm hover:text-[var(--primary)] transition-colors"
+              className="group underline-link relative block text-sm hover:text-[var(--primary)] transition-colors"
             >
               {t("Bottom.Cookies")}
-              <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />{" "}
-            </Link>{" "}
-          </motion.div>{" "}
-        </div>{" "}
+            </Link>
+          </motion.div>
+        </div>
       </div>
     </footer>
   );

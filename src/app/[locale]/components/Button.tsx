@@ -22,7 +22,7 @@ const Button = ({
   rounded = "none",
   icon,
   iconPosition = "left",
-  className = "",
+  className = "w-fit",
   onClick,
 }: ButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -39,11 +39,11 @@ const Button = ({
       border: "border border-primary",
     },
     secondary: {
-      bg: "bg-secondary",
+      bg: " bg-card",
       hover: "hover:bg-secondary",
-      text: "text-secondary-foreground/80",
-      shadow: "shadow-lg shadow-black/10 hover:shadow-black/20",
-      border: "border border-secondary",
+      text: " text-card-foreground",
+      shadow: "shadow-md shadow-black/10 hover:shadow-black/20",
+      border: " border border-border",
     },
     outline: {
       bg: "bg-transparent",

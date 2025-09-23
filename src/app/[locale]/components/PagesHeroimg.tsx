@@ -9,7 +9,7 @@ interface HeroProps {
   breadcrumb: { path: string; name: string }[];
 }
 
-export const Hero = ({ title, imageUrl, breadcrumb }: HeroProps) => {
+export const Hero = ({ imageUrl, breadcrumb }: HeroProps) => {
   return (
     <motion.section className="relative w-full overflow-hidden min-h-[300px] md:min-h-[400px] lg:min-h-[500px]">
       {/* Imagem de fundo com parallax */}
@@ -37,24 +37,24 @@ export const Hero = ({ title, imageUrl, breadcrumb }: HeroProps) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <motion.h1
+        {/* <motion.h1
           className="text-4xl md:text-5xl uppercase lg:text-7xl font-bold text-white pb-6 truncate"
           initial={{ y: 30 }}
           animate={{ y: 0 }}
           transition={{ type: "spring", stiffness: 100 }}
         >
           {title}
-        </motion.h1>
+        </motion.h1> */}
         <motion.div
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="flex  items-center justify-center text-xl text-white bg-accent/30 px-4 md:px-8 py-2 md:py-3  backdrop-blur-sm  border-b-2 border-gray-100 w-fit mx-auto"
+          className="flex  items-center justify-center text-xl text-foreground bg-accent px-4 md:px-8 py-2 md:py-3  backdrop-blur-sm  border-b-2 border-foreground font-semibold w-fit mx-auto"
         >
           <motion.a
             href="/"
             whileHover={{ scale: 1.05 }}
-            className="flex items-center  gap-1 hover:text-white/90 transition-colors"
+            className="flex items-center  gap-1 hover:text-foreground/90 transition-colors"
           >
             Home
           </motion.a>
@@ -66,7 +66,7 @@ export const Hero = ({ title, imageUrl, breadcrumb }: HeroProps) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 * (index + 1) }}
             >
-              <span className="mx-4 text-white">/</span>
+              <span className="mx-4 ">/</span>
               <motion.a
                 href={item.path}
                 whileHover={{ scale: 1.05 }}

@@ -10,6 +10,7 @@ import EmergencyCTA, {
 import AboutUs from "./sections/AboutUs";
 import DifferentialSection2 from "./sections/DifferentialSection2";
 import QuemSomos from "./sections/WhoWeAre";
+import TimelineSection from "./sections/timelineData";
 
 const emergencyContacts: EmergencyContacts = {
   title: "Não Encontrou o Corrector Ideal?",
@@ -35,6 +36,7 @@ const page = () => {
       <DifferentialSection2 />
       <QuemSomos />
       <TeamSection />
+      <TimelineSection />
       <EmergencyCTA emergencyContacts={emergencyContacts} />
       <Footer />
     </>
