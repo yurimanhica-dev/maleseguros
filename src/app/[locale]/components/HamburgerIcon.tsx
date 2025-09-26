@@ -29,15 +29,6 @@ const HamburgerIcon = ({ isOpen }: { isOpen: boolean }) => {
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="w-full h-0.5 bg-primary rounded "
       />
-      <motion.span
-        animate={{
-          rotate: isOpen ? -60 : 0,
-          y: isOpen ? -8 : 0,
-          width: isOpen ? "100%" : "60%",
-        }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="w-full h-0.5 bg-primary rounded "
-      />
     </div>
   );
 };

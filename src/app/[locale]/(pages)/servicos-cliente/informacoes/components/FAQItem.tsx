@@ -55,7 +55,7 @@ export default function FAQSection() {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Perguntas Frequentes
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">

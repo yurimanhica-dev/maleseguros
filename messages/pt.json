@@ -208,25 +208,24 @@
   "Footer": {
     "Description": "Protegendo sonhos e construindo confiança desde 2014, estamos ao lado dos nossos clientes em todo o processo.",
     "Explore": {
-      "Title": "Explore",
+      "Title": "Links Uteis",
       "Links": {
         "About": "Sobre nós",
         "Services": "Serviços",
-        "FindBroker": "Nossa Equipe",
-        "Academy": "Seguro Digital"
+        "FindBroker": "Contactos",
+        "Academy": "Informações Úteis"
       }
     },
     "Contact": {
       "Title": "Contactos",
       "Address": "Av. Vladimir Lenine, 2815 - Maputo",
+      "AddressAria": "Localização",
       "Phone": "(+258) 214 184 39",
       "Mobile": "(+258) 82 305 21 72",
       "Email": "maleseguros@info.co.mz"
     },
-    "Newsletter": {
-      "Title": "Newsletter",
-      "Placeholder": "Email Address",
-      "Description": "Inscreva-se para receber nossas notícias e atualizações."
+    "FollowUs": {
+      "Title": "Siga-nos"
     },
     "Bottom": {
       "Copy": "Todos os direitos reservados.",

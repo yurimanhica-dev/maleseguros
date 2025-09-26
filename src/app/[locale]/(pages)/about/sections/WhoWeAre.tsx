@@ -70,10 +70,10 @@ export default function QuemSomos() {
 
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                 <span className="block text-3xl uppercase">
-                  Mais de 8 Anos de Experiência no
-                </span>
-                <span className="block text-[var(--primary)]">
-                  Mercado de Seguros
+                  Mais de 8 Anos de Experiência no{" "}
+                  <span className="text-[var(--primary)]">
+                    Mercado de Seguros
+                  </span>
                 </span>
               </h2>
 

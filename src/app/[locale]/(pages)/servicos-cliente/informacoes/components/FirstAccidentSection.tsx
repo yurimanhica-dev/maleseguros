@@ -183,7 +183,7 @@ const AccidentSection = () => {
           transition={{ duration: 0.7 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
             Em caso de <span className="text-primary">acidente</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">

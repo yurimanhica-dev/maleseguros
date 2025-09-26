@@ -103,7 +103,7 @@ export default function TimelineSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl md:text-5xl uppercase font-bold text-foreground"
+            className="text-4xl md:text-5xl uppercase font-bold text-foreground"
           >
             Nossa Trajetória
           </motion.h2>

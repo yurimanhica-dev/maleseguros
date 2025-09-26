@@ -39,7 +39,7 @@ const EnterpriseServicesHero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-5xl lg:text-6xl font-bold text-white mb-4"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
           >
             <span className="text-[var(--primary)]">Proteção Completa</span>
             <br />

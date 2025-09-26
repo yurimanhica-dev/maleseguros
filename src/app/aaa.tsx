@@ -16,7 +16,7 @@ export default function GlobalNotFound() {
         breadcrumb={[{ name: "Error 404", path: "/" }]}
       />
       <div className=" flex flex-col gap-8 h-[50vh] items-center c-space justify-center mb-8">
-        <h2 className="text-5xl font-bold text-foreground ">
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground ">
           Página não encontrada
         </h2>
         <div className="relative text-center max-w-lg mx-auto text-[var(--muted-foreground)]">

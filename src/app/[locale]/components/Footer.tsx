@@ -3,15 +3,15 @@
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+
+import { useTranslations } from "next-intl";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa";
-
-import { useTranslations } from "next-intl";
-import { FiMail, FiMapPin, FiPhone, FiSmartphone } from "react-icons/fi";
+import { FiMail, FiPhone, FiSmartphone } from "react-icons/fi";
 import Logo from "../home/components/Logo";
 
 const Footer = () => {
@@ -20,16 +20,14 @@ const Footer = () => {
   const explore = [
     { name: t("Explore.Links.About"), href: "/about" },
     { name: t("Explore.Links.Services"), href: "/services" },
-    { name: t("Explore.Links.FindBroker"), href: "/nossa-equipe" },
-    { name: t("Explore.Links.Academy"), href: "/seguro-digital" },
+    {
+      name: t("Explore.Links.FindBroker"),
+      href: "/servicos-cliente/contactos",
+    },
+    { name: t("Explore.Links.Academy"), href: "/servicos-cliente/informacoes" },
   ];
 
   const contact = [
-    {
-      icon: <FiMapPin className="mr-2 text-[var(--primary)]" />,
-      text: t("Contact.Address"),
-      href: "https://maps.app.goo.gl/K9ZgTB1qbCjpz13Y6",
-    },
     {
       icon: <FiPhone className="mr-2 text-[var(--primary)]" />,
       text: t("Contact.Phone"),
@@ -39,6 +37,11 @@ const Footer = () => {
       icon: <FiSmartphone className="mr-2 text-[var(--primary)]" />,
       text: t("Contact.Mobile"),
       href: "tel:+258823052172",
+    },
+    {
+      icon: <FiMail className="mr-2 text-[var(--primary)]" />,
+      text: t("Contact.Email"),
+      href: "mailto:maleseguros@info.co.mz",
     },
     {
       icon: <FiMail className="mr-2 text-[var(--primary)]" />,
@@ -92,18 +95,6 @@ const Footer = () => {
             <p className="text-[var(--foreground)]/80 mb-6">
               {t("Description")}
             </p>
-            <div className="flex space-x-4">
-              {[FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter].map(
-                (Icon, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-black/90 hover:bg-[var(--primary)] p-3 rounded-full cursor-pointer"
-                  >
-                    <Icon className="w-4 h-4 text-white" />
-                  </div>
-                )
-              )}
-            </div>
           </motion.div>
 
           {/* Coluna 2: Explore */}
@@ -162,22 +153,39 @@ const Footer = () => {
 
           {/* Coluna 4: Newsletter */}
           <motion.div variants={itemVariants} custom={3}>
-            <h3 className="text-lg uppercase font-semibold mb-6">
-              {t("Newsletter.Title")}
-            </h3>
-            <div className="flex items-center bg-[var(--card)] border border-[var(--border)] rounded-md overflow-hidden">
-              <input
-                type="email"
-                placeholder={t("Newsletter.Placeholder")}
-                className="flex-1 bg-transparent focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-1 focus:ring-offset-[var(--card)] px-4 py-2 text-sm outline-none text-[var(--foreground)]"
-              />
-              <button className="bg-[var(--primary)] p-3 flex items-center justify-center">
-                <FiMail className="text-[var(--primary-foreground)]" />
-              </button>
+            <div className="mb-6">
+              <h3 className="text-lg uppercase font-semibold mb-4">
+                {t("Contact.Title")}
+              </h3>
+              <div className="flex space-x-4">
+                {[FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter].map(
+                  (Icon, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-black/90 hover:bg-[var(--primary)] p-3 rounded-full cursor-pointer"
+                    >
+                      <Icon className="w-4 h-4 text-white" />
+                    </div>
+                  )
+                )}
+              </div>
             </div>
-            <p className="text-sm text-[var(--foreground)]/80 mt-4">
-              {t("Newsletter.Description")}
-            </p>
+            <div>
+              <h3 className="text-lg uppercase font-semibold mb-4">
+                {t("Contact.AddressAria")}
+              </h3>
+              <Link
+                href="https://maps.app.goo.gl/K9ZgTB1qbCjpz13Y6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <span className="whitespace-pre-line text-foreground/80">
+                  {t("Contact.Address")}
+                </span>
+                <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              </Link>
+            </div>
           </motion.div>
         </motion.div>
         {/* Divider */}
