@@ -46,7 +46,7 @@ const Footer = () => {
     {
       icon: <FiMail className="mr-2 text-[var(--primary)]" />,
       text: t("Contact.Email"),
-      href: "mailto:maleseguros@info.co.mz",
+      href: "mailto:maleseguros@support.co.mz",
     },
   ];
 
@@ -155,7 +155,7 @@ const Footer = () => {
           <motion.div variants={itemVariants} custom={3}>
             <div className="mb-6">
               <h3 className="text-lg uppercase font-semibold mb-4">
-                {t("Contact.Title")}
+                {t("FollowUs.Title")}
               </h3>
               <div className="flex space-x-4">
                 {[FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter].map(
