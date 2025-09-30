@@ -13,7 +13,7 @@ import QuemSomos from "./sections/WhoWeAre";
 import TimelineSection from "./sections/timelineData";
 
 const emergencyContacts: EmergencyContacts = {
-  title: "Não Encontrou o Corrector Ideal?",
+  title: "Ainda tem alguma(s) dúvidas?",
   description:
     "Nossa equipe de atendimento pode conectá-lo com o especialista perfeito para suas necessidades específicas.",
   btn1Link: "tel:+258841234567",

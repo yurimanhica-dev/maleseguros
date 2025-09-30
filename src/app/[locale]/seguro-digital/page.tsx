@@ -1,7 +1,7 @@
-import Footer from "../../components/Footer";
-import NavBar from "../../components/Navbar";
-import { Hero } from "../../components/PagesHeroimg";
-import TopContactBar from "../../components/TopContactBar";
+import Footer from "../components/Footer";
+import NavBar from "../components/Navbar";
+import { Hero } from "../components/PagesHeroimg";
+import TopContactBar from "../components/TopContactBar";
 import InsuranceLogin from "./components/InsuranceLogin";
 
 const page = () => {

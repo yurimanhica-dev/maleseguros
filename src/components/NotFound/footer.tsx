@@ -1,11 +1,10 @@
 "use client";
 
+import Logo from "@/app/[locale]/home/components/Logo";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import { ArrowRight } from "lucide-react";
-import { useTranslations } from "next-intl";
 import {
   FaFacebookF,
   FaInstagram,
@@ -13,41 +12,35 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { FiMail, FiPhone, FiSmartphone } from "react-icons/fi";
-import Logo from "../home/components/Logo";
 
 const Footer = () => {
-  const t = useTranslations("Footer");
-
   const explore = [
-    { name: t("Explore.Links.About"), href: "/about" },
-    { name: t("Explore.Links.Services"), href: "/services" },
-    {
-      name: t("Explore.Links.FindBroker"),
-      href: "/servicos-cliente/contactos",
-    },
-    { name: t("Explore.Links.Academy"), href: "/servicos-cliente/informacoes" },
+    { name: "Sobre nós", href: "/about" },
+    { name: "Serviços", href: "/services" },
+    { name: "Contactos", href: "/servicos-cliente/contactos" },
+    { name: "Informações Úteis", href: "/servicos-cliente/informacoes" },
   ];
 
   const contact = [
     {
       icon: <FiPhone className="mr-2 text-[var(--primary)]" />,
-      text: t("Contact.Phone"),
+      text: "(+258) 214 184 39",
       href: "tel:+25821418439",
     },
     {
       icon: <FiSmartphone className="mr-2 text-[var(--primary)]" />,
-      text: t("Contact.Mobile"),
+      text: "(+258) 82 305 21 72",
       href: "tel:+258823052172",
     },
     {
       icon: <FiMail className="mr-2 text-[var(--primary)]" />,
-      text: t("Contact.Email1"),
+      text: "maleseguros@info.co.mz",
       href: "mailto:maleseguros@info.co.mz",
     },
     {
       icon: <FiMail className="mr-2 text-[var(--primary)]" />,
-      text: t("Contact.Address"),
-      href: "https://maps.app.goo.gl/K9ZgTB1qbCjpz13Y6",
+      text: "maleseguros@support.co.mz",
+      href: "mailto:maleseguros@support.co.mz",
     },
   ];
 
@@ -82,7 +75,6 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto c-space pt-16 relative z-10">
-        {/* Grid de 4 colunas */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -93,23 +85,39 @@ const Footer = () => {
           {/* Coluna 1: Logo + descrição + redes sociais */}
           <motion.div variants={itemVariants} custom={0}>
             <Logo />
-            <p className="text-[var(--foreground)]/80 mb-4">
-              {t("Description")}
+            <p className="text-[var(--foreground)]/80 mb-6">
+              Protegendo sonhos e construindo confiança desde 2014, estamos ao
+              lado dos nossos clientes em todo o processo.
             </p>
-            <button
-              type="button"
-              className="uppercase font-semibold flex gap-2 items-center text-primary underline-link"
-            >
-              <Link href="/about">Saiba mais</Link>
-              <ArrowRight className="w-5 h-5" />
-            </button>
           </motion.div>
 
-          {/* Coluna 2: Contact */}
-          <motion.div variants={itemVariants} custom={2}>
+          {/* Coluna 2: Explore */}
+          <motion.div variants={itemVariants} custom={1}>
             <h3 className="text-lg uppercase font-semibold mb-6">
-              {t("Contact.Title")}
+              Links Úteis
             </h3>
+            <ul className="space-y-3">
+              {explore.map((item, index) => (
+                <motion.li
+                  key={item.name}
+                  variants={itemVariants}
+                  custom={index + 1}
+                  whileHover={{ x: 8, color: "var(--primary)" }}
+                >
+                  <Link
+                    href={item.href}
+                    className="nav-link hover:text-primary text-foreground/80 transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Coluna 3: Contact */}
+          <motion.div variants={itemVariants} custom={2}>
+            <h3 className="text-lg uppercase font-semibold mb-6">Contactos</h3>
             <ul className="space-y-3">
               {contact.map((c, index) => (
                 <motion.li
@@ -135,36 +143,10 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Coluna 3: Explore */}
-          <motion.div variants={itemVariants} custom={1}>
-            <h3 className="text-lg uppercase font-semibold mb-6">
-              {t("Explore.Title")}
-            </h3>
-            <ul className="space-y-3">
-              {explore.map((item, index) => (
-                <motion.li
-                  key={item.name}
-                  variants={itemVariants}
-                  custom={index + 1}
-                  whileHover={{ x: 8, color: "var(--primary)" }}
-                >
-                  <Link
-                    href={item.href}
-                    className="nav-link hover:text-primary text-foreground/80 transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Coluna 4: Newsletter */}
+          {/* Coluna 4: Redes sociais + endereço */}
           <motion.div variants={itemVariants} custom={3}>
             <div className="mb-6">
-              <h3 className="text-lg uppercase font-semibold mb-8">
-                {t("FollowUs.Title")}
-              </h3>
+              <h3 className="text-lg uppercase font-semibold mb-4">Siga-nos</h3>
               <div className="flex space-x-4">
                 {[FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter].map(
                   (Icon, idx) => (
@@ -178,8 +160,23 @@ const Footer = () => {
                 )}
               </div>
             </div>
+            <div>
+              <h3 className="text-lg uppercase font-semibold mb-4">Endereço</h3>
+              <Link
+                href="https://maps.app.goo.gl/K9ZgTB1qbCjpz13Y6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <span className="whitespace-pre-line text-foreground/80">
+                  Av. Vladimir Lenine, 2815 - Maputo
+                </span>
+                <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              </Link>
+            </div>
           </motion.div>
         </motion.div>
+
         {/* Divider */}
         <motion.div
           initial={{ scaleX: 0 }}
@@ -188,6 +185,7 @@ const Footer = () => {
           transition={{ duration: 0.8 }}
           className="h-px bg-gradient-to-r from-transparent via-[var(--border)] to-transparent my-8 w-full"
         />
+
         {/* Rodapé inferior */}
         <div className="flex flex-col md:flex-row gap-4 justify-between mb-8 items-center">
           <motion.p
@@ -195,9 +193,10 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="text-sm text-[var(--muted-foreground)]/80  text-center md:text-left"
+            className="text-sm text-[var(--muted-foreground)]/80 text-center md:text-left"
           >
-            © {new Date().getFullYear()} MALEholding. {t("Bottom.Copy")}
+            © {new Date().getFullYear()} MALEholding. Todos os direitos
+            reservados.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -210,20 +209,19 @@ const Footer = () => {
               href="#"
               className="group underline-link relative block text-sm hover:text-[var(--primary)] transition-colors"
             >
-              {t("Bottom.Terms")}
-              {/* <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />{" "} */}
+              Termos de Serviço
             </Link>
             <Link
               href="#"
               className="group underline-link relative block text-sm hover:text-[var(--primary)] transition-colors"
             >
-              {t("Bottom.Privacy")}
+              Política de Privacidade
             </Link>
             <Link
               href="#"
               className="group underline-link relative block text-sm hover:text-[var(--primary)] transition-colors"
             >
-              {t("Bottom.Cookies")}
+              Cookies
             </Link>
           </motion.div>
         </div>

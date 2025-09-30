@@ -12,39 +12,28 @@ const timelineData = [
     image: "/timeline/1763.jpg",
   },
   {
-    year: 2017,
-    text: "Superamos 1000 apólices ativas, um marco que fortaleceu nossa reputação e nos desafiou a assumir responsabilidades acrescidas.",
+    year: 2020,
+    // text: "Superamos 1000 apólices ativas, um marco que fortaleceu nossa reputação e nos desafiou a assumir responsabilidades acrescidas.",
+    text: "Planejamos expandir nossa atuação para além de Maputo, levando nossos serviços a outras regiões de Moçambique e fortalecendo nossa presença nacional.",
     image: "/timeline/53301.jpg",
   },
   {
-    year: 2020,
-    text: "Iniciamos uma nova fase de transformação digital, modernizando processos e digitalizando o atendimento e suporte ao cliente. ",
-    image: "/timeline/2150690165.jpg",
-  },
-  {
-    year: 2021,
-    text: "Chegamos ao marco de 1000 clientes, consolidando nossa presença no mercado e reafirmando a confiança depositada em nós como uma das corretoras de referência em Moçambique.",
-    image: "/timeline/54689.jpg",
-  },
-  {
-    year: 2024,
-    text: "Completamos a nossa primeira década como corretora de seguros, reafirmando a nossa posição de destaque no mercado e continuando a oferecer soluções inovadoras e seguras aos nossos clientes.",
-    image: "/timeline/2150690108.jpg",
-  },
-  {
     year: 2025,
-    text: "Iniciamos uma nova fase de transformação digital, modernizando processos e digitalizando o atendimento e suporte ao cliente. ",
+    // text: "Iniciamos uma nova fase de transformação digital, modernizando processos e digitalizando o atendimento e suporte ao cliente. ",
+    text: "Informações por Recolher",
     image: "/timeline/2150690165.jpg",
   },
   {
-    year: 2029,
-    text: "Chegamos ao marco de 1000 clientes, consolidando nossa presença no mercado e reafirmando a confiança depositada em nós como uma das corretoras de referência em Moçambique.",
+    year: 2030,
+    // text: "Chegamos ao marco de 1000 clientes, consolidando nossa presença no mercado e reafirmando a confiança depositada em nós como uma das corretoras de referência em Moçambique.",
+    text: "Informações por Recolher",
     image: "/timeline/54689.jpg",
   },
   {
-    year: 2027,
-    text: "Completamos a nossa primeira década como corretora de seguros, reafirmando a nossa posição de destaque no mercado e continuando a oferecer soluções inovadoras e seguras aos nossos clientes.",
-    image: "/timeline/2150690108.jpg",
+    year: 2035,
+    // text: "Planejamos expandir nossa atuação para além de Maputo, levando nossos serviços a outras regiões de Moçambique e fortalecendo nossa presença nacional.",
+    text: "Informações por Recolher",
+    image: "/timeline/2150690165.jpg",
   },
 ];
 
@@ -277,8 +266,8 @@ export default function TimelineSection() {
             </div>
 
             {/* Timeline Sidebar */}
-            <div className="xl:col-span-1 overflow-hidden">
-              <div className="sticky top-8 bg-card/50 p-8 border border-border backdrop-blur-sm ">
+            <div className="xl:col-span-1  overflow-hidden">
+              <div className="sticky h-[820px] bg-card/50 p-8 border border-border backdrop-blur-sm ">
                 <h3 className="text-foreground text-xl font-bold mb-6">
                   Marcos Históricos
                 </h3>

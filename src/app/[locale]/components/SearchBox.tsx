@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Search, X } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { navItems } from "../config/navItems";
+import { navItemsPT } from "../config/navItemsNF";
 
 interface SearchBoxProps {
   placeholder?: string;
@@ -30,7 +30,7 @@ export default function SearchBox({
   const searchResults = useMemo(() => {
     const results: { title: string; url: string; description?: string }[] = [];
 
-    navItems.forEach((nav) => {
+    navItemsPT.forEach((nav) => {
       if (nav.path) {
         results.push({
           title: nav.title,

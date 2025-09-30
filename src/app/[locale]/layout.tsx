@@ -19,8 +19,8 @@ const funnel_Sans = Funnel_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Seguradora Favorita dos Moçambicanos | MALEseguros",
-  description: "A melhor corretora de Moçambique",
+  title: "MALEseguros",
+  description: "A Corretora de Seguros Favorita dos Moçambicanos, desde 2014.",
   icons: {
     icon: "/logos/icon.png",
     apple: "/logos/icon.png",

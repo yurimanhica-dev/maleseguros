@@ -1,14 +1,15 @@
 "use client";
 
-import Footer from "../components/Footer";
-import NavBar from "../components/Navbar";
+import { ContactCTA } from "@/components/NotFound/ContactCTA";
+import Footer from "@/components/NotFound/footer";
+import NavBar from "@/components/NotFound/navBar";
 import { Hero } from "../components/PagesHeroimg";
-import TopContactBar from "../components/TopContactBar";
+import SearchBox from "../components/SearchBox";
 
 export default function NotFound() {
   return (
     <>
-      <TopContactBar />
+      {/* <TopContactBar /> */}
       <NavBar />
       <Hero
         title="404"
@@ -25,12 +26,12 @@ export default function NotFound() {
             sido movida, renomeada ou nunca existiu. Use o nosso o link de
             navegação ou a busca abaixo para encontrar o que precisa.
           </p>
-          <div className="w-full absolute top-0 md:pt-24 pt-38 px-4 z-50">
-            {/* <SearchBox /> */}
+          <div className="w-full absolute top-0 md:pt-24 pt-38 px-4 z-50 min-h-[50vh]">
+            <SearchBox />
           </div>
         </div>
       </div>
-      {/* <ContactCTA /> */}
+      <ContactCTA />
       <Footer />
     </>
   );

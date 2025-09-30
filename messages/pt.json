@@ -217,12 +217,13 @@
       }
     },
     "Contact": {
-      "Title": "Contactos",
+      "Title": "Encontre-nos",
       "Address": "Av. Vladimir Lenine, 2815 - Maputo",
       "AddressAria": "Localização",
       "Phone": "(+258) 214 184 39",
       "Mobile": "(+258) 82 305 21 72",
-      "Email": "maleseguros@info.co.mz"
+      "Email1": "maleseguros@info.co.mz",
+      "Email2": "maleseguros@support.co.mz"
     },
     "FollowUs": {
       "Title": "Siga-nos"

@@ -2,8 +2,7 @@
 
 import Button from "@/app/[locale]/components/Button";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { redirect } from "next/navigation";
+import Link from "next/link";
 
 export interface EmergencyContacts {
   title: string;
@@ -36,19 +35,19 @@ const EmergencyCTA = ({ emergencyContacts }: EmergencyCTAProps) => {
         <p className="text-white/90 text-lg mb-6 max-w-2xl mx-auto">
           {description}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <Link
+          href={btn1Link}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
           <Button
-            onClick={() => redirect(btn1Link)}
             variant="ghost"
-            icon={<ArrowRight className="w-5 h-5 mr-2 animate-pulse" />}
-            iconPosition="right"
             size="md"
             rounded="full"
             className="font-semibold"
           >
             {btn1Text}
           </Button>
-        </div>
+        </Link>
       </motion.div>
     </div>
   );
