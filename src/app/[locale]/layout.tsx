@@ -1,4 +1,3 @@
-// src/app/[locale]/layout.tsx
 import { routing } from "@/i18n/routing";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -23,21 +22,19 @@ export const metadata: Metadata = {
   title: "MALEseguros",
   description: "A Corretora de Seguros Favorita dos Moçambicanos, desde 2014.",
   icons: {
-    icon: "/logos/icon.png",
-    apple: "/logos/icon.png",
-    shortcut: "/logos/icon.png",
-    other: [{ rel: "mask-icon", url: "/logos/icon.png" }],
+    icon: "/logos/favicon.png",
+    apple: "/logos/favicon.png",
+    shortcut: "/logos/favicon.png",
+    other: [{ rel: "mask-icon", url: "/logos/favicon.png" }],
   },
 };
 
-
-type Props = {
+type Props = Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-};
+  params: { locale: string };
+}>;
 
 export default async function LocaleLayout({ children, params }: Props) {
-  
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {
