@@ -248,7 +248,7 @@ export const SeguroAutoForm = () => {
 
   return (
     <section className="py-16">
-      <div className="max-w-2xl mx-auto bg-background rounded-lg shadow-md overflow-hidden ">
+      <div className="max-w-2xl c-space mx-auto bg-background rounded-lg shadow-md overflow-hidden ">
         {/* Cabeçalho estilo seguradora local */}
         <div className="bg-primary p-5 text-white">
           <div className="flex items-center gap-4 justify-between">

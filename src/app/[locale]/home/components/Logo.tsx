@@ -15,7 +15,7 @@ const Logo = () => {
     setMounted(true);
   }, []);
 
-  const currentTheme = theme === "system" ? resolvedTheme : theme;
+  const currentTheme = theme === "dark" ? resolvedTheme : theme;
 
   const logoSrc =
     currentTheme === "dark"

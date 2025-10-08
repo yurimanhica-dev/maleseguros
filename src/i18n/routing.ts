@@ -24,7 +24,7 @@ export const routing = defineRouting({
       pt: "/sinistros/oficinas-reboques",
     },
     "/servicos-cliente/informacoes": {
-      en: "/customer-service/infomation",
+      en: "/customer-service/information",
       pt: "/servicos-cliente/informacoes",
     },
     "/servicos-cliente/solicitar-retorno": {

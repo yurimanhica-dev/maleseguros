@@ -31,6 +31,25 @@
       "SeguroDigital": "Digital Insurance",
       "Callback": "Request Callback"
     },
+    "Routes": {
+      "Home": "/",
+      "About": "/about-us",
+      "Services": "/services",
+      "Contact": "/customer-service/contacts",
+      "FindBroker": "/find-broker",
+      "Academy": "/academy",
+      "SimulateInsurance": "/insurance-simulation",
+      "RenewPolicy": "/insurance/renew",
+      "OurTeam": "/our-team",
+      "Claims": "/claims",
+      "ReportClaim": "/claims/report",
+      "Documents": "/claims/documents",
+      "WorkshopsTows": "/claims/workshops-towing",
+      "CustomerService": "/customer-service",
+      "UsefulInformation": "/customer-service/information",
+      "RequestCallback": "/customer-service/request-call",
+      "DigitalInsurance": "/digital-insurance"
+    },
     "Hero": {
       "slides": {
         "1": {

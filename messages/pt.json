@@ -31,6 +31,28 @@
       "SeguroDigital": "Seguro Digital",
       "Callback": "Solicitar Retorno"
     },
+    "Routes": {
+      "Home": "/",
+      "About": "/sobre-nos",
+      "Services": "/servicos",
+      "Contact": "/servicos-cliente/contactos",
+      "FindBroker": "/encontrar-corretor",
+      "Academy": "/academia",
+
+      "SimulateInsurance": "/simulacao-seguro",
+      "RenewPolicy": "/seguros/renovar",
+
+      "OurTeam": "/nossa-equipe",
+
+      "Claims": "/sinistros",
+      "ReportClaim": "/sinistros/comunicar",
+      "Documents": "/sinistros/documentos",
+      "WorkshopsTows": "/sinistros/oficinas-reboques",
+
+      "CustomerService": "/servicos-cliente",
+      "UsefulInformation": "/servicos-cliente/informacoes",
+      "RequestCallback": "/servicos-cliente/solicitar-retorno"
+    },
     "Hero": {
       "slides": {
         "1": {

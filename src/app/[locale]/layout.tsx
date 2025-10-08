@@ -47,28 +47,27 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = (await import(`../../../messages/${locale}.json`)).default;
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body
-        className={`${funnel_Sans.className} antialiased 
+    <div
+      lang={locale}
+      className={`${funnel_Sans.className} antialiased 
           [&::-webkit-scrollbar]:h-0.5 
           [&::-webkit-scrollbar-thumb]:bg-primary
           [&::-webkit-scrollbar-track]:bg-foreground/10
           [&::-webkit-scrollbar-thumb]:rounded-b-full
         `}
+    >
+      <Analytics />
+      <SpeedInsights />
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem
+        disableTransitionOnChange
       >
-        <Analytics />
-        <SpeedInsights />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            {children}
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </ThemeProvider>
+    </div>
   );
 }

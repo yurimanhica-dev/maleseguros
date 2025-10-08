@@ -20,7 +20,11 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
   const { locale } = await params;
 
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      style={{ scrollBehavior: "smooth", colorScheme: "dark" }}
+      className="scroll-smooth dark"
+    >
       <body
         className={`${funnel_Sans.className} antialiased 
           [&::-webkit-scrollbar]:h-0.5 

@@ -31,6 +31,16 @@
       "SeguroDigital": "Inshurense ya Digitali",
       "Callback": "Komba Ku Tsakisela"
     },
+    "Routes": {
+      "Home": "Xindlu",
+      "Insurance": "Inshurense",
+      "Personal": "Ya Vuntshwa",
+      "Business": "Ya Vutshunguri",
+      "AboutUs": "Hi Ha",
+      "WhyChooseUs": "Hikuva Hlawula Hina",
+      "Testimonials": "Swivutiso",
+      "Contact": "Vulavulo"
+    },
     "Hero": {
       "slides": {
         "1": {

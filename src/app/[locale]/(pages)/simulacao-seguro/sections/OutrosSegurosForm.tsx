@@ -102,7 +102,7 @@ const OutrosSegurosForm = () => {
 
   return (
     <section className="bg-background" id="pedido-cotacao">
-      <div className="max-w-5xl mx-auto md:c-space">
+      <div className="max-w-5xl mx-auto c-space">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

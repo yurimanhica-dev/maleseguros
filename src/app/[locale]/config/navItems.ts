@@ -11,26 +11,26 @@ export interface NavItem {
 }
 
 export const navItems: NavItem[] = [
-  { title: "Nav.Home", path: "/" },
+  { title: "Nav.Home", path: "Routes.Home" },
   {
     title: "Nav.Explorar",
     subItems: [
       {
         title: "Nav.AcessoRapido",
         items: [
-          { name: "Nav.SimulacaoSeguro", path: "/simulacao-seguro" },
-          { name: "Nav.RenovarApolice", path: "/seguros/renovar" },
-          { name: "Nav.NossaEquipe", path: "/nossa-equipe" },
+          { name: "Nav.SimulacaoSeguro", path: "Routes.SimulateInsurance" },
+          { name: "Nav.RenovarApolice", path: "Routes.RenewPolicy" },
+          { name: "Nav.NossaEquipe", path: "Routes.OurTeam" },
         ],
       },
       {
         title: "Nav.Sinistros",
         items: [
-          { name: "Nav.ComunicarSinistro", path: "/sinistros/comunicar" },
-          { name: "Nav.Documentos", path: "/sinistros/documentos" },
+          { name: "Nav.ComunicarSinistro", path: "Routes.ReportClaim" },
+          { name: "Nav.Documentos", path: "Routes.Documents" },
           {
             name: "Nav.OficinasReboques",
-            path: "/sinistros/oficinas-reboques",
+            path: "Routes.WorkshopsTows",
           },
         ],
       },
@@ -39,18 +39,18 @@ export const navItems: NavItem[] = [
         items: [
           {
             name: "Nav.InformacoesUteis",
-            path: "/servicos-cliente/informacoes",
+            path: "Routes.UsefulInformation",
           },
           {
             name: "Nav.SolicitarRetorno",
-            path: "/servicos-cliente/solicitar-retorno",
+            path: "Routes.RequestCallback",
           },
-          { name: "Nav.Contactos", path: "/servicos-cliente/contactos" },
+          { name: "Nav.Contactos", path: "Routes.Contact" },
         ],
       },
     ],
   },
-  { title: "Nav.Servicos", path: "/services" },
-  { title: "Nav.SobreNos", path: "/about" },
-  // { title: "Nav.SeguroDigital", path: "/seguro-digital" },
+  { title: "Nav.Servicos", path: "Routes.Services" },
+  { title: "Nav.SobreNos", path: "Routes.About" },
+  // { title: "Nav.SeguroDigital", path: "Routes.DigitalInsurance" },
 ];

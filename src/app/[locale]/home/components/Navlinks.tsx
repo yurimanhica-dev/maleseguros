@@ -42,7 +42,7 @@ const NavLinks = () => {
       const normalizedPath = path.toLowerCase().replace(/\/+$/, "");
       if (
         normalizedCurrentPath === normalizedPath ||
-        normalizedCurrentPath.startsWith(normalizedPath + "/")
+        normalizedCurrentPath.startsWith(normalizedPath + "/home")
       ) {
         return true;
       }
@@ -66,7 +66,6 @@ const NavLinks = () => {
         }
       }
     }
-
     return false;
   };
 
@@ -77,16 +76,16 @@ const NavLinks = () => {
     <div className="container mx-auto">
       <div className="flex justify-between h-20 items-center gap-8">
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center h-full" role="menubar">
+        <nav className="hidden md:flex items-center h-full " role="menubar">
           <ul className="flex items-center gap-4 h-full">
             {navItems.map((item) => (
-              <li key={item.title} className="relative min-w-3  pb-1  h-full">
+              <li key={item.title} className="relative min-w-3  pb-1  h-full ">
                 {item.path ? (
                   <Link
-                    href={item.path}
+                    href={t(item.path)}
                     role="menuitem"
                     className={`${linkBaseClasses} uppercase text-sm ${
-                      isSelected(item.path, item.subItems)
+                      isSelected(t(item.path), item.subItems)
                         ? "text-primary border-primary"
                         : "text-foreground/90 hover:text-primary border-transparent hover:border-primary"
                     }`}
@@ -98,7 +97,13 @@ const NavLinks = () => {
                     <button
                       onClick={() => toggleDropdown(item.title)}
                       className={`${linkBaseClasses} uppercase text-sm ${
-                        isSelected(undefined, item.subItems)
+                        // Marca ativo se o dropdown está aberto OU se algum subitem está selecionado
+                        openDropdown === item.title ||
+                        item.subItems?.some((group) =>
+                          group.items.some((subItem) =>
+                            isSelected(t(subItem.path))
+                          )
+                        )
                           ? "text-primary border-primary"
                           : "text-foreground/90 hover:text-primary border-transparent hover:border-primary"
                       }`}
@@ -128,24 +133,26 @@ const NavLinks = () => {
                               stiffness: 300,
                               damping: 25,
                             }}
-                            className="absolute left-0 top-18 right-0 mt-0 min-w-4xl c-space w-full overflow-hidden mx-auto bg-background shadow-xl border-t border-border/10 z-50"
+                            className="absolute left-0 top-18 right-3 mt-0 min-w-[50vw] px-8 w-fit overflow-hidden mx-auto bg-background shadow-xl border-t border-border/10 z-50"
                             id={`dropdown-${item.title}`}
                             style={{
                               boxShadow:
                                 "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                             }}
                           >
-                            <div className="container overflow-hidden w-fit gap-10 py-12 grid md:grid-cols-2 lg:grid-cols-3">
+                            <div className="container overflow-hidden w-full gap-8 py-12 grid md:grid-cols-1 lg:grid-cols-3">
                               {item.subItems.map((group, groupIndex) => (
                                 <div key={groupIndex}>
                                   {group.title && (
-                                    <h4 className=" text-md uppercase font-bold text-primary mb-4">
+                                    <h4 className="text-nowrap text-md uppercase font-bold text-primary mb-4">
                                       {t(group.title)}
                                     </h4>
                                   )}
                                   <ul className="space-y-3">
                                     {group.items.map((subItem) => {
-                                      const selected = isSelected(subItem.path);
+                                      const selected = isSelected(
+                                        t(subItem.path)
+                                      );
 
                                       return (
                                         <li
@@ -153,11 +160,11 @@ const NavLinks = () => {
                                           className="relative group w-fit"
                                         >
                                           <Link
-                                            href={subItem.path}
+                                            href={t(subItem.path)}
                                             role="menuitem"
                                             className={`inline-block transition-colors ${
                                               selected
-                                                ? " font-medium"
+                                                ? "font-medium"
                                                 : "text-foreground/90 hover:text-primary"
                                             }`}
                                             onClick={() =>
