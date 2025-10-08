@@ -129,72 +129,72 @@ export const seguroConfig = {
     },
   },
 };
-export const companyPrincipios = [
+export const companyPrincipiosCARE = [
   {
-    id: "imparcialidade",
-    title: "Imparcialidade",
+    id: "0",
+    title: "Cuidado",
     description:
-      "Tratamos cada Cliente de forma justa e igual, garantindo um atendimento sem distinções.",
-    image: "/values/125041.jpg",
+      "Agimos com empatia e atenção genuína, colocando as pessoas no centro de tudo o que fazemos.",
+    image: "/values/2148784776.jpg",
     content: {
-      title: "Atendimento Justo e Transparente",
+      title: "Empatia e Proximidade em Cada Ação",
       description:
-        "Cada Cliente é valorizado com a mesma dedicação, assegurando confiança e relações de longo prazo.",
+        "O nosso cuidado vai além do serviço prestado — valorizamos relações humanas e soluções que realmente fazem diferença na vida das pessoas.",
       features: [
-        "Transparência em todas as interações",
-        "Igualdade no tratamento de cada Cliente",
-        "Excelência como padrão de serviço",
+        "Atendimento humanizado e personalizado",
+        "Preocupação genuína com o bem-estar do Cliente",
+        "Dedicação em cada detalhe do processo",
       ],
     },
   },
   {
-    id: "profissionalismo",
-    title: "Profissionalismo",
+    id: "1",
+    title: "Agilidade",
     description:
-      "Cuidamos dos detalhes e entendemos o negócio do Cliente para oferecer as melhores soluções.",
-    image: "/values/120121.jpg",
+      "Respondemos com rapidez e eficiência, mantendo a qualidade e a precisão em cada entrega.",
+    image: "/values/2148784772.jpg",
     content: {
-      title: "Excelência Profissional em Cada Detalhe",
+      title: "Rapidez com Responsabilidade",
       description:
-        "Com análise criteriosa e conhecimento técnico, oferecemos coberturas adequadas, zelo e soluções inovadoras.",
+        "A nossa estrutura flexível e tecnológica permite agir com velocidade sem comprometer a qualidade, oferecendo soluções eficazes no tempo certo.",
       features: [
-        "Análise aprofundada das necessidades",
-        "Propostas alinhadas ao risco real",
-        "Soluções criativas para minimizar perdas",
+        "Respostas imediatas e assertivas",
+        "Processos otimizados e automatizados",
+        "Equilíbrio entre velocidade e qualidade",
       ],
     },
   },
   {
-    id: "dedicacao",
-    title: "Dedicação",
+    id: "2",
+    title: "Responsabilidade",
     description:
-      "Nossa equipa está sempre disponível e atenta às necessidades dos Clientes.",
-    image: "/values/119174.jpg",
+      "Cumprimos compromissos com seriedade e ética, conscientes do impacto de cada decisão.",
+    image: "/values/2148784764.jpg",
     content: {
-      title: "Compromisso e Apoio Constante",
+      title: "Compromisso com o que é Certo",
       description:
-        "Colaboradores preparados e acessíveis garantem acompanhamento próximo e eficiente em todas as fases.",
+        "Somos guiados por um forte senso de responsabilidade social, corporativa e ambiental. Acreditamos que crescer é também cuidar.",
       features: [
-        "Atendimento rápido e eficiente",
-        "Equipe disponível para suporte contínuo",
-        "Respostas alinhadas às expectativas do Cliente",
+        "Comprometimento com resultados sustentáveis",
+        "Gestão ética e transparente",
+        "Contribuição ativa para a comunidade",
       ],
     },
   },
   {
-    id: "inovacaoZelo",
-    title: "Inovação & Zelo",
+    id: "3",
+    title: "Ética",
     description:
-      "Buscamos constantemente novas formas de proteger os Clientes com atenção e cuidado.",
-    image: "/values/126146.jpg",
+      "Mantemos integridade, respeito e transparência em todas as nossas relações.",
+    image: "/values/2148784779.jpg",
     content: {
-      title: "Cuidado Moderno e Inovador",
+      title: "Integridade como Base da Confiança",
       description:
-        "Unimos tecnologia, criatividade e zelo para oferecer soluções adaptadas ao mercado e às necessidades individuais.",
+        "A ética é o alicerce de cada decisão e a base da nossa reputação. Atuamos com honestidade e respeito, valorizando a confiança que nos é depositada.",
       features: [
-        "Uso de práticas modernas e eficientes",
-        "Estratégias para mitigar riscos de sinistros",
-        "Atenção cuidadosa em cada etapa do processo",
+        "Respeito às pessoas e às normas",
+        "Decisões guiadas por princípios morais sólidos",
+        "Cultura de transparência e justiça",
       ],
     },
   },

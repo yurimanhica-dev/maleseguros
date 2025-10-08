@@ -12,6 +12,7 @@
       "HoursAria": "Horário de funcionamento"
     },
     "Nav": {
+      "Home": "Página Inicial",
       "Explorar": "Explorar",
       "AcessoRapido": "Acesso Rápido",
       "SimulacaoSeguro": "Simulação de Seguro",
@@ -36,13 +37,13 @@
           "title": "Quem é Protegido Vive Diferente",
           "subtitle": "A diferença entre temer o futuro e estar pronto para ele",
           "description": "Nossos clientes não vivem com medo do amanhã — eles vivem com a certeza de estarem preparados.",
-          "cta": "Quero Viver Diferente"
+          "cta": "Viver Protegido"
         },
         "2": {
           "title": "Seguro de Veículos Automóveis",
           "subtitle": "Proteção total para seu veículo",
           "description": "Coberturas completas com assistência 24 horas em todo o país",
-          "cta": "Conhecer Planos"
+          "cta": "Simular Seguro"
         },
         "3": {
           "title": "A Sombra que Protege Seu Patrimônio",

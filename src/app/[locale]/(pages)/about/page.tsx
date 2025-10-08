@@ -9,6 +9,7 @@ import EmergencyCTA, {
 } from "../servicos-cliente/informacoes/components/EmergencyCTA";
 import AboutUs from "./sections/AboutUs";
 import DifferentialSection2 from "./sections/DifferentialSection2";
+import { MissaoVisao } from "./sections/MissaoVisao";
 import QuemSomos from "./sections/WhoWeAre";
 import TimelineSection from "./sections/timelineData";
 
@@ -34,6 +35,7 @@ const page = () => {
       />
       <AboutUs />
       <DifferentialSection2 />
+      <MissaoVisao />
       <QuemSomos />
       <TeamSection />
       <TimelineSection />

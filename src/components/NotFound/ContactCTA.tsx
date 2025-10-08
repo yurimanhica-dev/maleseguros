@@ -1,6 +1,5 @@
 "use client";
 
-import React from "next/link";
 import { motion } from "framer-motion";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 

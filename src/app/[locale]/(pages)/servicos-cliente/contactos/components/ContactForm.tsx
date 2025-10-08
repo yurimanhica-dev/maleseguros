@@ -159,12 +159,16 @@ const ContactForm = () => {
               <SelectValue placeholder="Assunto" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="Pedido de Seguros">Seguros</SelectItem>
-              <SelectItem value="Proposta de Investimentos">
-                Investimentos
+              <SelectItem value="informacoes">Informações Gerais</SelectItem>
+              <SelectItem value="parcerias">
+                Parcerias e Colaborações
               </SelectItem>
-              <SelectItem value="Reclamação">Reclamação</SelectItem>
-              <SelectItem value="Contacto Geral">Contacto Geral</SelectItem>
+              <SelectItem value="suporte">Suporte Técnico</SelectItem>
+              <SelectItem value="orcamento">Pedido de Orçamento</SelectItem>
+              <SelectItem value="feedback">Feedback e Sugestões</SelectItem>
+              <SelectItem value="reclamacao">Reclamação</SelectItem>
+              <SelectItem value="emprego">Oportunidades de Emprego</SelectItem>
+              <SelectItem value="outros">Outros</SelectItem>
             </SelectContent>
           </Select>
           <span className="text-primary">*</span>
@@ -195,7 +199,7 @@ const ContactForm = () => {
               : "bg-primary text-white hover:shadow-lg cursor-pointer"
           }`}
         >
-          {isSubmitting ? "Enviando..." : "Solicitar Cotação"}
+          {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
         </motion.button>
       </form>
     </div>

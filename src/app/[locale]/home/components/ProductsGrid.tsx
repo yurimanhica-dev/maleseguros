@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { HeartPulse, Plane, Ship, Umbrella } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../../components/Button";
 import {
   businessInsurance,
@@ -79,7 +80,9 @@ export const InsuranceProductsGrid = ({ type }: { type: string }) => {
                   rounded="md"
                   size="sm"
                 >
-                  {t("InsuranceTypes.RequestQuote")}
+                  <Link href="/ser">
+                    {t("InsuranceTypes.RequestQuote")}
+                  </Link>
                 </Button>
               </div>
             </motion.div>

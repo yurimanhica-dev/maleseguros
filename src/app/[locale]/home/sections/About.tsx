@@ -4,6 +4,7 @@ import { motion, useAnimation, Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import Button from "../../components/Button";
@@ -170,7 +171,9 @@ export const AboutUs = () => {
               size="md"
               rounded="full"
             >
+              <Link href="/about" className="flex items-center">
               {t("AboutUs.CTA")}
+              </Link>
             </Button>
           </motion.div>
         </motion.div>

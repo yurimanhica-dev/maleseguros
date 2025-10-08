@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight, Quote } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import Button from "../../components/Button";
 import { testimonials } from "../../config/testimonials";
@@ -45,7 +46,9 @@ export const Testimonials = () => {
               size="md"
               rounded="full"
             >
-              {t("Testimonials.CTA.Button")}
+              <Link href="/simulacao-seguro">
+                {t("Testimonials.CTA.Button")}
+              </Link>
             </Button>
 
             <div className="flex items-center gap-4">

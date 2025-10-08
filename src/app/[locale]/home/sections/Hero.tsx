@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import Button from "../../components/Button";
@@ -105,6 +106,7 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
+                className="cursor-pointer"
               >
                 <Button
                   variant="outline"
@@ -112,7 +114,9 @@ const Hero = () => {
                   iconPosition="right"
                   rounded="full"
                 >
-                  {t(slides[currentSlide].cta)}
+                  <Link href={slides[currentSlide].href}>
+                    {t(slides[currentSlide].cta)}
+                  </Link>
                 </Button>
               </motion.div>
             </motion.div>

@@ -5,6 +5,7 @@ export interface Slide {
   description: string;
   cta: string;
   image: string;
+  href: string;
 }
 
 export const slides: Slide[] = [
@@ -15,6 +16,7 @@ export const slides: Slide[] = [
     description: "Hero.slides.1.description",
     cta: "Hero.slides.1.cta",
     image: "/bg/umbre.jpg",
+    href: "/sinistros/comunicar",
   },
   {
     id: 2,
@@ -23,6 +25,7 @@ export const slides: Slide[] = [
     description: "Hero.slides.2.description",
     cta: "Hero.slides.2.cta",
     image: "/bg/bg_keys.jpg",
+    href: "/simulacao-seguro",
   },
   {
     id: 3,
@@ -31,5 +34,6 @@ export const slides: Slide[] = [
     description: "Hero.slides.3.description",
     cta: "Hero.slides.3.cta",
     image: "/bg/bg-umbrela.webp",
+    href: "/servicos-cliente/contactos",
   },
 ];

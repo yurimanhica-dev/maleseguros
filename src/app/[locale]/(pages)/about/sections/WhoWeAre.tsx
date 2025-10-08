@@ -1,10 +1,11 @@
 "use client";
 
-import { companyPrincipios, companyValues } from "@/app/[locale]/utils/types";
+import { companyPrincipiosCARE } from "@/app/[locale]/utils/types";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { Minus } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+
 const container: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -22,10 +23,7 @@ const item: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeOut",
-    },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
@@ -44,10 +42,12 @@ const contentVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.2 } },
   exit: { opacity: 0, y: -20, transition: { duration: 0.4 } },
 };
-export default function QuemSomos() {
-  const [activeValue, setActiveValue] = useState(companyValues[0].id);
 
-  const selectedValue = companyPrincipios.find(
+export default function QuemSomos() {
+  // ✅ agora começa com o primeiro princípio selecionado
+  const [activeValue, setActiveValue] = useState(companyPrincipiosCARE[0].id);
+
+  const selectedValue = companyPrincipiosCARE.find(
     (value) => value.id === activeValue
   );
 
@@ -64,23 +64,21 @@ export default function QuemSomos() {
           {/* Coluna de conteúdo */}
           <div className="space-y-8">
             <motion.div variants={item} className="space-y-4">
-              <div className="inline-flex  items-center uppercase px-4 py-2 bg-[var(--primary)] text-white text-sm font-medium">
+              <div className="inline-flex items-center uppercase px-4 py-2 bg-[var(--primary)] text-white text-sm font-medium">
                 <span>Os Nossos Princípios</span>
               </div>
 
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
                 <span className="block text-3xl uppercase">
-                  Mais de 8 Anos de Experiência no{" "}
-                  <span className="text-[var(--primary)]">
-                    Mercado de Seguros
-                  </span>
+                  Mais de 8 Anos{" "}
+                  <span className="text-[var(--primary)]"> Cuidando </span>
+                  dos Nossos Clientes
                 </span>
               </h2>
 
               <p className="text-lg text-foreground/70 leading-relaxed">
-                No relacionamento com os nossos Clientes, seguimos princípios
-                que asseguram confiança, transparência e excelência em cada
-                serviço prestado.
+                Guiados pelo princípio C.A.R.E, oferecemos um relacionamento que
+                vai além dos serviços.
               </p>
 
               {/* Botões dos valores */}
@@ -88,27 +86,35 @@ export default function QuemSomos() {
                 variants={item}
                 className="flex flex-wrap justify-between items-center gap-3 mt-6"
               >
-                {companyPrincipios.map((value) => (
-                  <button
-                    key={value.id}
-                    onClick={() => setActiveValue(value.id)}
-                    className={`flex uppercase items-center px-2 py-2  text-sm font-medium transition-all ${
-                      activeValue === value.id
-                        ? "underline text-[var(--primary)]"
-                        : "text-[var(--secondary-foreground)]"
-                    }`}
-                  >
-                    {value.title}
-                  </button>
-                ))}
+                {companyPrincipiosCARE.map((value) => {
+                  const firstLetter = value.title.charAt(0);
+                  const rest = value.title.slice(1);
+
+                  return (
+                    <button
+                      key={value.id}
+                      onClick={() => setActiveValue(value.id)}
+                      className={`flex uppercase cursor-pointer items-center px-2 py-2 text-sm font-medium transition-all ${
+                        activeValue === value.id
+                          ? "underline underline-offset-4 decoration-primary "
+                          : "text-[var(--secondary-foreground)]"
+                      }`}
+                    >
+                      <span className="text-[var(--primary)] text-lg font-bold">
+                        {firstLetter}
+                      </span>
+                      {rest}
+                    </button>
+                  );
+                })}
               </motion.div>
             </motion.div>
           </div>
 
-          {/* Coluna visual - Conteúdo dinâmico baseado no valor selecionado */}
+          {/* Coluna visual */}
           <motion.div
             variants={item}
-            className="relative h-[500px]  overflow-hidden shadow-2xl bg-black"
+            className="relative h-[500px] overflow-hidden shadow-2xl bg-black"
           >
             <AnimatePresence>
               <motion.div
@@ -127,10 +133,8 @@ export default function QuemSomos() {
                   priority
                 />
 
-                {/* Overlay gradiente */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/50 to-black/70" />
 
-                {/* Conteúdo textual */}
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeValue + "-content"}

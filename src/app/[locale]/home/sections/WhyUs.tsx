@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { redirect } from "next/navigation";
+import Link from "next/link";
 import { useState } from "react";
 import Button from "../../components/Button";
 import { features } from "../../config/whyUsItems";
@@ -110,16 +110,15 @@ export default function WhyChooseUs() {
             ))}
           </div>
           <Button
-            onClick={() => {
-              redirect("/sinistro");
-            }}
             variant="primary"
             icon={<ArrowRight />}
             iconPosition="right"
             size="md"
             rounded="full"
           >
-            {t("WhyChooseUs.CTA")}
+            <Link href="/sinistros/comunicar" className="flex items-center">
+              {t("WhyChooseUs.CTA")}
+            </Link>
           </Button>
         </div>
 

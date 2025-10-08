@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import ContactForm from "../../(pages)/servicos-cliente/contactos/components/ContactForm";
 import { contactOptions } from "../../config/contactCTA";
 
 export const ContactCTA = () => {
@@ -108,6 +109,7 @@ export const ContactCTA = () => {
           <h3 className="text-2xl font-semibold text-foreground mb-8">
             {t("ContactCTA.SendMessageTitle")}
           </h3>
+          {/*
           <div className="space-y-6">
             <input
               type="text"
@@ -119,6 +121,26 @@ export const ContactCTA = () => {
               placeholder={t("ContactCTA.Form.EmailPlaceholder")}
               className="w-full px-4 py-3 border-b border-gray-200 focus:border-primary outline-none bg-transparent"
             />
+            <div className="flex items-center gap-2">
+              <Select
+                value={formData.subject}
+                onValueChange={handleSelectChange}
+                disabled={isSubmitting}
+              >
+                <SelectTrigger className="w-full px-4 py-3 border-b border-gray-200 focus:border-primary outline-none bg-transparent text-foreground">
+                  <SelectValue placeholder="Assunto" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Pedido de Seguros">Seguros</SelectItem>
+                  <SelectItem value="Proposta de Investimentos">
+                    Investimentos
+                  </SelectItem>
+                  <SelectItem value="Reclamação">Reclamação</SelectItem>
+                  <SelectItem value="Contacto Geral">Contacto Geral</SelectItem>
+                </SelectContent>
+              </Select>
+              <span className="text-primary">*</span>
+            </div>
             <textarea
               placeholder={t("ContactCTA.Form.MessagePlaceholder")}
               rows={4}
@@ -131,7 +153,9 @@ export const ContactCTA = () => {
             >
               {t("ContactCTA.Form.SendButton")}
             </motion.button>
-          </div>
+          </div> 
+          */}
+          <ContactForm />
         </motion.div>
       </div>
     </div>
