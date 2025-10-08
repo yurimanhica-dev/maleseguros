@@ -1,3 +1,4 @@
+// src/app/[locale]/layout.tsx
 import { routing } from "@/i18n/routing";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -29,12 +30,14 @@ export const metadata: Metadata = {
   },
 };
 
-type Props = Readonly<{
+// Change this type to match Next.js expectations
+type Props = {
   children: React.ReactNode;
-  params: { locale: string };
-}>;
+  params: Promise<{ locale: string }>; // Add Promise wrapper
+};
 
 export default async function LocaleLayout({ children, params }: Props) {
+  // Await the params promise
   const { locale } = await params;
 
   if (!hasLocale(routing.locales, locale)) {

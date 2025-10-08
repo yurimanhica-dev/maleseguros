@@ -1,6 +1,11 @@
 import { Funnel_Sans } from "next/font/google";
+import { ReactNode } from "react";
 import "./[locale]/globals.css";
 
+interface LayoutProps {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+}
 const funnel_Sans = Funnel_Sans({
   variable: "--font-noto-serif-jp",
   display: "swap",
@@ -10,13 +15,12 @@ const funnel_Sans = Funnel_Sans({
   subsets: ["latin", "latin-ext"],
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function LocaleLayout({ children, params }: LayoutProps) {
+  // Await the params promise
+  const { locale } = await params;
+
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang={locale}>
       <body
         className={`${funnel_Sans.className} antialiased 
           [&::-webkit-scrollbar]:h-0.5 
