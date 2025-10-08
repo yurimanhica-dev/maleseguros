@@ -1,6 +1,5 @@
 "use client";
 
-import Logo from "@/app/[locale]/home/components/Logo";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -84,7 +83,14 @@ const Footer = () => {
         >
           {/* Coluna 1: Logo + descrição + redes sociais */}
           <motion.div variants={itemVariants} custom={0}>
-            <Logo />
+            <div className="relative h-16 w-40">
+              <Image
+                src="/logos/Maleseguros_dark.png"
+                alt="logo"
+                fill
+                className="object-contain transition duration-300 ease-in-out"
+              />
+            </div>
             <p className="text-[var(--foreground)]/80 mb-6">
               Protegendo sonhos e construindo confiança desde 2014, estamos ao
               lado dos nossos clientes em todo o processo.

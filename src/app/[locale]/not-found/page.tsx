@@ -13,7 +13,7 @@ export default function NotFound() {
       <NavBar />
       <Hero
         title="404"
-        imageUrl="/bg/error.jpg"
+        imageUrl="/bg/40319.jpg"
         breadcrumb={[{ name: "Error 404", path: "/" }]}
       />
       <div className=" flex flex-col gap-8 h-[50vh] items-center c-space justify-center mb-8">

@@ -11,6 +11,7 @@ export interface NavItem {
 }
 
 export const navItemsPT: NavItem[] = [
+  { title: "Página Inicial", path: "/" },
   {
     title: "Explorar",
     subItems: [
@@ -45,5 +46,5 @@ export const navItemsPT: NavItem[] = [
   },
   { title: "Serviços", path: "/services" },
   { title: "Sobre Nós", path: "/about" },
-  { title: "Seguro Digital", path: "/seguro-digital" },
+  // { title: "Seguro Digital", path: "/seguro-digital" },
 ];

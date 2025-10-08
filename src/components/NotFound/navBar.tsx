@@ -1,10 +1,10 @@
 "use client";
 
 import HamburgerIcon from "@/app/[locale]/components/HamburgerIcon";
-import Logo from "@/app/[locale]/home/components/Logo";
 import MobileMenu from "@/app/[locale]/home/components/MobileMenu";
 
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 import NavLinks from "./NavLinks";
 
@@ -21,8 +21,14 @@ const NavBar = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
+            className="relative h-16 w-40"
           >
-            <Logo />
+            <Image
+              src="/logos/Maleseguros_dark.png"
+              alt="logo"
+              fill
+              className="object-contain transition duration-300 ease-in-out"
+            />
           </motion.div>
 
           <div className="hidden md:block">
